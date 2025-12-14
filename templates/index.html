@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI ETF Trader 仪表盘</title>
+  <link rel="icon" href="data:,">
+  <!-- Load local ECharts synchronously -->
+  <script src="/static/echarts.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; color: #333; }
+    .container { max-width: 1400px; margin: 0 auto; margin-left: 220px; margin-right: 320px; }
+    .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; background: white; padding: 20px 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); }
+    .header h1 { font-size: 28px; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .header-right { display: flex; align-items: center; gap: 20px; }
+    .last-update { font-size: 13px; color: #666; display: flex; flex-direction: column; align-items: flex-end; }
+    .last-update .time { font-weight: 600; color: #667eea; margin-top: 4px; }
+    .btn { padding: 4px 8px; border: 1px solid #ccc; background: #fff; cursor: pointer; border-radius: 4px; }
+    .btn-refresh { padding: 8px 16px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 13px; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3); }
+    .btn-refresh:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4); }
+    .auto-refresh { font-size: 12px; color: #999; }
+    .error-banner { display: none; background: #fee; color: #c33; padding: 12px 16px; border-radius: 6px; margin-bottom: 20px; border-left: 4px solid #c33; font-size: 13px; }
+    .error-banner.show { display: block; }
+    .card { background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); margin-bottom: 24px; overflow: hidden; }
+    .card-header { padding: 20px 24px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); border-bottom: 1px solid #e8eef5; display: flex; align-items: center; gap: 12px; }
+    .card-header h2 { font-size: 18px; font-weight: 600; color: #333; margin: 0; }
+    .card-header .icon { font-size: 20px; }
+    .card-body { padding: 24px; }
+    .chart-container { width: 100%; height: 420px; display: flex; align-items: center; justify-content: center; background: #fafbfc; border-radius: 8px; }
+    .chart-placeholder { color: #999; font-size: 14px; text-align: center; }
+    .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 20px; }
+    .metric-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2); }
+    .metric-label { font-size: 12px; opacity: 0.9; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .metric-value { font-size: 28px; font-weight: 700; font-family: 'Courier New', monospace; }
+    .metric-unit { font-size: 12px; opacity: 0.8; margin-top: 4px; }
+    .table-wrapper { overflow-x: auto; max-height: 500px; overflow-y: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    thead { background: #f8f9fb; position: sticky; top: 0; z-index: 10; }
+    th { padding: 12px 16px; text-align: left; font-weight: 600; color: #555; border-bottom: 2px solid #e8eef5; }
+    td { padding: 12px 16px; border-bottom: 1px solid #f0f0f0; }
+    .decision-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-weight: 600; font-size: 12px; text-transform: uppercase; }
+    .decision-buy { background: #d4edda; color: #155724; }
+    .decision-sell { background: #f8d7da; color: #721c24; }
+    .decision-hold { background: #fff3cd; color: #856404; }
+    .gain { color: #2ecc71; } .loss { color: #e74c3c; }
+    .empty-state { display: none; text-align: center; padding: 40px 20px; color: #999; }
+    .empty-state.show { display: block; }
+    .mode-badge { background: #e0e0e0; color: #666; font-size: 12px; padding: 4px 8px; border-radius: 4px; font-weight: 600; }
+    .tooltip-wrapper { position: relative; cursor: help; border-bottom: 1px dotted #999; display: inline-block; }
+    .tooltip-text { visibility: hidden; width: 280px; background-color: #333; color: #fff; text-align: left; border-radius: 6px; padding: 10px; position: absolute; z-index: 1000; bottom: 125%; left: 50%; margin-left: -140px; opacity: 0; transition: opacity 0.3s; font-size: 12px; line-height: 1.5; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+    .tooltip-text::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: #333 transparent transparent transparent; }
+    .tooltip-wrapper:hover .tooltip-text { visibility: visible; opacity: 1; }
+    /* Sidebar */
+    .sidebar { position: fixed; left: 20px; top: 20px; bottom: 20px; width: 180px; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 12px; overflow-y: auto; }
+    .sidebar h3 { font-size: 14px; margin: 6px 0 10px; color: #444; }
+    .nav-list { list-style: none; }
+    .nav-list li { margin: 6px 0; }
+    .nav-list a { text-decoration: none; color: #555; font-size: 13px; display: block; padding: 6px 8px; border-radius: 6px; }
+    .nav-list a:hover { background: #f3f5ff; color: #333; }
+    /* Rightbar (live tickers) */
+    .rightbar { position: fixed; right: 20px; top: 20px; bottom: 20px; width: 300px; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); display: block; overflow: hidden; }
+    .rightbar-header { padding: 12px 14px; border-bottom: 1px solid #eef2f7; display: flex; align-items: center; justify-content: space-between; }
+    .rightbar-header h3 { font-size: 14px; color: #444; }
+    .rightbar-body { height: calc(100% - 48px); overflow-y: auto; padding: 10px 10px 12px; }
+    .rb-head { position: sticky; top: 0; display: flex; align-items: center; justify-content: space-between; padding: 6px 10px; font-size: 12px; color: #666; background: #fff; border-bottom: 1px solid #f0f0f0; z-index: 1; }
+    .rb-item { display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; border-radius: 8px; border: 1px solid #f0f0f0; margin-bottom: 8px; background: #fafbff; }
+    .rb-code { font-weight: 700; font-size: 13px; }
+    .rb-name { color: #888; font-size: 12px; margin-left: 6px; }
+    .rb-price { font-weight: 700; font-size: 14px; }
+    .rb-change { font-size: 12px; }
+    .rb-gain { color: #2ecc71; }
+    .rb-loss { color: #e74c3c; }
+    @media (max-width: 1280px) { .rightbar { display: none !important; } .container { margin-right: 20px; } }
+    /* Back to top */
+    #backToTop { position: fixed; right: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 22px; background: #667eea; color: #fff; font-size: 18px; display: none; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 6px 16px rgba(102,126,234,0.4); }
+    #backToTop.show { display: flex; }
+    body { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h3>导航</h3>
+    <ul class="nav-list">
+      <li><a href="#sec-performance">账户总资产曲线</a></li>
+      <li><a href="#sec-portfolio">实时资产概览</a></li>
+            <li><a href="#sec-kpi">关键绩效指标</a></li>
+      <li><a href="#sec-positions">当前持仓明细</a></li>
+      <li><a href="#sec-trades">最近交易记录</a></li>
+      <li><a href="#sec-decisions">最近AI决策</a></li>
+      <li><a href="#sec-factors">因子速览</a></li>
+      <li><a href="#sec-vega">波动率风险（近似）</a></li>
+
+    </ul>
+  </div>
+  <div class="container">
+    <div class="header"><h1>📊 AI ETF Trader 仪表盘</h1><div class="header-right"><span id="liveSourceBadge" class="mode-badge" style="margin-right:10px;">源: --</span><div class="last-update"><span>最后更新</span><span class="time" id="lastUpdate">--:--:--</span></div><button class="btn-refresh" onclick="loadAll()">🔄 刷新</button><button class="btn-refresh" id="btnPull" onclick="refreshPrices()">📥 拉取最新行情</button><div class="auto-refresh">自动刷新: 10秒</div></div></div>
+    <div id="globalError" class="error-banner"></div>
+    <div class="content">
+    <div id="sec-performance" class="card"><div class="card-header"><span class="icon">📈</span><h2>账户总资产曲线</h2><div style="margin-left:auto; display:flex; align-items:center; gap:8px;"><span id="modeLabel" class="mode-badge">交易日</span><span class="muted">显示</span><select id="tradingModeSelect" class="btn"><option value="1">交易日</option><option value="0">自然日</option></select></div></div><div class="card-body"><div id="performanceChart" class="chart-container"><div class="chart-placeholder">📭 暂无数据</div></div></div></div>
+    <div id="sec-portfolio" class="card"><div class="card-header"><span class="icon">💹</span><h2>实时资产概览</h2></div><div class="card-body"><div class="metrics-grid"><div class="metric-card"><div class="metric-label">总资产(估值)</div><div class="metric-value" id="p-total">0.00</div></div><div class="metric-card"><div class="metric-label">现金</div><div class="metric-value" id="p-cash">0.00</div></div><div class="metric-card"><div class="metric-label">持仓市值</div><div class="metric-value" id="p-hold">0.00</div></div></div></div></div>
+    
+    <div id="sec-kpi" class="card"><div class="card-header"><span class="icon">🎯</span><h2>关键绩效指标</h2></div><div class="card-body"><div class="metrics-grid"><div class="metric-card"><div class="metric-label"><span class="tooltip-wrapper">总交易次数<span class="tooltip-text">统计周期内总的卖出交易次数</span></span></div><div class="metric-value" id="m-total">--</div></div><div class="metric-card"><div class="metric-label"><span class="tooltip-wrapper">胜率<span class="tooltip-text">盈利的卖出交易次数 / 总卖出交易次数</span></span></div><div class="metric-value" id="m-win">--</div></div><div class="metric-card"><div class="metric-label"><span class="tooltip-wrapper">总收益率<span class="tooltip-text">公式: (期末总资产 - 期初总资产) / 期初总资产 × 100%</span></span></div><div class="metric-value" id="m-totalret">--</div></div><div class="metric-card"><div class="metric-label"><span class="tooltip-wrapper">年化收益率<span class="tooltip-text">公式: 总收益率 × (365 / 统计天数)</span></span></div><div class="metric-value" id="m-annual">--</div></div><div class="metric-card"><div class="metric-label"><span class="tooltip-wrapper">最大回撤<span class="tooltip-text">统计周期内，账户净值从任意历史高点回落的最大百分比</span></span></div><div class="metric-value" id="m-mdd">--</div></div></div></div></div>
+    <div id="sec-positions" class="card"><div class="card-header"><span class="icon">📦</span><h2>当前持仓（含分配）</h2></div><div class="card-body"><div id="posEmpty" class="empty-state"><div class="empty-state-icon">📭</div><div class="empty-state-text">暂无持仓</div></div><div id="allocationChart" class="chart-container" style="height: 300px; margin-bottom: 12px;"><div class="chart-placeholder">📊 暂无持仓</div></div><div class="table-wrapper"><table id="positionsTable" style="display:none;"><thead><tr><th>ETF代码</th><th>数量</th><th>最新价</th><th>市值</th></tr></thead><tbody></tbody></table></div></div></div>
+    <div id="sec-trades" class="card"><div class="card-header"><span class="icon">💰</span><h2>最近交易记录</h2></div><div class="card-body"><div id="tradesEmpty" class="empty-state"><div class="empty-state-icon">📭</div><div class="empty-state-text">暂无交易记录</div></div><div class="table-wrapper"><table id="tradesTable" style="display:none;"><thead><tr><th>日期</th><th>ETF代码</th><th>操作</th><th>价格</th><th>数量</th><th>总值</th><th>操作后资金</th><th>理由</th></tr></thead><tbody></tbody></table></div></div></div>
+    <div id="sec-decisions" class="card"><div class="card-header"><span class="icon">🤖</span><h2>最近AI决策</h2></div><div class="card-body"><div id="decisionsEmpty" class="empty-state"><div class="empty-state-icon">📭</div><div class="empty-state-text">暂无AI决策</div></div><div class="table-wrapper"><table id="decisionsTable"><thead><tr><th>日期</th><th>ETF</th><th>决策</th><th>置信度</th><th>分析理由</th></tr></thead><tbody></tbody></table></div></div></div>
+
+    <div id="sec-factors" class="card">
+      <div class="card-header">
+        <span class="icon">🧮</span>
+        <h2>因子速览</h2>
+      </div>
+      <div class="card-body">
+        <div id="factorsEmpty" class="empty-state show">
+          <div class="empty-state-icon">📭</div>
+          <div class="empty-state-text">正在加载因子数据...</div>
+        </div>
+        <div class="table-wrapper">
+          <table id="factorsTable" style="display:none;">
+            <thead>
+              <tr>
+                <th>代码</th>
+                <th>日期</th>
+                <th>1日收益(%)</th>
+                <th>20日波动(年化%)</th>
+                <th>RSI(14)</th>
+                <th>策略模式</th>
+                <th>策略参数</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div id="sec-vega" class="card">
+      <div class="card-header"><span class="icon">⚡</span><h2>波动率风险（近似）</h2><div style="margin-left:auto; display:flex; align-items:center; gap:8px;"><span class="muted">标的</span><select id="vegaSelect" class="btn"></select></div></div>
+      <div class="card-body">
+        <div id="vegaEmpty" class="empty-state show">
+          <div class="empty-state-icon">📭</div>
+          <div class="empty-state-text">正在加载波动率风险...</div>
+        </div>
+        <div id="vegaChart" class="chart-container" style="height:320px;">
+          <div class="chart-placeholder">📈 请选择标的查看</div>
+        </div>
+        <div class="table-wrapper">
+          <table id="vegaTable" style="display:none;">
+            <thead>
+              <tr>
+                <th>代码</th>
+                <th>名称</th>
+                <th>日期</th>
+                <th>年化σ(%)</th>
+                <th>ΔV</th>
+                <th>累计ΔV</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- options section removed -->
+  </div>
+
+  <button id="backToTop" title="返回顶部">↑</button>
+
+  <!-- Right side live ticker bar (only shown when market is open) -->
+  <div id="rightbar" class="rightbar">
+    <div class="rightbar-header">
+      <h3>ETF 行情速览</h3>
+      <div>
+        <span id="rbStatus" class="mode-badge" style="margin-right:8px;">--</span>
+        <span id="rbSource" class="mode-badge" style="margin-right:8px;">源: --</span>
+        <span id="rbClock" style="font-size:12px;color:#999;">--:--:--</span>
+      </div>
+    </div>
+    <div class="rightbar-body" id="rightbarBody">
+      <div class="empty-state show" id="rbEmpty" style="padding:12px;color:#999;">正在加载...</div>
+    </div>
+  </div>
+
+  <script>
+    // --- Globals & Chart Options ---
+    let perfChart = null, allocChart = null, vegaChart = null;
+    const perfOption = { tooltip: { trigger: 'axis' }, grid: { left: 60, right: 20, top: 20, bottom: 40 }, xAxis: { type: 'category' }, yAxis: { type: 'value', scale: true }, series: [{ type: 'line', smooth: true, data: [] }] };
+    const allocOption = { tooltip: { trigger: 'item', formatter: '{b}: {c}元 ({d}%)' }, legend: { top: 'bottom' }, series: [{ name: '持仓分配', type: 'pie', radius: ['40%', '70%'], avoidLabelOverlap: false, itemStyle: { borderRadius: 10, borderColor: '#fff', borderWidth: 2 }, label: { show: false }, emphasis: { label: { show: true, fontSize: '20', fontWeight: 'bold' } }, data: [] }] };
+    const vegaOption = { tooltip: { trigger: 'axis' }, legend: { data: ['累计ΔV','σ(%)'] }, grid: { left: 60, right: 60, top: 30, bottom: 40 }, xAxis: { type: 'category', data: [] }, yAxis: [ { type: 'value', name: '累计ΔV', scale: true }, { type: 'value', name: '年化σ(%)', scale: true, position: 'right' } ], series: [ { name:'累计ΔV', type:'line', smooth:true, yAxisIndex:0, data: [] }, { name:'σ(%)', type:'line', smooth:true, yAxisIndex:1, data: [] } ] };
+
+    // --- Helpers ---
+    let codeNameMap = {};
+    const setName = (code, name) => {
+      if (!code) return;
+      const nm = (name == null ? '' : String(name).trim());
+      if (nm && nm !== '-' && nm.toLowerCase() !== 'none') {
+        codeNameMap[String(code)] = nm;
+      }
+    };
+    const getName = (code) => { const n = codeNameMap[String(code)] || ''; return n && n !== '-' ? n : null; };
+    const codeWithName = (code) => { const n = getName(code); return n ? `${code} (${n})` : `${code}`; };
+
+    const getTradingMode = () => document.getElementById('tradingModeSelect')?.value || '1';
+    const updateModeLabel = () => { const el = document.getElementById('modeLabel'); if(el) el.textContent = getTradingMode() === '0' ? '自然日' : '交易日'; };
+    const setLastUpdate = () => { const d = new Date(); document.getElementById('lastUpdate').textContent = d.toTimeString().split(' ')[0]; };
+    const showError = (msg) => { const el = document.getElementById('globalError'); el.textContent = '⚠️ ' + msg; el.classList.add('show'); setTimeout(() => el.classList.remove('show'), 5000); };
+    const fetchJSON = async (url) => { const res = await fetch(url, { cache: 'no-store' }); if (!res.ok) throw new Error(url + ' -> HTTP ' + res.status); return await res.json(); };
+    const formatPercent = (v) => (typeof v === 'number' && isFinite(v) ? v.toFixed(2) : '--') + (typeof v === 'number' && isFinite(v) ? '%' : '');
+    const safeNum = (v) => (typeof v === 'number' && isFinite(v) ? v : null);
+    const getDecisionClass = (d) => `decision-${d}`;
+    const getDecisionText = (d) => ({'buy':'买入','sell':'卖出','hold':'持有'}[d]||d);
+
+    // --- Load Functions ---
+    async function loadPerformance() {
+      if (typeof window.echarts === 'undefined') { setTimeout(loadPerformance, 200); return; }
+      try {
+        const mode = getTradingMode();
+        let data = await fetchJSON(`/api/performance?trading=${mode}`);
+        if ((!data || !data.dates || data.dates.length === 0) && mode === '1') {
+          data = await fetchJSON('/api/performance?trading=0');
+        }
+        const chartDom = document.getElementById('performanceChart');
+        if (!data || !data.dates || data.dates.length === 0) {
+          chartDom.innerHTML = '<div class="chart-placeholder">📭 暂无数据</div>';
+          if (perfChart && !perfChart.isDisposed()) { perfChart.dispose(); perfChart = null; }
+          return;
+        }
+        if (!perfChart || perfChart.isDisposed()) {
+          perfChart = echarts.init(chartDom);
+        }
+        perfOption.xAxis.data = data.dates;
+        perfOption.series[0].data = data.values;
+        perfChart.setOption(perfOption);
+      } catch (e) { showError('加载账户曲线失败: ' + e.message); }
+    }
+
+    async function loadPortfolio() {
+      try {
+        const p = await fetchJSON('/api/portfolio');
+        const n2 = (x) => (typeof x === 'number' ? x.toFixed(2) : '0.00');
+        document.getElementById('p-total').textContent = n2(p.total_value);
+        document.getElementById('p-cash').textContent = n2(p.cash);
+        document.getElementById('p-hold').textContent = n2(p.holdings_value);
+
+        const pos = p.positions || [];
+        const posEmpty = pos.length === 0;
+        document.getElementById('posEmpty').classList.toggle('show', posEmpty);
+        document.getElementById('positionsTable').style.display = posEmpty ? 'none' : 'table';
+        const posTbody = document.querySelector('#positionsTable tbody');
+        posTbody.innerHTML = '';
+        pos.forEach(it => {
+          const row = posTbody.insertRow();
+          row.innerHTML = `<td>${codeWithName(it.etf_code)}</td><td>${n2(it.quantity)}</td><td>${n2(it.price)}</td><td>${n2(it.value)}</td>`;
+        });
+
+        if (typeof window.echarts !== 'undefined') {
+          const allocDom = document.getElementById('allocationChart');
+          if (posEmpty) {
+            allocDom.innerHTML = '<div class="chart-placeholder">📊 暂无持仓</div>';
+            if (allocChart && !allocChart.isDisposed()) { allocChart.dispose(); allocChart = null; }
+          } else {
+            if (!allocChart || allocChart.isDisposed()) {
+              allocChart = echarts.init(allocDom);
+            }
+            allocOption.series[0].data = pos.map(it => ({ name: codeWithName(it.etf_code), value: n2(it.value) }));
+            allocChart.setOption(allocOption);
+          }
+        }
+      } catch (e) { /* silent */ }
+    }
+
+    const computeKpis = (dates, values) => {
+      const n = (values||[]).length; if (!n) return {tr:0, an:0, mdd:0};
+      const first = Number(values[0]||0), last = Number(values[n-1]||0);
+      const days = Math.max(1, (new Date(dates[n-1]) - new Date(dates[0])) / 86400000);
+      const tr = first > 0 ? (last-first)/first*100 : 0;
+      const an = tr * (365.0/days);
+      let peak = -Infinity, mdd = 0;
+      for (const v of values) { if (v > peak) peak = v; const dd = peak > 0 ? (v-peak)/peak*100 : 0; if (dd < mdd) mdd = dd; }
+      return {tr, an, mdd};
+    };
+
+    async function loadMetrics() {
+      try {
+        const m = await fetchJSON('/api/metrics');
+        let perf = await fetchJSON(`/api/performance?trading=${getTradingMode()}`);
+        if (!perf || !perf.dates || perf.dates.length === 0) perf = await fetchJSON('/api/performance?trading=0');
+
+        document.getElementById('m-total').textContent = m.total_trades ?? 0;
+        document.getElementById('m-win').textContent = formatPercent(m.win_rate ?? 0);
+
+        const fmt = (v) => (typeof v === 'number' && isFinite(v) ? v.toFixed(2) : '--');
+        const [trEl, anEl, mdEl] = ['m-totalret', 'm-annual', 'm-mdd'].map(id => document.getElementById(id));
+
+        const kpis = { tr: m.total_return, an: m.annualized_return, mdd: m.max_drawdown };
+        let prevKpis = null;
+        if (perf && perf.dates && perf.dates.length >= 2) {
+          prevKpis = computeKpis(perf.dates.slice(0, -1), perf.values.slice(0, -1));
+        }
+
+        const applyValue = (el, val, negIsBad = true) => {
+          if (typeof val !== 'number' || !isFinite(val)) { el.className = 'metric-value'; el.textContent = '--'; return; }
+          el.className = `metric-value ${val >= 0 ? 'gain' : 'loss'}`;
+          el.innerHTML = `${val >= 0 ? '↑' : '↓'} ${fmt(val)}%`;
+        };
+        applyValue(trEl, kpis.tr);
+        applyValue(anEl, kpis.an);
+        applyValue(mdEl, kpis.mdd, false); // 回撤越小越好，这里固定红色向下展示
+      } catch (e) { showError('加载指标失败: ' + e.message); }
+    }
+
+    async function loadTrades() {
+      const n2 = (x) => (typeof x === 'number' ? x.toFixed(2) : '0.00');
+      const n3 = (x) => (typeof x === 'number' ? x.toFixed(3) : '0.000');
+      try {
+        const rows = await fetchJSON('/api/trades');
+        const tbody = document.querySelector('#tradesTable tbody');
+        tbody.innerHTML = '';
+        const empty = !(rows && rows.length);
+        document.getElementById('tradesEmpty').classList.toggle('show', empty);
+        document.getElementById('tradesTable').style.display = empty ? 'none' : 'table';
+        (rows || []).forEach(tr => {
+          const row = tbody.insertRow();
+          row.innerHTML = `<td>${tr.date || ''}</td><td>${codeWithName(tr.etf_code || '')}</td><td><span class=\"decision-badge ${getDecisionClass(tr.action)}\">${getDecisionText(tr.action)}</span></td><td>${n3(tr.price)}</td><td>${n2(tr.quantity)}</td><td>${n2(tr.value)}</td><td>${n2(tr.capital_after)}</td><td>${tr.reasoning || ''}</td>`;
+        });
+      } catch (e) { showError('加载交易记录失败: ' + e.message); }
+    }
+
+    async function loadDecisions() {
+      try {
+        const rows = await fetchJSON('/api/decisions');
+        const tbody = document.querySelector('#decisionsTable tbody');
+        tbody.innerHTML = '';
+        const empty = !(rows && rows.length);
+        document.getElementById('decisionsEmpty').classList.toggle('show', empty);
+        document.getElementById('decisionsTable').style.display = empty ? 'none' : 'table';
+        (rows || []).forEach(d => {
+            const row = tbody.insertRow();
+            const confidence = typeof d.confidence === 'number' ? d.confidence : 0;
+            row.innerHTML = `<td>${d.date || ''}</td><td>${codeWithName(d.etf || '')}</td><td><span class=\"decision-badge ${getDecisionClass(d.decision)}\">${getDecisionText(d.decision)}</span></td><td><div class=\"confidence-bar\"><div class=\"confidence-bar-bg\"><div class=\"confidence-bar-fill\" style=\"width: ${confidence * 100}%\"></div></div><span class=\"confidence-text\">${(confidence * 100).toFixed(0)}%</span></div></td><td>${d.reasoning || ''}</td>`;
+        });
+      } catch (e) { showError('加载AI决策失败: ' + e.message); }
+    }
+
+        async function loadTickers() {
+      const n2 = (x) => (typeof x === 'number' ? x.toFixed(2) : '0.00');
+      try {
+        let data = await fetchJSON('/api/etf_tickers?live=1');
+        let list = [];
+        let marketOpen = undefined;
+        let source = 'history';
+        if (Array.isArray(data)) {
+          list = data;
+          source = 'history';
+        } else if (data && Array.isArray(data.rows)) {
+          list = data.rows;
+          marketOpen = !!data.market_open;
+          source = data.source || 'history';
+        }
+
+        try { (list || []).forEach(t => setName(t.code, t.name)); } catch(e) {}
+
+        const rb = document.getElementById('rightbar');
+        const rbBody = document.getElementById('rightbarBody');
+        const rbClock = document.getElementById('rbClock');
+        const rbStatus = document.getElementById('rbStatus');
+        const rbSource = document.getElementById('rbSource');
+        const liveSourceBadge = document.getElementById('liveSourceBadge');
+
+        if (rbClock) { const d = new Date(); rbClock.textContent = d.toTimeString().split(' ')[0]; }
+        if (rbStatus) {
+          const open = !!marketOpen;
+          rbStatus.textContent = open ? '开市' : '闭市';
+          rbStatus.style.background = open ? '#d4edda' : '#eee';
+          rbStatus.style.color = open ? '#155724' : '#666';
+        }
+        if (rbSource) { rbSource.textContent = '源: ' + (source || '--'); }
+        if (liveSourceBadge) { liveSourceBadge.textContent = '源: ' + (source || '--'); }
+
+        if (rb) rb.style.display = '';
+        if (rbBody) {
+          rbBody.innerHTML = '';
+          const head = document.createElement('div');
+          head.className = 'rb-head';
+          head.innerHTML = '<div>代码 / 名称</div><div>价格 / 涨跌幅</div>';
+          rbBody.appendChild(head);
+          if (!list || !list.length) {
+            const emptyDiv = document.createElement('div');
+            emptyDiv.className = 'empty-state show';
+            emptyDiv.style.cssText = 'padding:12px;color:#999;';
+            emptyDiv.textContent = '暂无数据';
+            rbBody.appendChild(emptyDiv);
+          } else {
+            (list || []).forEach(ticker => {
+              const isGain = Number(ticker.pct_change) >= 0;
+              const changeClass = isGain ? 'rb-gain' : 'rb-loss';
+              const changeArrow = isGain ? '↑' : '↓';
+              const item = document.createElement('div');
+              item.className = 'rb-item';
+              item.innerHTML = `
+                <div>
+                  <span class="rb-code">${ticker.code}</span>
+                  <span class="rb-name">${ticker.name || '-'}</span>
+                </div>
+                <div style="text-align:right">
+                  <div class="rb-price">${n2(Number(ticker.price))}</div>
+                  <div class="rb-change ${changeClass}">${changeArrow} ${n2(Number(ticker.pct_change))}%</div>
+                </div>
+              `;
+              rbBody.appendChild(item);
+            });
+          }
+        }
+      } catch (e) { showError('加载ETF行情失败: ' + e.message); }
+    }
+
+    async function loadFactors() {
+      const n2 = (x) => (typeof x === 'number' ? x.toFixed(2) : '0.00');
+      const n4 = (x) => (typeof x === 'number' ? x.toFixed(4) : '0.0000');
+      try {
+        const rows = await fetchJSON('/api/qlib/factors');
+        const tbody = document.querySelector('#factorsTable tbody');
+        tbody.innerHTML = '';
+        const empty = !(rows && rows.length);
+        document.getElementById('factorsEmpty').classList.toggle('show', empty);
+        document.getElementById('factorsTable').style.display = empty ? 'none' : 'table';
+        (rows || []).sort((a,b)=>String(a.symbol).localeCompare(String(b.symbol))).forEach(f => {
+          const row = tbody.insertRow();
+          const strategy = f.strategy || {};
+          const strategyMode = strategy.mode || '--';
+          const strategyParams = strategy.mode ? `breakout_n=${strategy.breakout_n}, rsi_n=${strategy.rsi_n}, rsi_low=${strategy.rsi_low}, rsi_high=${strategy.rsi_high}` : '--';
+          row.innerHTML = `
+            <td>${codeWithName(f.symbol || '')}</td>
+            <td>${(f.date || '').toString().slice(0,10)}</td>
+            <td>${n2(f.ret_1d_pct)}</td>
+            <td>${n2(f.vol_20d_pct)}</td>
+            <td>${n2(f.rsi_14)}</td>
+            <td><span class="mode-badge">${strategyMode}</span></td>
+            <td style="font-size: 12px; color: #666;">${strategyParams}</td>
+          `;
+        });
+      } catch (e) { showError('加载因子失败: ' + e.message); }
+    }
+
+    async function loadOptions() {
+      try {
+        const sel = document.getElementById('optSelect');
+        // 1) 准备标的下拉：优先用实时tickers，其次历史
+        let tickerData = await fetchJSON('/api/etf_tickers?live=1').catch(()=>null);
+        if (!tickerData) tickerData = await fetchJSON('/api/etf_tickers').catch(()=>null);
+        let list = [];
+        if (Array.isArray(tickerData)) list = tickerData; else if (tickerData && Array.isArray(tickerData.rows)) list = tickerData.rows;
+        // 名称映射
+        try { (list || []).forEach(t => setName(t.code, t.name)); } catch(e) {}
+        if (sel) {
+          const prev = (()=>{try{return localStorage.getItem('optCode')||'';}catch(e){return ''}})();
+          const old = sel.value;
+          sel.innerHTML = '';
+          (list || []).forEach(t => {
+            const opt = document.createElement('option');
+            opt.value = t.code;
+            opt.textContent = codeWithName(t.code);
+            sel.appendChild(opt);
+          });
+          if (prev && list.some(x=>String(x.code)===prev)) sel.value = prev; else if (old && list.some(x=>String(x.code)===old)) sel.value = old;
+        }
+        const code = document.getElementById('optSelect')?.value || (list && list[0] && list[0].code) || '';
+        if (!code) {
+          document.getElementById('optEmpty').classList.add('show');
+          document.getElementById('optAtmTable').style.display='none';
+          document.getElementById('optChainTable').style.display='none';
+          return;
+        }
+        try { localStorage.setItem('optCode', code); } catch(e) {}
+        // 2) ATM IV 概览
+        const atm = await fetchJSON(`/api/options/atm_iv?code=${code}`).catch(()=>null);
+        const atmT = document.querySelector('#optAtmTable');
+        const atmBody = document.querySelector('#optAtmTable tbody');
+        atmBody.innerHTML = '';
+        let atmRows = [];
+        if (atm && atm.ok && Array.isArray(atm.rows)) atmRows = atm.rows; else if (atm && Array.isArray(atm.rows)) atmRows = atm.rows; else atmRows = [];
+        const n2 = (x)=> (typeof x==='number' && isFinite(x) ? x.toFixed(2) : '--');
+        const n4 = (x)=> (typeof x==='number' && isFinite(x) ? x.toFixed(4) : '--');
+        if (atmRows.length) {
+          document.getElementById('optEmpty').classList.remove('show');
+          atmT.style.display='table';
+          atmRows.sort((a,b)=>a.K-b.K).forEach(r => {
+            const tr = atmBody.insertRow();
+            tr.innerHTML = `<td>${(r.opt_type||'').toUpperCase()}</td><td>${n2(r.K)}</td><td>${r.T_days||'--'}</td><td>${n4(r.mid)}</td><td>${n2((typeof r.iv==='number'? r.iv*100 : null))}</td>`;
+          });
+        } else {
+          atmT.style.display='none';
+        }
+        // 3) 期权链（含IV/Greeks）
+        const chain = await fetchJSON(`/api/options/chain?code=${code}`).catch(()=>null);
+        const chT = document.querySelector('#optChainTable');
+        const chBody = document.querySelector('#optChainTable tbody');
+        chBody.innerHTML = '';
+        let chRows = [];
+        if (chain && chain.ok && Array.isArray(chain.rows)) chRows = chain.rows; else if (chain && Array.isArray(chain.rows)) chRows = chain.rows; else chRows = [];
+        if (chRows.length) {
+          document.getElementById('optEmpty').classList.remove('show');
+          chT.style.display='table';
+          chRows.sort((a,b)=> (a.expiry||'').localeCompare(b.expiry||'') || a.K-b.K || (a.opt_type||'').localeCompare(b.opt_type||''));
+          chRows.forEach(r => {
+            const tr = chBody.insertRow();
+            tr.innerHTML = `<td>${(r.opt_type||'').toUpperCase()}</td><td>${n2(r.K)}</td><td>${(r.expiry||'').toString().slice(0,10)}</td><td>${r.T_days||'--'}</td><td>${n4(r.price_mid)}</td><td>${n2((typeof r.iv==='number'? r.iv*100 : null))}</td><td>${n4(r.delta)}</td><td>${n4(r.gamma)}</td><td>${n4(r.vega)}</td><td>${n4(r.theta)}</td>`;
+          });
+        } else {
+          chT.style.display='none';
+        }
+        if (!atmRows.length && !chRows.length) {
+          document.getElementById('optEmpty').classList.add('show');
+        }
+      } catch (e) { showError('加载期权与IV失败: ' + e.message); }
+    }
+
+    async function loadAll() {
+      document.getElementById('globalError').classList.remove('show');
+      await Promise.all([loadPortfolio(), loadPerformance(), loadMetrics(), loadTrades(), loadDecisions(), loadTickers(), loadFactors(), loadVega()]).catch(() => {});
+      setLastUpdate();
+    }
+
+    async function loadVega() {
+      try {
+        // 1) 汇总（用于表格 + 下拉框）
+        const summary = await fetchJSON('/api/vega_risk');
+        const tbody = document.querySelector('#vegaTable tbody');
+        const tableEl = document.getElementById('vegaTable');
+        const emptyEl = document.getElementById('vegaEmpty');
+        tbody.innerHTML = '';
+        const list = Array.isArray(summary) ? summary : [];
+        const empty = !(list && list.length);
+        emptyEl.classList.toggle('show', empty);
+        tableEl.style.display = empty ? 'none' : 'table';
+
+        // 代码->名称映射（复用）
+        list.forEach(r => setName(r.code, r.name));
+
+        list.forEach(r => {
+          const row = tbody.insertRow();
+          row.innerHTML = `<td>${codeWithName(r.code)}</td><td>${getName(r.code) || '-'}</td><td>${r.date || ''}</td><td>${(typeof r.sigma==='number'&&isFinite(r.sigma)?r.sigma.toFixed(2):'--')}</td><td>${(typeof r.delta_V==='number'&&isFinite(r.delta_V)?r.delta_V.toFixed(2):'--')}</td><td>${(typeof r.cum_delta_V==='number'&&isFinite(r.cum_delta_V)?r.cum_delta_V.toFixed(2):'--')}</td>`;
+        });
+
+        // 2) 下拉框
+        const sel = document.getElementById('vegaSelect');
+        const prev = (()=>{try{return localStorage.getItem('vegaCode')||'';}catch(e){return ''}})();
+        if (sel) {
+          const old = sel.value;
+          sel.innerHTML = '';
+          list.forEach(r => {
+            const opt = document.createElement('option');
+            opt.value = r.code; opt.textContent = codeWithName(r.code);
+            sel.appendChild(opt);
+          });
+          if (prev && list.some(r=>r.code===prev)) sel.value = prev;
+          else if (old && list.some(r=>r.code===old)) sel.value = old;
+        }
+
+        // 3) 单标的曲线
+        const code = document.getElementById('vegaSelect')?.value || (list[0]?.code || '');
+        if (!code) return;
+        try { localStorage.setItem('vegaCode', code); } catch(e) {}
+        const period = 120;
+        const series = await fetchJSON(`/api/vega_risk?code=${code}&period=${period}`);
+        const rows = (series && series.rows) ? series.rows : [];
+        const dates = rows.map(r=>r.date);
+        const cumdv = rows.map(r=> (typeof r.cum_delta_V==='number' && isFinite(r.cum_delta_V)) ? r.cum_delta_V : null);
+        const sig = rows.map(r=> (typeof r.sigma==='number' && isFinite(r.sigma)) ? r.sigma : null);
+        const chartDom = document.getElementById('vegaChart');
+        if (!vegaChart || vegaChart.isDisposed()) { vegaChart = echarts.init(chartDom); }
+        vegaOption.xAxis.data = dates;
+        vegaOption.series[0].data = cumdv;
+        vegaOption.series[1].data = sig;
+        vegaChart.setOption(vegaOption);
+      } catch (e) { /* 静默 */ }
+    }
+
+    async function refreshPrices() {
+      const btn = document.getElementById('btnPull');
+      if (btn) { btn.disabled = true; btn.textContent = '⏳ 正在拉取...'; }
+      try {
+        const res = await fetch('/api/refresh_prices', { method: 'POST' });
+        const data = await res.json();
+        if (!res.ok || !data.ok) throw new Error((data && data.msg) || '刷新失败');
+        await loadAll();
+      } catch (e) { showError('手动拉取失败: ' + e.message); }
+      finally { if (btn) { btn.disabled = false; btn.textContent = '📥 拉取最新行情'; } }
+    }
+
+    // --- Initialization ---
+    document.addEventListener('DOMContentLoaded', () => {
+      const sel = document.getElementById('tradingModeSelect');
+      try { const saved = localStorage.getItem('tradingMode'); if (sel && saved) sel.value = saved; } catch(e) {}
+      updateModeLabel();
+      if (sel) sel.addEventListener('change', () => { try { localStorage.setItem('tradingMode', sel.value); } catch(e) {} updateModeLabel(); loadPerformance(); });
+      // back-to-top toggle
+      const btt = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if (!btt) return;
+        if (window.scrollY > 300) btt.classList.add('show'); else btt.classList.remove('show');
+      });
+      if (btt) btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+      loadAll();
+      const vSel = document.getElementById('vegaSelect');
+      if (vSel) vSel.addEventListener('change', () => { try { localStorage.setItem('vegaCode', vSel.value); } catch(e) {} loadVega(); });
+      setInterval(loadAll, 10000);
+    });
+  </script>
+</body>
+</html>

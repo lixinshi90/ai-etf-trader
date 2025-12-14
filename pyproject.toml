@@ -1,0 +1,83 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-etf-trader"
+version = "1.0.0"
+description = "AI-driven ETF automated trading system with data fetching, AI/rule-based decision making, trade execution, and performance evaluation"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "AI ETF Trader Team"}
+]
+
+dependencies = [
+    "akshare>=1.17.88",
+    "schedule>=1.2.2",
+    "openai>=2.8.1",
+    "python-dotenv>=1.2.1",
+    "flask>=3.0",
+    "pandas>=2.2",
+    "numpy>=2.1",
+    "requests>=2.32.5",
+    "beautifulsoup4>=4.14.2",
+    "lxml>=6.0.2",
+    "openpyxl>=3.1.5",
+    "python-docx>=1.2.0",
+    "PyMuPDF>=1.26.6",
+    "matplotlib>=3.10.7",
+    "tabulate>=0.9.0",
+    "tqdm>=4.67.1",
+    "pydantic>=2.12.4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=23.0",
+    "flake8>=6.0",
+    "mypy>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/ai-etf-trader"
+Documentation = "https://github.com/yourusername/ai-etf-trader/blob/main/README.md"
+Repository = "https://github.com/yourusername/ai-etf-trader"
+Issues = "https://github.com/yourusername/ai-etf-trader/issues"
+
+
+[tool.uv.sources]
+# Optional: Add custom package sources if needed
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+skip_gitignore = true
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+

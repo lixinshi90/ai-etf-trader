@@ -1,0 +1,32 @@
+# /etc/systemd/system/ai-etf-web.service
+# Systemd unit for AI ETF Trader Web (gunicorn)
+# 1) Copy this file to /etc/systemd/system/ai-etf-web.service
+# 2) Adjust paths and user below to match your server
+# 3) sudo systemctl daemon-reload && sudo systemctl enable --now ai-etf-web
+
+[Unit]
+Description=AI ETF Trader Web (gunicorn)
+After=network.target
+
+[Service]
+Type=simple
+# Change to your project path
+WorkingDirectory=/opt/ai-etf-trader
+# Optional: environment variables file (.env in project root)
+EnvironmentFile=/opt/ai-etf-trader/.env
+# Gunicorn inside venv
+ExecStart=/opt/ai-etf-trader/venv/bin/gunicorn -b 127.0.0.1:5000 -w 2 src.web_app:app
+# Run as a non-root user
+User=aiuser
+Group=aiuser
+# Restart policy
+Restart=always
+RestartSec=5
+# Recommended for Python stdout/stderr
+Environment=PYTHONUNBUFFERED=1
+# Increase open files if needed
+# LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+

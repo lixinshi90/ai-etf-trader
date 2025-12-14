@@ -1,0 +1,91 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# IDE & OS specific
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Project specific (sensitive or generated)
+.env
+.env.*
+!/.env.example
+
+# Data, logs, and other generated files
+data/
+!/data/.gitkeep
+logs/
+!/logs/.gitkeep
+decisions/
+!/decisions/.gitkeep
+trades/
+!/trades/.gitkeep
+tmp/
+!/tmp/.gitkeep
+
+# Qlib specific
+qlib-main/build/
+qlib-main/dist/
+qlib-main/*.egg-info/
+
+# Local scripts cache
+.uv_cache/
+
+# ========== 补充：Python 高频遗漏项 ==========
+# pytest 测试缓存（如果用pytest做单元测试）
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter Notebook 检查点（如果用Jupyter/IPython）
+.ipynb_checkpoints/
+*.ipynb~
+
+# 包管理器缓存（除了uv，补充poetry/pipenv）
+# Poetry（Python包管理器）
+poetry.lock*  # 可选：若团队统一版本，可保留lock文件，注释此行
+.venv/
+# Pipenv
+Pipfile.lock*  # 同理，团队协作可保留
+# pip 缓存
+pip-wheel-metadata/
+
+# ========== 补充：日志文件具体后缀（精准忽略） ==========
+# 避免漏删具体的日志文件（仅排除文件，不影响logs/目录的.gitkeep）
+*.log
+*.log.*
+*.err
+logs/*.out
+logs/old/
+
+# ========== 补充：Python 打包/分发冗余 ==========
+# twine/setup.py 生成的冗余
+.eggs/
+MANIFEST
+# 本地安装的egg包
+*.egg
+
+# ========== 补充：Qlib 可能的冗余（可选） ==========
+# Qlib 运行时缓存（如果用到）
+qlib-main/.cache/
+qlib-main/.qlib/
+
+
+
+

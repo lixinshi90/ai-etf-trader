@@ -1,0 +1,64 @@
+# UV Virtual Environment
+.venv/
+venv/
+
+# UV Cache
+.uv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Project specific
+.env
+.env.local
+.env.*.local
+data/qlib/raw/
+logs/
+trades/
+decisions/
+tmp/
+*.db
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
