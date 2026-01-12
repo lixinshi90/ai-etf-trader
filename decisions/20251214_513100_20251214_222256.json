@@ -1,0 +1,8 @@
+{
+  "decision": "buy",
+  "confidence": 0.85,
+  "reasoning": "当前价格高于MA20，显示上涨趋势，且价格位于20日高位的强势区间。尽管最近5日有轻微回调，但整体趋势未改，量能保持正常，为买入提供支撑。",
+  "target_price": 1.952,
+  "stop_loss": 1.9162,
+  "take_profit": 1.972
+}

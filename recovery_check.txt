@@ -1,0 +1,51 @@
+﻿
+logs\daily.log:387:2025-12-06 20:08:41,228 INFO 已从交易历史恢复账户：现金33743.74，持仓标的7
+logs\daily.log:412:2025-12-07 16:54:06,321 INFO 已从交易历史恢复账户：现金54769.58，持仓标的6
+logs\daily.log:479:2025-12-08 19:53:10,505 INFO 已从交易历史恢复账户：现金54769.58，持仓标的6
+logs\daily.log:529:2025-12-08 20:00:16,327 INFO 已从交易历史恢复账户：现金46110.51，持仓标的7
+logs\daily.log:586:2025-12-09 19:30:48,536 INFO 已从交易历史恢复账户：现金37852.04，持仓标的8
+logs\daily.log:788:2025-12-12 11:18:09,408 INFO 已从交易历史恢复账户：现金37521.39，持仓标的8
+logs\daily.log:852:2025-12-12 17:52:53,187 INFO 已从交易历史恢复账户：现金66402.90，持仓标的9
+logs\daily.log:880:2025-12-12 18:05:38,241 INFO 已从交易历史恢复账户：现金72321.85，持仓标的8
+logs\daily.log:910:2025-12-12 18:08:16,130 INFO [equity-breakdown] cash=72321.85 holdings=313315.70 missing_px=[]
+logs\daily.log:917:2025-12-12 19:50:27,930 INFO 已从交易历史恢复账户：现金72321.85，持仓标的8
+logs\daily.log:920:2025-12-12 19:51:58,945 INFO 已从交易历史恢复账户：现金72321.85，持仓标的8
+logs\daily.log:923:2025-12-12 22:05:38,718 INFO 已从交易历史恢复账户：现金72321.85，持仓标的8
+logs\daily.log:953:2025-12-12 22:06:14,357 INFO [equity-breakdown] cash=82873.02 holdings=303408.11 missing_px=[]
+logs\daily.log:961:2025-12-14 22:21:53,453 INFO 已从交易历史恢复账户：现金82873.02，持仓标的8
+logs\daily.log:1009:2025-12-14 22:23:10,564 INFO [equity-breakdown] cash=82873.02 holdings=303408.11 missing_px=[]
+logs\daily.log:1017:2025-12-15 19:14:57,271 INFO 已从交易历史恢复账户：现金82873.02，持仓标的8
+logs\daily.log:1060:2025-12-15 19:15:42,382 INFO [equity-breakdown] cash=118625.09 holdings=266779.99 missing_px=[]
+logs\daily.log:1067:2025-12-15 19:16:55,073 INFO 已从交易历史恢复账户：现金118625.09，持仓标的7
+logs\daily.log:1101:2025-12-15 19:17:43,176 INFO [equity-breakdown] cash=220681.71 holdings=164651.88 missing_px=[]
+logs\daily.log:1109:2025-12-16 17:38:32,273 INFO 已从交易历史恢复账户：现金220681.71，持仓标的6
+logs\daily.log:1152:2025-12-16 17:39:35,646 INFO [equity-breakdown] cash=249368.11 holdings=123323.41 missing_px=['5126
+60']
+logs\daily.log:1159:2025-12-16 20:23:21,356 INFO 已从交易历史恢复账户：现金249368.11，持仓标的5
+logs\daily.log:1186:2025-12-16 20:23:35,284 INFO [equity-breakdown] cash=249368.11 holdings=123323.41 missing_px=['5126
+60']
+logs\daily.log:1250:2025-12-17 23:17:50,177 INFO [equity-breakdown] cash=75274.65 holdings=24688.32 missing_px=[]
+logs\daily.log:1254:2025-12-17 23:18:18,350 INFO 已从交易历史恢复账户：现金75274.65，持仓标的7
+logs\daily.log:1306:2025-12-17 23:21:21,306 INFO [equity-breakdown] cash=75274.65 holdings=96526.24 missing_px=[]
+logs\daily.log:1316:2025-12-17 23:54:00,966 INFO 已从交易历史恢复账户：现金75274.65，持仓标的7
+logs\daily.log:1337:2025-12-18 23:49:00,445 INFO 已从交易历史恢复账户：现金69262.12，持仓标的4
+logs\daily.log:1384:2025-12-18 23:51:25,738 INFO [equity-breakdown] cash=45677.12 holdings=53363.26 missing_px=[]
+logs\daily.log:1395:2025-12-19 22:21:44,525 INFO 已从交易历史恢复账户：现金45677.12，持仓标的7
+logs\daily.log:1445:2025-12-19 22:24:38,701 INFO [equity-breakdown] cash=39758.78 holdings=59516.73 missing_px=[]
+logs\daily.log:1456:2025-12-22 22:01:46,681 INFO 已从交易历史恢复账户：现金69262.12，持仓标的4
+logs\daily.log:1506:2025-12-22 22:02:36,672 INFO [equity-breakdown] cash=69262.12 holdings=40787.79 missing_px=[]
+logs\daily.log:1516:2025-12-22 22:20:20,106 INFO 已从交易历史恢复账户：现金69262.12，持仓标的4
+logs\daily.log:1547:2025-12-22 22:23:40,942 INFO 已从交易历史恢复账户：现金69262.12，持仓标的4
+logs\daily.log:1598:2025-12-22 22:27:48,241 INFO [equity-breakdown] cash=60287.89 holdings=49748.58 missing_px=[]
+logs\daily.log:1608:2025-12-22 22:45:19,078 INFO 已从交易历史恢复账户：现金69262.12，持仓标的4
+logs\daily.log:1652:2025-12-22 22:46:26,963 INFO [equity-breakdown] cash=60287.89 holdings=49748.58 missing_px=[]
+logs\daily.log:1663:2025-12-23 19:20:20,984 INFO 已从交易历史恢复账户：现金60287.89，持仓标的5
+logs\daily.log:1715:2025-12-23 19:21:21,192 INFO [equity-breakdown] cash=52476.44 holdings=57449.23 missing_px=[]
+logs\daily.log:1726:2025-12-24 22:20:28,607 INFO 已从交易历史恢复账户：现金52476.44，持仓标的6
+logs\daily.log:1784:2025-12-24 22:22:37,463 INFO [equity-breakdown] cash=52476.44 holdings=57578.72 missing_px=[]
+logs\daily.log:1794:2025-12-24 22:31:59,035 INFO 已从交易历史恢复账户：现金99795.48，持仓标的6
+logs\daily.log:1834:2025-12-24 22:32:12,572 INFO [equity-breakdown] cash=99795.48 holdings=57578.72 missing_px=[]
+logs\daily.log:1844:2025-12-25 20:38:12,463 INFO 已从交易历史恢复账户：现金52476.44，持仓标的6
+logs\daily.log:1898:2025-12-25 20:39:46,909 INFO [equity-breakdown] cash=52476.44 holdings=57809.19 missing_px=[]
+
+

@@ -1,0 +1,8 @@
+{
+  "decision": "buy",
+  "confidence": 0.85,
+  "reasoning": "MA50>MA200，显示上升趋势，ATR较低，市场波动小，可适当增加仓位。当前价格未突破近期高点，但仍在Donchian通道内，建议买入。",
+  "target_price": null,
+  "stop_loss": 7.038,
+  "take_profit": null
+}

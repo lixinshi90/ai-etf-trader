@@ -1,0 +1,8 @@
+{
+  "decision": "hold",
+  "confidence": 0.6,
+  "reasoning": "尽管当前处于上涨趋势，但最新价格低于20日均线且成交量显著萎缩，表明上涨动力可能减弱。同时，价格位置偏弱，短期内上涨或下跌的可能性均存在，因此建议持有。",
+  "target_price": null,
+  "stop_loss": null,
+  "take_profit": null
+}

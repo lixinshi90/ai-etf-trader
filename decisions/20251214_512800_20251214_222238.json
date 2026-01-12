@@ -1,0 +1,8 @@
+{
+  "decision": "sell",
+  "confidence": 0.65,
+  "reasoning": "尽管处于上涨趋势，但价格低于MA20且处于偏弱位置，未见明显突破信号，结合最近5日下跌趋势，考虑卖出以规避风险。",
+  "target_price": 0.81,
+  "stop_loss": 0.813,
+  "take_profit": 0.8
+}

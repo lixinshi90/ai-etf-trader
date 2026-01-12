@@ -1,0 +1,37 @@
+# --- Web Application Configuration ---
+flask:
+  host: "127.0.0.1"
+  port: 5001
+  debug: false
+
+# --- Re-simulation and Strategy Parameters ---
+strategy:
+  initial_capital: 100000.0
+  max_position_pct: 0.20  # Max 20% of current cash for a single buy
+  
+  # 动态仓位管理
+  enable_dynamic_position: true
+  base_position_pct: 0.15  # 基础仓位15%（降低风险敞口）
+  min_position_pct: 0.05   # 最小仓位5%
+  max_position_pct: 0.25   # 最大仓位25%（避免单一标的权重过高）
+  
+  # 风控体系
+  hard_stop_loss_pct: 0.08  # 8%浮亏立即清仓
+  quick_take_profit_trigger: 0.10  # 浮盈10%触发部分止盈
+  quick_take_profit_sell_ratio: 0.5  # 止盈时卖出50%仓位
+  enable_trailing_stop: true  # 启用跟踪止损
+  trailing_stop_pct: 0.05  # 回撤5%触发
+  trailing_step_pct: 0.01  # 价格每涨1%，止损线同步抬升
+  
+  # AI决策优化
+  daily_ai_calls_limit: 8  # 优先核心池标的
+  ai_confidence_threshold: 0.7  # 仅当AI置信度≥70%时参与合议
+
+# --- Transaction Cost Parameters ---
+costs:
+  buy_slippage: 0.001
+  buy_commission: 0.0005
+  sell_slippage: 0.001
+  sell_commission: 0.0005
+  sell_tax: 0.001
+

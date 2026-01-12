@@ -1,0 +1,8 @@
+{
+  "decision": "hold",
+  "confidence": 0.65,
+  "reasoning": "尽管价格高于MA20显示偏强，但整体趋势仍为下跌，且未出现明显突破信号，因此保持持有，等待更明确的市场指示。",
+  "target_price": null,
+  "stop_loss": null,
+  "take_profit": null
+}

@@ -1,0 +1,8 @@
+{
+  "decision": "buy",
+  "confidence": 0.85,
+  "reasoning": "MA50>MA200，显示上升趋势。当前价格4.7300高于MA20（4.7061），且ATR为0.0632，属于较低波动水平，建议动态仓位不超过25%。价格未突破20日高点，但考虑到ATR较低，仍建议买入。",
+  "target_price": null,
+  "stop_loss": 4.533,
+  "take_profit": null
+}

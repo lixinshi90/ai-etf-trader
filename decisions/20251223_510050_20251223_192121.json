@@ -1,0 +1,8 @@
+{
+  "decision": "buy",
+  "confidence": 0.85,
+  "reasoning": "MA50>MA200，表明上升趋势，当前价格3.0980高于MA50 3.0718，ATR为0.0334，波动较小，建议动态仓位买入。",
+  "target_price": null,
+  "stop_loss": 3.093,
+  "take_profit": 3.14
+}

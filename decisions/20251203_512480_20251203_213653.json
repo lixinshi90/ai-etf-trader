@@ -1,0 +1,8 @@
+{
+  "decision": "sell",
+  "confidence": 0.75,
+  "reasoning": "价格处于下跌趋势，且低于20日均线，显示近期弱势。成交量显著萎缩，表明买方力量不足，趋势可能继续。",
+  "target_price": 1.36,
+  "stop_loss": 1.4,
+  "take_profit": 1.32
+}

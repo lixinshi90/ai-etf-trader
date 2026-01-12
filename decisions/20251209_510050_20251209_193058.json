@@ -1,0 +1,8 @@
+{
+  "decision": "buy",
+  "confidence": 0.85,
+  "reasoning": "价格高于MA20且处于上涨趋势中，显示强势。虽未突破Donchian阻力位，但量能正常，有进一步上涨空间。",
+  "target_price": 3.25,
+  "stop_loss": 3.1,
+  "take_profit": 3.3
+}

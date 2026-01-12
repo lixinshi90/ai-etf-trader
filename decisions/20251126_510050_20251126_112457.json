@@ -1,0 +1,8 @@
+{
+  "decision": "hold",
+  "confidence": 0.6,
+  "reasoning": "虽然目前ETF处于上涨趋势，但最新价格低于20日均线且成交量显著萎缩，表明上涨动力不足。同时，价格接近60日均线，存在均值回归的可能，因此建议持有。",
+  "target_price": 3.2,
+  "stop_loss": 3.05,
+  "take_profit": 3.25
+}

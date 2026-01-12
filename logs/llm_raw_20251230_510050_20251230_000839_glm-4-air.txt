@@ -1,0 +1,1 @@
+{"decision":"buy","confidence":0.85,"reasoning":"MA50>MA200，显示上升趋势。当前价格未突破阻力位，但ATR较低，可考虑轻仓买入。","target_price":null,"stop_loss":3.0045,"take_profit":3.4188}

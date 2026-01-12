@@ -1,0 +1,8 @@
+{
+  "decision": "sell",
+  "confidence": 0.65,
+  "reasoning": "价格低于MA20且处于下跌趋势中，ATR显示波动性较小，短期内未见明显反转信号，适合逢高卖出。",
+  "target_price": 0.339,
+  "stop_loss": 0.347,
+  "take_profit": 0.333
+}

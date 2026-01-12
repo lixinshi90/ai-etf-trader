@@ -1,0 +1,8 @@
+{
+  "decision": "hold",
+  "confidence": 0.75,
+  "reasoning": "虽然当前ETF处于上涨趋势，价格高于20日均线，显示偏强，但最近5日涨跌幅和20日波动率均较小，表明市场较为平稳，没有明显的买入或卖出信号。因此，建议持有。",
+  "target_price": 3.2,
+  "stop_loss": 3.1,
+  "take_profit": 3.25
+}

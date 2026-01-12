@@ -1,0 +1,1722 @@
+2025-11-26 10:09:03,627 INFO AI ETF Trader 启动中...
+2025-11-26 10:09:03,631 INFO === 2025-11-26 10:09:03 每日任务开始 ===
+2025-11-26 10:09:04,109 INFO 已更新 510050 数据
+2025-11-26 10:09:04,638 INFO 已更新 159915 数据
+2025-11-26 10:09:05,250 INFO 已更新 510300 数据
+2025-11-26 10:09:49,085 INFO Retrying request to /chat/completions in 0.476374 seconds
+2025-11-26 10:52:08,987 INFO Retrying request to /chat/completions in 0.921863 seconds
+2025-11-26 10:54:36,458 INFO Retrying request to /chat/completions in 1.525208 seconds
+2025-11-26 10:57:01,780 INFO Retrying request to /chat/completions in 0.475345 seconds
+2025-11-26 10:57:44,343 INFO Retrying request to /chat/completions in 0.797014 seconds
+2025-11-26 10:58:27,221 INFO Retrying request to /chat/completions in 1.909426 seconds
+2025-11-26 11:00:03,305 INFO Retrying request to /chat/completions in 0.467147 seconds
+2025-11-26 11:00:45,959 INFO Retrying request to /chat/completions in 0.780657 seconds
+2025-11-26 11:04:23,651 INFO Retrying request to /chat/completions in 1.509976 seconds
+2025-11-26 11:05:06,290 INFO [daily_once] 启动一次性每日任务...
+2025-11-26 11:05:06,298 INFO === 2025-11-26 11:05:06 每日任务开始 ===
+2025-11-26 11:05:06,815 WARNING 更新 510050 失败：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-11-26 11:05:07,597 WARNING 更新 159915 失败：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-11-26 11:05:08,346 WARNING 更新 510300 失败：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-11-26 11:05:49,992 INFO Retrying request to /chat/completions in 0.474529 seconds
+2025-11-26 11:05:50,789 INFO Retrying request to /chat/completions in 0.433594 seconds
+2025-11-26 11:06:32,546 INFO Retrying request to /chat/completions in 0.945721 seconds
+2025-11-26 11:06:33,324 INFO Retrying request to /chat/completions in 0.989515 seconds
+2025-11-26 11:07:15,600 INFO Retrying request to /chat/completions in 1.810571 seconds
+2025-11-26 11:07:16,389 INFO Retrying request to /chat/completions in 1.918425 seconds
+2025-11-26 11:08:49,331 INFO Retrying request to /chat/completions in 0.439492 seconds
+2025-11-26 11:08:49,331 INFO Retrying request to /chat/completions in 0.424658 seconds
+2025-11-26 11:09:31,835 INFO Retrying request to /chat/completions in 0.942576 seconds
+2025-11-26 11:09:31,865 INFO Retrying request to /chat/completions in 0.925226 seconds
+2025-11-26 11:10:14,851 INFO Retrying request to /chat/completions in 1.778470 seconds
+2025-11-26 11:10:14,851 INFO Retrying request to /chat/completions in 1.647956 seconds
+2025-11-26 11:11:50,698 INFO Retrying request to /chat/completions in 0.415047 seconds
+2025-11-26 11:11:50,776 INFO Retrying request to /chat/completions in 0.409406 seconds
+2025-11-26 11:12:33,293 INFO Retrying request to /chat/completions in 0.785058 seconds
+2025-11-26 11:13:16,174 INFO Retrying request to /chat/completions in 1.595399 seconds
+2025-11-26 11:14:42,780 INFO Retrying request to /chat/completions in 0.470970 seconds
+2025-11-26 11:15:25,427 INFO Retrying request to /chat/completions in 0.879510 seconds
+2025-11-26 11:16:08,536 INFO Retrying request to /chat/completions in 1.840341 seconds
+2025-11-26 11:17:39,767 INFO Retrying request to /chat/completions in 0.417232 seconds
+2025-11-26 11:18:22,286 INFO Retrying request to /chat/completions in 0.793756 seconds
+2025-11-26 11:19:05,155 INFO Retrying request to /chat/completions in 1.683202 seconds
+2025-11-26 11:20:41,051 INFO Retrying request to /chat/completions in 0.381393 seconds
+2025-11-26 11:21:23,517 INFO Retrying request to /chat/completions in 0.944825 seconds
+2025-11-26 11:22:06,593 INFO Retrying request to /chat/completions in 1.529416 seconds
+2025-11-26 11:24:51,771 INFO [daily_once] 启动一次性每日任务...
+2025-11-26 11:24:51,780 INFO === 2025-11-26 11:24:51 每日任务开始 ===
+2025-11-26 11:24:52,675 WARNING 更新 510050 失败：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-11-26 11:24:53,164 WARNING 更新 159915 失败：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-11-26 11:24:53,973 WARNING 更新 510300 失败：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-11-26 11:24:57,840 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 11:24:57,861 INFO 510050 AI决策: hold (置信度: 0.6)
+2025-11-26 11:25:01,037 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 11:25:01,041 INFO 159915 AI决策: hold (置信度: 0.6)
+2025-11-26 11:25:06,479 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 11:25:06,483 INFO 510300 AI决策: hold (置信度: 0.6)
+2025-11-26 11:25:06,484 INFO 当前总资产: 100000.00 元
+2025-11-26 11:25:06,484 INFO === 每日任务结束 ===
+
+2025-11-26 11:25:06,484 INFO [daily_once] 完成并退出。
+2025-11-26 22:07:50,772 INFO AI ETF Trader 启动中...
+2025-11-26 22:07:50,782 INFO === 2025-11-26 22:07:50 每日任务开始 ===
+2025-11-26 22:07:51,154 WARNING 更新 510050 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-11-26 22:07:51,476 WARNING 更新 159915 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-11-26 22:07:52,294 WARNING 更新 510300 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-11-26 22:07:52,325 INFO 已达当日AI调用上限(3)，510050 使用默认持有策略
+2025-11-26 22:07:52,326 INFO 已达当日AI调用上限(3)，159915 使用默认持有策略
+2025-11-26 22:07:52,327 INFO 已达当日AI调用上限(3)，510300 使用默认持有策略
+2025-11-26 22:07:52,327 INFO 当前总资产: 100000.00 元
+2025-11-26 22:07:52,327 INFO === 每日任务结束 ===
+
+2025-11-26 22:07:52,327 INFO 已设置每日定时任务：17:00
+2025-11-27 18:21:04,649 INFO AI ETF Trader 启动中...
+2025-11-27 18:21:04,666 INFO === 2025-11-27 18:21:04 每日任务开始 ===
+2025-11-27 18:21:05,141 INFO 已更新 510050 数据
+2025-11-27 18:21:05,526 INFO 已更新 159915 数据
+2025-11-27 18:21:05,965 INFO 已更新 510300 数据
+2025-11-27 18:21:10,214 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 18:21:10,229 INFO 510050 AI决策: buy (置信度: 0.7)
+2025-11-27 18:21:14,011 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 18:21:14,013 INFO 159915 AI决策: hold (置信度: 0.6)
+2025-11-27 18:21:16,437 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-11-27 18:21:16,466 INFO 510300 AI决策: hold (置信度: 0.6)
+2025-11-27 18:21:16,467 INFO 当前总资产: 99988.10 元
+2025-11-27 18:21:16,468 INFO === 每日任务结束 ===
+
+2025-11-27 18:21:16,468 INFO 已设置每日定时任务：17:00
+2025-11-28 21:40:37,940 INFO AI ETF Trader 启动中...
+2025-11-28 21:40:37,947 INFO === 2025-11-28 21:40:37 每日任务开始 ===
+2025-11-28 21:40:38,703 INFO 已更新 510050 数据
+2025-11-28 21:40:39,321 INFO 已更新 159915 数据
+2025-11-28 21:40:39,847 INFO 已更新 510300 数据
+2025-11-28 21:40:42,816 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:40:42,825 INFO 510050 AI决策: buy (置信度: 0.7)
+2025-11-28 21:40:47,293 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:40:47,295 INFO 159915 AI决策: hold (置信度: 0.6)
+2025-11-28 21:40:50,395 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-11-28 21:40:50,397 INFO 510300 AI决策: hold (置信度: 0.6)
+2025-11-28 21:40:50,398 INFO 当前总资产: 99988.10 元
+2025-11-28 21:40:50,411 INFO === 每日任务结束 ===
+
+2025-11-28 21:40:50,411 INFO 已设置每日定时任务：17:00
+2025-11-28 23:01:26,505 INFO [daily_once] 启动一次性每日任务...
+2025-11-28 23:01:26,510 INFO === 2025-11-28 23:01:26 每日任务开始 ===
+2025-11-28 23:01:28,784 WARNING 更新 510050 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-11-28 23:01:29,205 WARNING 更新 159915 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-11-28 23:01:29,495 WARNING 更新 510300 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-11-28 23:01:29,552 INFO 已达当日AI调用上限(3)，510050 使用默认持有策略
+2025-11-28 23:01:29,554 INFO 已达当日AI调用上限(3)，159915 使用默认持有策略
+2025-11-28 23:01:29,601 INFO 已达当日AI调用上限(3)，510300 使用默认持有策略
+2025-11-28 23:01:29,601 INFO 当前总资产: 100000.00 元
+2025-11-28 23:01:29,607 INFO 已写入日终快照 2025-11-28: 99135.43
+2025-11-28 23:01:29,608 INFO === 每日任务结束 ===
+
+2025-11-28 23:01:29,608 INFO [daily_once] 完成并退出。
+2025-11-30 09:47:35,265 INFO [daily_once] 启动一次性每日任务...
+2025-11-30 09:47:35,275 INFO === 2025-11-30 09:47:35 每日任务开始 ===
+2025-11-30 09:47:35,598 INFO 已更新 510050 数据
+2025-11-30 09:47:35,886 INFO 已更新 159915 数据
+2025-11-30 09:47:36,223 INFO 已更新 510300 数据
+2025-11-30 09:47:40,146 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-11-30 09:47:40,190 INFO 510050 AI决策: buy (置信度: 0.7)
+2025-11-30 09:47:43,665 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-11-30 09:47:43,668 INFO 159915 AI决策: hold (置信度: 0.6)
+2025-11-30 09:47:46,519 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-11-30 09:47:46,548 INFO 510300 AI决策: hold (置信度: 0.6)
+2025-11-30 09:47:46,550 INFO 当前总资产: 100000.00 元
+2025-11-30 09:47:46,576 INFO 已写入日终快照 2025-11-30: 116990.16
+2025-11-30 09:47:46,609 INFO === 每日任务结束 ===
+
+2025-11-30 09:47:46,610 INFO [daily_once] 完成并退出。
+2025-12-01 20:20:02,385 INFO AI ETF Trader 启动中...
+2025-12-01 20:20:02,390 INFO === 2025-12-01 20:20:02 每日任务开始 ===
+2025-12-01 20:20:03,789 INFO 已更新 510050 数据
+2025-12-01 20:20:04,359 INFO 已更新 159915 数据
+2025-12-01 20:20:04,845 INFO 已更新 510300 数据
+2025-12-01 20:20:11,493 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-01 20:20:11,506 INFO 510050 AI决策: buy (置信度: 0.75)
+2025-12-01 20:20:15,619 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-01 20:20:15,622 INFO 159915 AI决策: hold (置信度: 0.7)
+2025-12-01 20:20:20,222 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-01 20:20:20,225 INFO 510300 AI决策: buy (置信度: 0.7)
+2025-12-01 20:20:20,226 INFO 当前总资产: 100000.00 元
+2025-12-01 20:20:20,231 INFO 已写入日终快照 2025-12-01: 99394.43
+2025-12-01 20:20:20,231 INFO === 每日任务结束 ===
+
+2025-12-01 20:20:20,232 INFO 已设置每日定时任务：17:00
+2025-12-02 19:07:37,591 INFO [daily_once] 启动一次性每日任务...
+2025-12-02 19:07:37,596 INFO === 2025-12-02 19:07:37 每日任务开始 ===
+2025-12-02 19:07:38,347 WARNING 更新 510050 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 19:07:39,004 WARNING 更新 510300 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 19:07:39,710 WARNING 更新 159915 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 19:07:40,166 WARNING 更新 159922 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 19:07:42,571 WARNING 更新 512100 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 19:07:42,826 WARNING 更新 512170 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 19:07:43,271 WARNING 更新 512480 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 19:07:43,703 WARNING 更新 512800 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 19:07:44,421 WARNING 更新 515000 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 19:07:44,830 WARNING 更新 515050 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 19:07:45,240 WARNING 更新 515110 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 19:07:45,705 WARNING 更新 516160 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 19:07:46,023 WARNING 更新 513100 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 19:07:46,327 WARNING 更新 513500 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 19:07:46,787 WARNING 更新 588000 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 19:07:52,673 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-02 19:07:52,696 INFO 510050 AI决策: buy (置信度: 0.75)
+2025-12-02 19:07:52,699 INFO 510050 动态仓位(波动率+置信度): 30.00%
+2025-12-02 19:07:55,921 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-02 19:07:55,928 INFO 510300 AI决策: buy (置信度: 0.7)
+2025-12-02 19:07:55,937 INFO 510300 动态仓位(波动率+置信度): 30.00%
+2025-12-02 19:08:00,408 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-02 19:08:00,438 INFO 159915 AI决策: hold (置信度: 0.7)
+2025-12-02 19:08:00,440 WARNING 159922 无足够数据，跳过AI决策
+2025-12-02 19:08:00,441 WARNING 512100 无足够数据，跳过AI决策
+2025-12-02 19:08:00,441 WARNING 512170 无足够数据，跳过AI决策
+2025-12-02 19:08:00,442 WARNING 512480 无足够数据，跳过AI决策
+2025-12-02 19:08:00,442 WARNING 512800 无足够数据，跳过AI决策
+2025-12-02 19:08:00,442 WARNING 515000 无足够数据，跳过AI决策
+2025-12-02 19:08:00,442 WARNING 515050 无足够数据，跳过AI决策
+2025-12-02 19:08:00,443 WARNING 515110 无足够数据，跳过AI决策
+2025-12-02 19:08:00,443 WARNING 516160 无足够数据，跳过AI决策
+2025-12-02 19:08:00,444 WARNING 513100 无足够数据，跳过AI决策
+2025-12-02 19:08:00,444 WARNING 513500 无足够数据，跳过AI决策
+2025-12-02 19:08:00,444 WARNING 588000 无足够数据，跳过AI决策
+2025-12-02 19:08:00,445 INFO 当前总资产: 99964.31 元
+2025-12-02 19:08:00,458 INFO 已写入日终快照 2025-12-02: 98778.42
+2025-12-02 19:08:00,482 INFO === 每日任务结束 ===
+
+2025-12-02 19:08:00,482 INFO [daily_once] 完成并退出。
+2025-12-02 20:36:34,599 INFO AI ETF Trader 启动中...
+2025-12-02 20:36:34,615 INFO === 2025-12-02 20:36:34 每日任务开始 ===
+2025-12-02 20:36:35,220 WARNING 更新 510050 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 20:36:35,820 WARNING 更新 510300 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 20:36:36,565 WARNING 更新 159915 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 20:36:37,124 WARNING 更新 159922 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 20:36:37,561 WARNING 更新 512100 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 20:36:38,082 WARNING 更新 512170 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 20:36:38,626 WARNING 更新 512480 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 20:36:39,307 WARNING 更新 512800 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 20:36:39,980 WARNING 更新 515000 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 20:36:40,644 WARNING 更新 515050 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 20:36:41,059 WARNING 更新 515110 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 20:36:41,391 WARNING 更新 516160 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 20:36:42,024 WARNING 更新 516010 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 20:36:42,345 WARNING 更新 513100 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 20:36:42,776 WARNING 更新 513500 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 20:36:43,324 WARNING 更新 588000 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 20:36:43,656 WARNING 更新 588080 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 20:36:44,088 WARNING 更新 512660 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-02 20:36:44,415 WARNING 更新 512690 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-03 21:36:22,678 INFO [daily_once] 启动一次性每日任务...
+2025-12-03 21:36:22,688 INFO === 2025-12-03 21:36:22 每日任务开始 ===
+2025-12-03 21:36:23,161 INFO 已更新 510050 数据
+2025-12-03 21:36:23,567 INFO 已更新 510300 数据
+2025-12-03 21:36:24,858 INFO 已更新 159915 数据
+2025-12-03 21:36:25,354 INFO 已更新 159922 数据
+2025-12-03 21:36:25,566 INFO 已更新 512100 数据
+2025-12-03 21:36:25,779 INFO 已更新 512170 数据
+2025-12-03 21:36:25,993 INFO 已更新 512480 数据
+2025-12-03 21:36:26,182 INFO 已更新 512800 数据
+2025-12-03 21:36:26,400 INFO 已更新 515000 数据
+2025-12-03 21:36:26,598 INFO 已更新 515050 数据
+2025-12-03 21:36:26,814 INFO 已更新 515110 数据
+2025-12-03 21:36:27,008 INFO 已更新 516160 数据
+2025-12-03 21:36:27,260 INFO 已更新 516010 数据
+2025-12-03 21:36:27,452 INFO 已更新 513100 数据
+2025-12-03 21:36:28,589 WARNING 更新 513500 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-03 21:36:28,743 WARNING 更新 588000 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-03 21:36:28,873 WARNING 更新 588080 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-03 21:36:29,029 WARNING 更新 512660 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-03 21:36:32,177 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-03 21:36:32,193 INFO 510050 AI决策: buy (置信度: 0.6)
+2025-12-03 21:36:32,195 INFO 510050 动态仓位(波动率+置信度): 25.00%
+2025-12-03 21:36:35,613 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-03 21:36:35,619 INFO 510300 AI决策: hold (置信度: 0.7)
+2025-12-03 21:36:39,191 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-03 21:36:39,201 INFO 159915 AI决策: sell (置信度: 0.75)
+2025-12-03 21:36:44,325 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-03 21:36:44,332 INFO 159922 AI决策: sell (置信度: 0.75)
+2025-12-03 21:36:46,957 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-03 21:36:46,967 INFO 512100 AI决策: sell (置信度: 0.75)
+2025-12-03 21:36:51,587 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-03 21:36:51,599 INFO 512170 AI决策: sell (置信度: 0.75)
+2025-12-03 21:36:53,964 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-03 21:36:53,968 INFO 512480 AI决策: sell (置信度: 0.75)
+2025-12-03 21:36:56,811 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-03 21:36:56,821 INFO 512800 AI决策: buy (置信度: 0.6)
+2025-12-03 21:36:56,823 INFO 512800 动态仓位(波动率+置信度): 25.00%
+2025-12-03 21:37:00,087 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-03 21:37:00,092 INFO 515000 AI决策: sell (置信度: 0.75)
+2025-12-03 21:37:02,751 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-03 21:37:02,755 INFO 515050 AI决策: sell (置信度: 0.75)
+2025-12-03 21:37:06,063 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-03 21:37:06,071 INFO 515110 AI决策: buy (置信度: 0.7)
+2025-12-03 21:37:06,073 INFO 515110 动态仓位(波动率+置信度): 25.00%
+2025-12-03 21:37:09,405 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-03 21:37:09,410 INFO 516160 AI决策: buy (置信度: 0.6)
+2025-12-03 21:37:09,413 INFO 516160 动态仓位(波动率+置信度): 10.69%
+2025-12-03 21:37:13,910 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-03 21:37:13,913 INFO 516010 AI决策: sell (置信度: 0.75)
+2025-12-03 21:37:20,157 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-03 21:37:20,167 INFO 513100 AI决策: buy (置信度: 0.8)
+2025-12-03 21:37:20,169 INFO 513100 动态仓位(波动率+置信度): 14.98%
+2025-12-03 21:37:20,175 WARNING 513500 无足够数据，跳过AI决策
+2025-12-03 21:37:20,175 WARNING 588000 无足够数据，跳过AI决策
+2025-12-03 21:37:20,176 WARNING 588080 无足够数据，跳过AI决策
+2025-12-03 21:37:20,176 WARNING 512660 无足够数据，跳过AI决策
+2025-12-03 21:37:20,176 INFO 当前总资产: 99952.44 元
+2025-12-03 21:37:20,181 INFO 已写入日终快照 2025-12-03: 98296.48
+2025-12-03 21:37:20,194 INFO === 每日任务结束 ===
+
+2025-12-03 21:37:20,194 INFO [daily_once] 完成并退出。
+2025-12-05 15:57:00,862 INFO [daily_once] 启动一次性每日任务...
+2025-12-05 15:57:00,867 INFO === 2025-12-05 15:57:00 每日任务开始 ===
+2025-12-05 15:57:01,216 INFO 已更新 510050 数据
+2025-12-05 15:57:01,687 INFO 已更新 510300 数据
+2025-12-05 15:57:02,053 INFO 已更新 159915 数据
+2025-12-05 15:57:02,317 INFO 已更新 159922 数据
+2025-12-05 15:57:02,544 INFO 已更新 512100 数据
+2025-12-05 15:57:02,865 INFO 已更新 512170 数据
+2025-12-05 15:57:03,120 INFO 已更新 512480 数据
+2025-12-05 15:57:03,334 INFO 已更新 512800 数据
+2025-12-05 15:57:03,586 INFO 已更新 515000 数据
+2025-12-05 15:57:03,785 INFO 已更新 515050 数据
+2025-12-05 15:57:04,028 INFO 已更新 515110 数据
+2025-12-05 15:57:04,206 INFO 已更新 516160 数据
+2025-12-05 15:57:04,452 INFO 已更新 516010 数据
+2025-12-05 15:57:04,765 INFO 已更新 513100 数据
+2025-12-05 15:57:05,056 INFO 已更新 513500 数据
+2025-12-05 15:57:05,465 INFO 已更新 588000 数据
+2025-12-05 15:57:05,694 INFO 已更新 588080 数据
+2025-12-05 15:57:05,996 INFO 已更新 512660 数据
+2025-12-05 15:57:09,910 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 15:57:09,929 INFO 510050 AI决策: hold (置信度: 0.75)
+2025-12-05 15:57:12,482 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 15:57:12,482 INFO 510300 AI决策: sell (置信度: 0.75)
+2025-12-05 15:57:15,791 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 15:57:15,801 INFO 159915 AI决策: sell (置信度: 0.75)
+2025-12-05 15:57:19,404 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 15:57:19,417 INFO 159922 AI决策: sell (置信度: 0.75)
+2025-12-05 15:57:22,371 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 15:57:22,386 INFO 512100 AI决策: sell (置信度: 0.75)
+2025-12-05 15:57:24,962 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 15:57:24,969 INFO 512170 AI决策: sell (置信度: 0.8)
+2025-12-05 15:57:28,332 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 15:57:28,338 INFO 512480 AI决策: sell (置信度: 0.75)
+2025-12-05 15:57:31,320 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 15:57:31,348 INFO 512800 AI决策: buy (置信度: 0.7)
+2025-12-05 15:57:31,350 INFO 512800 动态仓位(波动率+置信度): 25.00%
+2025-12-05 15:57:34,585 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 15:57:34,589 INFO 515000 AI决策: sell (置信度: 0.75)
+2025-12-05 15:57:37,863 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 15:57:37,871 INFO 515050 AI决策: sell (置信度: 0.75)
+2025-12-05 15:57:40,742 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 15:57:40,773 INFO 515110 AI决策: buy (置信度: 0.8)
+2025-12-05 15:57:40,778 INFO 515110 动态仓位(波动率+置信度): 25.00%
+2025-12-05 15:57:43,922 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 15:57:43,926 INFO 516160 AI决策: buy (置信度: 0.6)
+2025-12-05 15:57:43,928 INFO 516160 动态仓位(波动率+置信度): 11.10%
+2025-12-05 15:57:46,651 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 15:57:46,680 INFO 516010 AI决策: sell (置信度: 0.75)
+2025-12-05 15:57:49,202 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 15:57:49,202 INFO 513100 AI决策: buy (置信度: 0.8)
+2025-12-05 15:57:49,202 INFO 513100 动态仓位(波动率+置信度): 15.65%
+2025-12-05 15:57:52,150 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 15:57:52,157 INFO 513500 AI决策: buy (置信度: 0.8)
+2025-12-05 15:57:52,161 INFO 513500 动态仓位(波动率+置信度): 19.95%
+2025-12-05 15:57:55,220 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 15:57:55,226 INFO 588000 AI决策: sell (置信度: 0.75)
+2025-12-05 15:57:58,666 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 15:57:58,694 INFO 588080 AI决策: sell (置信度: 0.8)
+2025-12-05 15:58:01,070 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-05 15:58:01,076 INFO 512660 AI决策: sell (置信度: 0.75)
+2025-12-05 15:58:01,077 INFO 当前总资产: 99953.65 元
+2025-12-05 15:58:01,101 INFO === 每日任务结束 ===
+
+2025-12-05 15:58:01,101 INFO [daily_once] 完成并退出。
+2025-12-05 18:31:32,887 INFO [daily_once] 启动一次性每日任务...
+2025-12-05 18:31:32,887 INFO === 2025-12-05 18:31:32 每日任务开始 ===
+2025-12-05 18:31:33,655 INFO 已更新 510050 数据
+2025-12-05 18:31:34,436 INFO 已更新 510300 数据
+2025-12-05 18:31:34,903 INFO 已更新 159915 数据
+2025-12-05 18:31:35,277 INFO 已更新 159922 数据
+2025-12-05 18:31:35,587 INFO 已更新 512100 数据
+2025-12-05 18:31:36,197 INFO 已更新 512170 数据
+2025-12-05 18:31:36,380 INFO 已更新 512480 数据
+2025-12-05 18:31:36,927 INFO 已更新 512800 数据
+2025-12-05 18:31:38,117 INFO 已更新 515000 数据
+2025-12-05 18:31:39,504 WARNING 更新 515050 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-05 18:31:39,877 WARNING 更新 515110 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-05 18:31:39,987 WARNING 更新 516160 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-05 18:31:40,106 WARNING 更新 516010 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-05 18:31:40,385 WARNING 更新 513100 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-05 18:31:40,552 WARNING 更新 513500 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-05 18:31:40,897 WARNING 更新 588000 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-05 18:31:42,014 WARNING 更新 588080 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-05 18:31:42,127 WARNING 更新 512660 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-05 18:31:42,203 INFO 510050 AI决策: hold (置信度: 0.75)
+2025-12-05 18:31:42,206 INFO 510300 AI决策: sell (置信度: 0.75)
+2025-12-05 18:31:42,206 INFO 159915 AI决策: sell (置信度: 0.75)
+2025-12-05 18:31:42,216 INFO 159922 AI决策: sell (置信度: 0.75)
+2025-12-05 18:31:42,218 INFO 512100 AI决策: sell (置信度: 0.75)
+2025-12-05 18:31:42,226 INFO 512170 AI决策: sell (置信度: 0.8)
+2025-12-05 18:31:42,227 INFO 512480 AI决策: sell (置信度: 0.75)
+2025-12-05 18:31:42,227 INFO 512800 AI决策: buy (置信度: 0.7)
+2025-12-05 18:31:42,227 INFO 512800 冷静期未过(1天)，跳过买入
+2025-12-05 18:31:42,239 INFO 515000 AI决策: sell (置信度: 0.75)
+2025-12-05 18:31:42,256 INFO 515050 AI决策: sell (置信度: 0.75)
+2025-12-05 18:31:42,257 INFO 515110 AI决策: buy (置信度: 0.8)
+2025-12-05 18:31:42,257 INFO 515110 冷静期未过(1天)，跳过买入
+2025-12-05 18:31:42,257 INFO 516160 AI决策: buy (置信度: 0.6)
+2025-12-05 18:31:42,265 INFO 516160 冷静期未过(1天)，跳过买入
+2025-12-05 18:31:42,269 INFO 516010 AI决策: sell (置信度: 0.75)
+2025-12-05 18:31:42,269 INFO 513100 AI决策: buy (置信度: 0.8)
+2025-12-05 18:31:42,269 INFO 513100 冷静期未过(1天)，跳过买入
+2025-12-05 18:31:42,277 INFO 513500 AI决策: buy (置信度: 0.8)
+2025-12-05 18:31:42,277 INFO 513500 冷静期未过(1天)，跳过买入
+2025-12-05 18:31:42,277 INFO 588000 AI决策: sell (置信度: 0.75)
+2025-12-05 18:31:42,286 INFO 588080 AI决策: sell (置信度: 0.8)
+2025-12-05 18:31:42,286 INFO 512660 AI决策: sell (置信度: 0.75)
+2025-12-05 18:31:42,286 INFO 当前总资产: 100000.00 元
+2025-12-05 18:31:42,296 INFO 已写入日终快照 2025-12-05: 99118.55
+2025-12-05 18:31:42,296 INFO === 每日任务结束 ===
+
+2025-12-05 18:31:42,296 INFO [daily_once] 完成并退出。
+2025-12-06 20:08:39,341 INFO [daily_once] 启动一次性每日任务...
+2025-12-06 20:08:41,175 INFO === 2025-12-06 20:08:41 每日任务开始 ===
+2025-12-06 20:08:41,228 INFO 已从交易历史恢复账户：现金33743.74，持仓标的7
+2025-12-06 20:08:42,673 INFO 已更新 510050 数据
+2025-12-06 20:08:42,909 INFO 已更新 510300 数据
+2025-12-06 20:08:43,553 INFO 已更新 159915 数据
+2025-12-06 20:08:43,892 INFO 已更新 159922 数据
+2025-12-06 20:08:44,598 INFO 已更新 512100 数据
+2025-12-06 20:08:45,356 INFO 已更新 512170 数据
+2025-12-06 20:08:45,618 WARNING 更新 512480 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-06 20:08:47,168 WARNING 更新 512800 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-06 20:08:48,028 WARNING 更新 515000 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-06 20:08:48,647 WARNING 更新 515050 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-06 20:08:49,160 WARNING 更新 515110 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-06 20:08:49,459 WARNING 更新 516160 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-06 20:08:49,668 WARNING 更新 516010 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-06 20:08:49,889 WARNING 更新 513100 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-06 20:08:50,400 WARNING 更新 513500 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-06 20:08:50,858 WARNING 更新 588000 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-06 20:08:52,072 WARNING 更新 588080 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-06 20:08:52,187 WARNING 更新 512660 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-06 20:08:56,247 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-06 20:08:56,258 INFO 510050 AI决策: hold (置信度: 0.7)
+2025-12-06 20:08:59,533 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-06 20:08:59,564 INFO 510300 AI决策: sell (置信度: 0.75)
+2025-12-07 16:54:06,258 INFO [daily_once] 启动一次性每日任务...
+2025-12-07 16:54:06,267 INFO === 2025-12-07 16:54:06 每日任务开始 ===
+2025-12-07 16:54:06,321 INFO 已从交易历史恢复账户：现金54769.58，持仓标的6
+2025-12-07 16:54:06,645 WARNING 更新 510050 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-07 16:54:06,851 WARNING 更新 510300 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-07 16:54:07,168 WARNING 更新 159915 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-07 16:54:07,479 WARNING 更新 159922 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-07 16:54:07,736 WARNING 更新 512100 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-07 16:54:08,078 WARNING 更新 512170 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-07 16:54:08,301 WARNING 更新 512480 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-07 16:54:08,695 WARNING 更新 512800 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-07 16:54:09,003 WARNING 更新 515000 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-07 16:54:09,278 WARNING 更新 515050 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-07 16:54:09,573 WARNING 更新 515110 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-07 16:54:09,896 WARNING 更新 516160 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-07 16:54:10,298 WARNING 更新 516010 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-07 16:54:10,643 WARNING 更新 513100 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-07 16:54:10,913 WARNING 更新 513500 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-07 16:54:11,316 WARNING 更新 588000 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-07 16:54:11,664 WARNING 更新 588080 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-07 16:54:11,972 WARNING 更新 512660 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-07 16:54:17,421 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 16:54:17,434 INFO 510050 AI决策: hold (置信度: 0.7)
+2025-12-07 16:54:20,061 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 16:54:20,094 INFO 510300 AI决策: sell (置信度: 0.8)
+2025-12-07 16:54:24,059 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 16:54:24,088 INFO 159915 AI决策: sell (置信度: 0.75)
+2025-12-07 16:54:27,950 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 16:54:27,954 INFO 159922 AI决策: sell (置信度: 0.75)
+2025-12-07 16:54:31,020 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 16:54:31,025 INFO 512100 AI决策: sell (置信度: 0.75)
+2025-12-07 16:54:33,559 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 16:54:33,597 INFO 512170 AI决策: sell (置信度: 0.8)
+2025-12-07 16:54:36,342 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 16:54:36,365 INFO 512480 AI决策: sell (置信度: 0.75)
+2025-12-07 16:54:39,027 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 16:54:39,057 INFO 512800 AI决策: buy (置信度: 0.7)
+2025-12-07 16:54:39,063 INFO 512800 动态仓位(波动率+置信度): 25.00%
+2025-12-07 16:54:42,692 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 16:54:42,702 INFO 515000 AI决策: sell (置信度: 0.75)
+2025-12-07 16:54:46,071 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 16:54:46,076 INFO 515050 AI决策: sell (置信度: 0.75)
+2025-12-07 16:54:48,540 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 16:54:48,549 INFO 515110 AI决策: buy (置信度: 0.75)
+2025-12-07 16:54:48,557 INFO 515110 动态仓位(波动率+置信度): 25.00%
+2025-12-07 16:54:51,398 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 16:54:51,428 INFO 516160 AI决策: buy (置信度: 0.6)
+2025-12-07 16:54:51,432 INFO 516160 动态仓位(波动率+置信度): 11.10%
+2025-12-07 16:54:54,777 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 16:54:54,786 INFO 516010 AI决策: sell (置信度: 0.75)
+2025-12-07 16:55:00,000 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 16:55:00,034 INFO 513100 AI决策: buy (置信度: 0.8)
+2025-12-07 16:55:00,040 INFO 513100 动态仓位(波动率+置信度): 15.65%
+2025-12-07 16:55:05,224 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 16:55:05,266 INFO 513500 AI决策: buy (置信度: 0.8)
+2025-12-07 16:55:05,271 INFO 513500 动态仓位(波动率+置信度): 19.95%
+2025-12-07 16:55:07,847 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 16:55:07,885 INFO 588000 AI决策: sell (置信度: 0.75)
+2025-12-07 16:55:10,889 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 16:55:10,893 INFO 588080 AI决策: sell (置信度: 0.75)
+2025-12-07 16:55:13,374 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-07 16:55:13,400 INFO 512660 AI决策: sell (置信度: 0.75)
+2025-12-07 16:55:13,404 INFO 当前总资产: 253676.98 元
+2025-12-07 16:55:13,419 INFO 已写入日终快照 2025-12-07: 253676.98
+2025-12-07 16:55:13,454 INFO === 每日任务结束 ===
+
+2025-12-07 16:55:13,455 INFO [daily_once] 完成并退出。
+2025-12-08 19:53:10,442 INFO [daily_once] 启动一次性每日任务...
+2025-12-08 19:53:10,450 INFO === 2025-12-08 19:53:10 每日任务开始 ===
+2025-12-08 19:53:10,505 INFO 已从交易历史恢复账户：现金54769.58，持仓标的6
+2025-12-08 19:53:11,039 INFO 已更新 510050 数据
+2025-12-08 19:53:11,382 INFO 已更新 510300 数据
+2025-12-08 19:53:12,101 INFO 已更新 159915 数据
+2025-12-08 19:53:12,362 INFO 已更新 159922 数据
+2025-12-08 19:53:12,682 INFO 已更新 512100 数据
+2025-12-08 19:53:12,931 INFO 已更新 512170 数据
+2025-12-08 19:53:13,739 INFO 已更新 512480 数据
+2025-12-08 19:53:14,230 WARNING 更新 512800 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 19:53:14,784 WARNING 更新 515000 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 19:53:15,070 WARNING 更新 515050 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 19:53:15,581 WARNING 更新 515110 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 19:53:15,834 WARNING 更新 516160 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 19:53:16,302 WARNING 更新 516010 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 19:53:16,757 WARNING 更新 513100 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 19:53:17,327 WARNING 更新 513500 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 19:53:18,565 WARNING 更新 588000 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 19:53:19,216 WARNING 更新 588080 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 19:53:19,423 WARNING 更新 512660 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 19:53:22,853 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 19:53:22,864 INFO 510050 AI决策: buy (置信度: 0.85)
+2025-12-08 19:53:22,866 INFO 510050 动态仓位(波动率+置信度): 25.00%
+2025-12-08 19:53:25,426 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 19:53:25,430 INFO 510300 AI决策: buy (置信度: 0.65)
+2025-12-08 19:53:25,431 INFO 510300 动态仓位(波动率+置信度): 25.00%
+2025-12-08 19:53:29,722 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 19:53:29,736 INFO 159915 AI决策: sell (置信度: 0.65)
+2025-12-08 19:53:32,537 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 19:53:32,540 INFO 159922 AI决策: sell (置信度: 0.65)
+2025-12-08 19:53:35,327 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 19:53:35,331 INFO 512100 AI决策: sell (置信度: 0.65)
+2025-12-08 19:53:38,112 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 19:53:38,115 INFO 512170 AI决策: sell (置信度: 0.65)
+2025-12-08 19:53:41,221 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 19:53:49,424 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 19:53:49,427 INFO 512480 AI决策: buy (置信度: 0.65)
+2025-12-08 19:53:49,428 INFO 512480 动态仓位(波动率+置信度): 13.98%
+2025-12-08 19:53:52,253 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 19:53:52,256 INFO 512800 AI决策: hold (置信度: 0.65)
+2025-12-08 19:53:54,395 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 19:53:54,401 INFO 515000 AI决策: sell (置信度: 0.65)
+2025-12-08 19:53:56,814 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 19:53:56,816 INFO 515050 AI决策: sell (置信度: 0.65)
+2025-12-08 19:53:59,709 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 19:53:59,712 INFO 515110 AI决策: buy (置信度: 0.85)
+2025-12-08 19:53:59,715 INFO 515110 动态仓位(波动率+置信度): 25.00%
+2025-12-08 19:54:02,844 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 19:54:02,846 INFO 516160 AI决策: sell (置信度: 0.65)
+2025-12-08 20:00:16,310 INFO [daily_once] 启动一次性每日任务...
+2025-12-08 20:00:16,322 INFO === 2025-12-08 20:00:16 每日任务开始 ===
+2025-12-08 20:00:16,327 INFO 已从交易历史恢复账户：现金46110.51，持仓标的7
+2025-12-08 20:00:16,654 WARNING 更新 510050 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 20:00:16,902 WARNING 更新 510300 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 20:00:17,194 WARNING 更新 159915 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 20:00:17,733 WARNING 更新 159922 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 20:00:18,268 WARNING 更新 512100 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 20:00:18,522 WARNING 更新 512170 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 20:00:18,763 WARNING 更新 512480 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 20:00:18,974 WARNING 更新 512800 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 20:00:19,176 WARNING 更新 515000 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 20:00:19,393 WARNING 更新 515050 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 20:00:20,139 WARNING 更新 515110 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 20:00:20,435 WARNING 更新 516160 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 20:00:20,672 WARNING 更新 516010 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 20:00:20,885 WARNING 更新 513100 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 20:00:21,132 WARNING 更新 513500 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 20:00:21,350 WARNING 更新 588000 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 20:00:21,638 WARNING 更新 588080 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 20:00:21,906 WARNING 更新 512660 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-08 20:00:22,073 INFO 510050 AI决策: buy (置信度: 0.85)
+2025-12-08 20:00:22,075 INFO 510050 动态仓位(波动率+置信度): 25.00%
+2025-12-08 20:00:22,089 INFO 510300 AI决策: buy (置信度: 0.65)
+2025-12-08 20:00:22,089 INFO 510300 冷静期未过(1天)，跳过买入
+2025-12-08 20:00:22,109 INFO 159915 AI决策: sell (置信度: 0.65)
+2025-12-08 20:00:22,128 INFO 159922 AI决策: sell (置信度: 0.65)
+2025-12-08 20:00:22,140 INFO 512100 AI决策: sell (置信度: 0.65)
+2025-12-08 20:00:22,154 INFO 512170 AI决策: sell (置信度: 0.65)
+2025-12-08 20:00:22,168 INFO 512480 AI决策: buy (置信度: 0.65)
+2025-12-08 20:00:22,169 INFO 512480 冷静期未过(1天)，跳过买入
+2025-12-08 20:00:22,184 INFO 512800 AI决策: hold (置信度: 0.65)
+2025-12-08 20:00:22,200 INFO 515000 AI决策: sell (置信度: 0.65)
+2025-12-08 20:00:22,215 INFO 515050 AI决策: sell (置信度: 0.65)
+2025-12-08 20:00:22,230 INFO 515110 AI决策: buy (置信度: 0.85)
+2025-12-08 20:00:22,233 INFO 515110 动态仓位(波动率+置信度): 25.00%
+2025-12-08 20:00:22,248 INFO 516160 AI决策: sell (置信度: 0.65)
+2025-12-08 20:00:26,457 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 20:00:26,483 INFO 516010 AI决策: sell (置信度: 0.65)
+2025-12-08 20:00:29,573 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 20:00:29,580 INFO 513100 AI决策: buy (置信度: 0.85)
+2025-12-08 20:00:29,584 INFO 513100 动态仓位(波动率+置信度): 16.09%
+2025-12-08 20:00:32,252 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 20:00:32,277 INFO 513500 AI决策: buy (置信度: 0.85)
+2025-12-08 20:00:32,279 INFO 513500 动态仓位(波动率+置信度): 20.50%
+2025-12-08 20:00:34,777 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 20:00:34,783 INFO 588000 AI决策: sell (置信度: 0.65)
+2025-12-08 20:00:38,205 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 20:00:38,213 INFO 588080 AI决策: sell (置信度: 0.65)
+2025-12-08 20:00:42,117 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 20:00:42,121 INFO 512660 AI决策: buy (置信度: 0.75)
+2025-12-08 20:00:42,123 INFO 512660 动态仓位(波动率+置信度): 17.90%
+2025-12-08 20:00:42,155 INFO 当前总资产: 254297.41 元
+2025-12-08 20:00:42,167 INFO 已写入日终快照 2025-12-08: 99411.59
+2025-12-08 20:00:42,172 INFO === 每日任务结束 ===
+
+2025-12-08 20:00:42,173 INFO [daily_once] 完成并退出。
+2025-12-09 19:30:48,510 INFO [daily_once] 启动一次性每日任务...
+2025-12-09 19:30:48,523 INFO === 2025-12-09 19:30:48 每日任务开始 ===
+2025-12-09 19:30:48,536 INFO 已从交易历史恢复账户：现金37852.04，持仓标的8
+2025-12-09 19:30:48,942 INFO 已更新 510050 数据
+2025-12-09 19:30:49,408 INFO 已更新 510300 数据
+2025-12-09 19:30:49,845 INFO 已更新 159915 数据
+2025-12-09 19:30:50,243 INFO 已更新 159922 数据
+2025-12-09 19:30:50,644 INFO 已更新 512100 数据
+2025-12-09 19:30:50,999 INFO 已更新 512170 数据
+2025-12-09 19:30:51,297 INFO 已更新 512480 数据
+2025-12-09 19:30:51,702 INFO 已更新 512800 数据
+2025-12-09 19:30:52,098 INFO 已更新 515000 数据
+2025-12-09 19:30:52,422 INFO 已更新 515050 数据
+2025-12-09 19:30:52,768 INFO 已更新 515110 数据
+2025-12-09 19:30:53,250 INFO 已更新 516160 数据
+2025-12-09 19:30:53,663 INFO 已更新 516010 数据
+2025-12-09 19:30:53,961 WARNING 更新 513100 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-09 19:30:54,186 WARNING 更新 513500 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-09 19:30:54,387 WARNING 更新 588000 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-09 19:30:54,671 WARNING 更新 588080 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-09 19:30:54,907 WARNING 更新 512660 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-09 19:30:58,289 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-09 19:30:58,307 INFO 510050 AI决策: buy (置信度: 0.85)
+2025-12-09 19:31:00,730 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-09 19:31:00,734 INFO 510300 AI决策: hold (置信度: 0.65)
+2025-12-09 19:31:03,547 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-09 19:31:03,550 INFO 159915 AI决策: sell (置信度: 0.65)
+2025-12-09 19:31:06,428 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-09 19:31:06,431 INFO 159922 AI决策: hold (置信度: 0.65)
+2025-12-09 19:31:09,928 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-09 19:31:09,936 INFO 512100 AI决策: hold (置信度: 0.65)
+2025-12-09 19:31:13,045 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-09 19:31:13,051 INFO 512170 AI决策: sell (置信度: 0.65)
+2025-12-09 19:31:15,677 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-09 19:32:24,054 INFO 512480 AI决策: sell (置信度: 0.65)
+2025-12-09 19:32:26,543 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-09 19:32:26,553 INFO 512800 AI决策: hold (置信度: 0.65)
+2025-12-09 19:32:30,024 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-09 19:32:30,029 INFO 515000 AI决策: sell (置信度: 0.65)
+2025-12-09 19:32:33,391 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-09 19:32:33,392 INFO 515050 AI决策: buy (置信度: 0.85)
+2025-12-09 19:32:36,621 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-09 19:32:36,635 INFO 515110 AI决策: hold (置信度: 0.65)
+2025-12-09 19:32:39,680 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-09 19:32:39,687 INFO 516160 AI决策: hold (置信度: 0.65)
+2025-12-09 19:32:43,471 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-09 19:32:43,476 INFO 516010 AI决策: sell (置信度: 0.65)
+2025-12-09 19:32:49,105 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-09 19:32:49,110 INFO 513100 AI决策: buy (置信度: 0.85)
+2025-12-09 19:32:51,697 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-09 19:32:51,700 INFO 513500 AI决策: buy (置信度: 0.85)
+2025-12-09 19:32:54,153 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-09 19:32:54,159 INFO 588000 AI决策: sell (置信度: 0.65)
+2025-12-09 19:32:56,844 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-09 19:32:56,846 INFO 588080 AI决策: sell (置信度: 0.65)
+2025-12-09 19:32:59,677 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-09 19:32:59,679 INFO 512660 AI决策: buy (置信度: 0.65)
+2025-12-09 19:32:59,680 INFO 当前总资产: 252900.93 元
+2025-12-09 19:32:59,687 INFO 已写入日终快照 2025-12-09: 97746.13
+2025-12-09 19:32:59,687 INFO === 每日任务结束 ===
+
+2025-12-09 19:32:59,687 INFO [daily_once] qlib_adapter 导出原始CSV...
+2025-12-09 19:33:00,380 INFO [daily_once] qlib_run 计算因子...
+2025-12-09 19:33:00,577 INFO [daily_once] 完成并退出。
+2025-12-12 00:20:53,254 INFO [daily_once] 启动一次性每日任务...
+2025-12-12 00:22:10,095 INFO [daily_once] 启动一次性每日任务...
+2025-12-12 00:23:11,438 INFO [daily_once] 启动一次性每日任务...
+2025-12-12 00:23:23,820 INFO [daily_once] 启动一次性每日任务...
+2025-12-12 00:24:44,184 INFO [daily_once] 启动一次性每日任务...
+2025-12-12 00:24:44,190 INFO === 2025-12-12 00:24:44 每日任务开始 ===
+2025-12-12 00:24:44,563 WARNING 更新 159915 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 00:24:44,850 WARNING 更新 159922 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 00:24:45,178 WARNING 更新 510050 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 00:24:45,582 WARNING 更新 510300 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 00:24:45,992 WARNING 更新 512100 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 00:24:46,359 WARNING 更新 512170 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 00:24:46,573 WARNING 更新 512480 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 00:24:46,859 WARNING 更新 512660 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 00:24:47,040 WARNING 更新 512800 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 00:24:47,220 WARNING 更新 513100 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 00:24:47,439 WARNING 更新 513500 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 00:24:47,651 WARNING 更新 515000 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 00:24:47,841 WARNING 更新 515050 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 00:24:48,053 WARNING 更新 515110 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 00:24:48,251 WARNING 更新 516010 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 00:24:48,413 WARNING 更新 516160 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 00:24:48,635 WARNING 更新 588000 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 00:24:48,829 WARNING 更新 588080 失败，将使用缓存数据：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 00:24:48,917 INFO --- 开始处理核心池 (18个) ---
+2025-12-12 00:24:48,918 INFO --- 开始执行所有决策 ---
+2025-12-12 00:24:48,923 INFO === 每日任务结束 ===
+
+2025-12-12 00:24:48,924 INFO [daily_once] qlib_adapter 导出原始CSV...
+2025-12-12 00:24:49,668 INFO [daily_once] qlib_run 计算因子...
+2025-12-12 00:24:49,842 INFO [daily_once] 完成并退出。
+2025-12-12 10:53:31,558 INFO [backfill-task] 为日期 2025-12-11 启动一次性任务...
+2025-12-12 10:53:31,558 INFO 开始过滤标的池... 最小成交额: 2000万, 最短上市: 6月
+2025-12-12 10:53:41,785 WARNING 过滤 510300 时出错: '基金代码'，默认保留。
+2025-12-12 10:53:41,787 WARNING 过滤 510050 时出错: '基金代码'，默认保留。
+2025-12-12 10:53:41,922 WARNING 过滤 159915 时出错: '基金代码'，默认保留。
+2025-12-12 10:53:41,924 WARNING 过滤 588000 时出错: '基金代码'，默认保留。
+2025-12-12 10:53:41,925 INFO 标的池过滤完成，剩余 4/4 个标的: 510300,510050,159915,588000
+2025-12-12 10:53:41,925 INFO 开始过滤标的池... 最小成交额: 2000万, 最短上市: 6月
+2025-12-12 10:53:53,319 WARNING 过滤 512480 时出错: '基金代码'，默认保留。
+2025-12-12 10:53:53,319 WARNING 过滤 516160 时出错: '基金代码'，默认保留。
+2025-12-12 10:53:53,319 WARNING 过滤 513100 时出错: '基金代码'，默认保留。
+2025-12-12 10:53:53,319 WARNING 过滤 159790 时出错: '基金代码'，默认保留。
+2025-12-12 10:53:53,319 INFO 标的池过滤完成，剩余 4/4 个标的: 512480,516160,513100,159790
+2025-12-12 10:53:53,555 WARNING 更新 159790 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:53:53,692 WARNING 更新 159915 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:53:53,858 WARNING 更新 510050 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:53:54,166 WARNING 更新 510300 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:53:54,474 WARNING 更新 512480 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:53:54,626 WARNING 更新 513100 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:53:54,801 WARNING 更新 516160 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:53:55,051 WARNING 更新 588000 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:53:55,092 INFO === 2025-12-12 10:53:55 每日任务开始 ===
+2025-12-12 10:53:55,291 WARNING 更新 159790 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:53:55,445 WARNING 更新 159915 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:53:55,618 WARNING 更新 510050 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:53:55,773 WARNING 更新 510300 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:53:55,914 WARNING 更新 512480 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:53:56,085 WARNING 更新 513100 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:53:56,375 WARNING 更新 516160 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:53:56,626 WARNING 更新 588000 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:53:56,816 INFO --- 开始处理核心池 (4个) ---
+2025-12-12 10:54:10,166 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 10:54:13,724 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 10:54:17,820 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 10:54:20,688 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 10:54:20,719 INFO --- 核心池无买入信号，开始处理观察池 (4个) ---
+2025-12-12 10:54:24,420 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 10:54:26,750 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 10:54:31,746 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 10:54:31,753 WARNING 159790 无足够数据，跳过决策
+2025-12-12 10:54:31,758 INFO --- 开始执行所有决策 ---
+2025-12-12 10:54:31,772 INFO === 每日任务结束 ===
+
+2025-12-12 10:54:31,772 INFO [backfill-task] 2025-12-11 任务完成。
+2025-12-12 10:57:42,991 INFO [backfill-task] 为日期 2025-12-11 启动一次性任务...
+2025-12-12 10:57:42,997 INFO 开始过滤标的池... 最小成交额: 2000万, 最短上市: 6月
+2025-12-12 10:58:07,813 WARNING 过滤 510300 时出错: '基金代码'，默认保留。
+2025-12-12 10:58:07,813 WARNING 过滤 510050 时出错: '基金代码'，默认保留。
+2025-12-12 10:58:07,829 WARNING 过滤 159915 时出错: '基金代码'，默认保留。
+2025-12-12 10:58:07,829 WARNING 过滤 588000 时出错: '基金代码'，默认保留。
+2025-12-12 10:58:07,829 INFO 标的池过滤完成，剩余 4/4 个标的: 510300,510050,159915,588000
+2025-12-12 10:58:07,829 INFO 开始过滤标的池... 最小成交额: 2000万, 最短上市: 6月
+2025-12-12 10:58:31,368 WARNING 过滤 512480 时出错: '基金代码'，默认保留。
+2025-12-12 10:58:31,368 WARNING 过滤 516160 时出错: '基金代码'，默认保留。
+2025-12-12 10:58:31,368 WARNING 过滤 513100 时出错: '基金代码'，默认保留。
+2025-12-12 10:58:31,368 WARNING 过滤 159790 时出错: '基金代码'，默认保留。
+2025-12-12 10:58:31,368 INFO 标的池过滤完成，剩余 4/4 个标的: 512480,516160,513100,159790
+2025-12-12 10:58:32,333 INFO 已更新 159790 截至 2025-12-11 的数据
+2025-12-12 10:58:33,068 INFO 已更新 159915 截至 2025-12-11 的数据
+2025-12-12 10:58:33,904 INFO 已更新 510050 截至 2025-12-11 的数据
+2025-12-12 10:58:34,747 INFO 已更新 510300 截至 2025-12-11 的数据
+2025-12-12 10:58:35,598 INFO 已更新 512480 截至 2025-12-11 的数据
+2025-12-12 10:58:36,462 INFO 已更新 513100 截至 2025-12-11 的数据
+2025-12-12 10:58:37,369 INFO 已更新 516160 截至 2025-12-11 的数据
+2025-12-12 10:58:38,353 INFO 已更新 588000 截至 2025-12-11 的数据
+2025-12-12 10:58:38,358 INFO === 2025-12-12 10:58:38 每日任务开始 ===
+2025-12-12 10:58:39,000 WARNING 更新 159790 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:58:39,720 WARNING 更新 159915 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:58:40,477 WARNING 更新 510050 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:58:41,033 WARNING 更新 510300 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:58:41,550 WARNING 更新 512480 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:58:42,110 WARNING 更新 513100 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:58:42,721 WARNING 更新 516160 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:58:43,410 WARNING 更新 588000 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 10:58:43,477 INFO --- 开始处理核心池 (4个) ---
+2025-12-12 10:58:46,734 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 10:58:49,999 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 10:58:52,809 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 10:58:56,410 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 10:58:56,412 INFO --- 核心池无买入信号，开始处理观察池 (4个) ---
+2025-12-12 10:59:00,042 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 10:59:03,837 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 10:59:07,874 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 10:59:11,498 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 10:59:11,499 INFO --- 开始执行所有决策 ---
+2025-12-12 10:59:11,534 INFO === 每日任务结束 ===
+
+2025-12-12 10:59:11,534 INFO [backfill-task] 2025-12-11 任务完成。
+2025-12-12 11:17:13,779 INFO [backfill-task] 为日期 2025-12-11 启动一次性任务...
+2025-12-12 11:17:13,779 INFO 开始过滤标的池... 最小成交额: 2000万, 最短上市: 6月
+2025-12-12 11:17:42,944 WARNING 过滤 510300 时出错: '基金代码'，默认保留。
+2025-12-12 11:17:42,944 WARNING 过滤 510050 时出错: '基金代码'，默认保留。
+2025-12-12 11:17:42,944 WARNING 过滤 159915 时出错: '基金代码'，默认保留。
+2025-12-12 11:17:42,944 WARNING 过滤 588000 时出错: '基金代码'，默认保留。
+2025-12-12 11:17:42,944 INFO 标的池过滤完成，剩余 4/4 个标的: 510300,510050,159915,588000
+2025-12-12 11:17:42,944 INFO 开始过滤标的池... 最小成交额: 2000万, 最短上市: 6月
+2025-12-12 11:18:06,124 WARNING 过滤 512480 时出错: '基金代码'，默认保留。
+2025-12-12 11:18:06,124 WARNING 过滤 516160 时出错: '基金代码'，默认保留。
+2025-12-12 11:18:06,124 WARNING 过滤 513100 时出错: '基金代码'，默认保留。
+2025-12-12 11:18:06,124 WARNING 过滤 159790 时出错: '基金代码'，默认保留。
+2025-12-12 11:18:06,124 INFO 标的池过滤完成，剩余 4/4 个标的: 512480,516160,513100,159790
+2025-12-12 11:18:06,677 WARNING 更新 159790 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 11:18:07,093 WARNING 更新 159915 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 11:18:07,551 WARNING 更新 510050 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 11:18:07,902 WARNING 更新 510300 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 11:18:08,269 WARNING 更新 512480 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 11:18:08,670 WARNING 更新 513100 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 11:18:09,027 WARNING 更新 516160 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 11:18:09,392 WARNING 更新 588000 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 11:18:09,408 INFO 已从交易历史恢复账户：现金37521.39，持仓标的8
+2025-12-12 11:18:09,408 INFO === 2025-12-12 11:18:09 每日任务开始 ===
+2025-12-12 11:18:09,809 WARNING 更新 159790 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 11:18:10,152 WARNING 更新 159915 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 11:18:10,465 WARNING 更新 510050 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 11:18:10,788 WARNING 更新 510300 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 11:18:11,387 WARNING 更新 512480 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 11:18:11,913 WARNING 更新 513100 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 11:18:12,416 WARNING 更新 516160 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 11:18:12,768 WARNING 更新 588000 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-12-12 11:18:12,808 INFO --- 开始处理核心池 (4个) ---
+2025-12-12 11:18:16,059 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 11:18:19,277 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 11:18:22,460 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 11:18:24,903 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 11:18:24,909 INFO --- 核心池无买入信号，开始处理观察池 (4个) ---
+2025-12-12 11:18:28,644 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 11:18:31,968 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 11:18:35,205 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 11:18:39,041 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 11:18:39,141 INFO --- 开始执行所有决策 ---
+2025-12-12 11:18:39,154 INFO 已写入日终快照 2025-12-11: 97081.57
+2025-12-12 11:18:39,167 INFO === 每日任务结束 ===
+
+2025-12-12 11:18:39,168 INFO [backfill-task] 2025-12-11 任务完成。
+2025-12-12 17:39:25,128 INFO [daily_once] 启动一次性每日任务...
+2025-12-12 17:39:25,132 INFO === 2025-12-12 17:39:25 每日任务开始 ===
+2025-12-12 17:39:26,116 WARNING 更新 159915 失败: 未获取到 159915 的ETF日线数据
+2025-12-12 17:39:26,859 WARNING 更新 159922 失败: 未获取到 159922 的ETF日线数据
+2025-12-12 17:39:27,477 WARNING 更新 510050 失败: 未获取到 510050 的ETF日线数据
+2025-12-12 17:39:27,836 WARNING 更新 510300 失败: 未获取到 510300 的ETF日线数据
+2025-12-12 17:39:28,516 WARNING 更新 512100 失败: 未获取到 512100 的ETF日线数据
+2025-12-12 17:39:29,379 WARNING 更新 512170 失败: 未获取到 512170 的ETF日线数据
+2025-12-12 17:39:30,034 WARNING 更新 512480 失败: 未获取到 512480 的ETF日线数据
+2025-12-12 17:39:31,027 WARNING 更新 512660 失败: 未获取到 512660 的ETF日线数据
+2025-12-12 17:39:31,469 WARNING 更新 512800 失败: 未获取到 512800 的ETF日线数据
+2025-12-12 17:39:31,999 WARNING 更新 513100 失败: 未获取到 513100 的ETF日线数据
+2025-12-12 17:39:32,462 WARNING 更新 513500 失败: 未获取到 513500 的ETF日线数据
+2025-12-12 17:39:32,968 WARNING 更新 515000 失败: 未获取到 515000 的ETF日线数据
+2025-12-12 17:39:33,468 WARNING 更新 515050 失败: 未获取到 515050 的ETF日线数据
+2025-12-12 17:39:33,926 WARNING 更新 515110 失败: 未获取到 515110 的ETF日线数据
+2025-12-12 17:39:34,458 WARNING 更新 516010 失败: 未获取到 516010 的ETF日线数据
+2025-12-12 17:39:34,898 WARNING 更新 516160 失败: 未获取到 516160 的ETF日线数据
+2025-12-12 17:39:35,629 WARNING 更新 588000 失败: 未获取到 588000 的ETF日线数据
+2025-12-12 17:39:36,246 WARNING 更新 588080 失败: 未获取到 588080 的ETF日线数据
+2025-12-12 17:39:36,322 INFO --- 开始处理核心池 (18个) ---
+2025-12-12 17:39:41,108 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 17:39:44,837 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 17:39:49,108 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 17:39:51,997 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 17:39:55,075 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 17:39:58,717 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 17:40:02,757 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 17:40:05,473 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 17:40:09,378 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 17:40:12,021 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 17:40:16,187 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-12 17:40:16,192 INFO --- 开始执行所有决策 ---
+2025-12-12 17:40:16,223 INFO === 每日任务结束 ===
+
+2025-12-12 17:40:16,224 INFO [daily_once] qlib_adapter 导出原始CSV...
+2025-12-12 17:40:16,912 INFO [daily_once] qlib_run 计算因子...
+2025-12-12 17:40:17,096 INFO [daily_once] 完成并退出。
+2025-12-12 17:52:53,180 INFO [daily_once] 启动一次性每日任务...
+2025-12-12 17:52:53,187 INFO 已从交易历史恢复账户：现金66402.90，持仓标的9
+2025-12-12 17:52:53,187 INFO === 2025-12-12 17:52:53 每日任务开始 ===
+2025-12-12 17:52:53,796 WARNING 更新 159915 失败: 未获取到 159915 的ETF日线数据
+2025-12-12 17:52:54,714 WARNING 更新 159922 失败: 未获取到 159922 的ETF日线数据
+2025-12-12 17:52:55,163 WARNING 更新 510050 失败: 未获取到 510050 的ETF日线数据
+2025-12-12 17:52:55,590 WARNING 更新 510300 失败: 未获取到 510300 的ETF日线数据
+2025-12-12 17:52:56,146 WARNING 更新 512100 失败: 未获取到 512100 的ETF日线数据
+2025-12-12 17:52:56,596 WARNING 更新 512170 失败: 未获取到 512170 的ETF日线数据
+2025-12-12 17:52:57,157 WARNING 更新 512480 失败: 未获取到 512480 的ETF日线数据
+2025-12-12 17:52:57,786 WARNING 更新 512660 失败: 未获取到 512660 的ETF日线数据
+2025-12-12 17:52:58,547 WARNING 更新 512800 失败: 未获取到 512800 的ETF日线数据
+2025-12-12 17:52:59,720 WARNING 更新 513100 失败: 未获取到 513100 的ETF日线数据
+2025-12-12 17:53:00,127 WARNING 更新 513500 失败: 未获取到 513500 的ETF日线数据
+2025-12-12 17:53:00,644 WARNING 更新 515000 失败: 未获取到 515000 的ETF日线数据
+2025-12-12 17:53:01,168 WARNING 更新 515050 失败: 未获取到 515050 的ETF日线数据
+2025-12-12 17:53:01,673 WARNING 更新 515110 失败: 未获取到 515110 的ETF日线数据
+2025-12-12 17:53:02,286 WARNING 更新 516010 失败: 未获取到 516010 的ETF日线数据
+2025-12-12 17:53:02,687 WARNING 更新 516160 失败: 未获取到 516160 的ETF日线数据
+2025-12-12 17:53:05,966 WARNING 更新 588000 失败: 未获取到 588000 的ETF日线数据
+2025-12-12 17:53:06,999 WARNING 更新 588080 失败: 未获取到 588080 的ETF日线数据
+2025-12-12 17:53:07,129 INFO --- 开始处理核心池 (18个) ---
+2025-12-12 17:53:07,507 INFO --- 开始执行所有决策 ---
+2025-12-12 17:53:07,518 INFO === 每日任务结束 ===
+
+2025-12-12 17:53:07,518 INFO [daily_once] qlib_adapter 导出原始CSV...
+2025-12-12 17:53:08,246 INFO [daily_once] qlib_run 计算因子...
+2025-12-12 17:53:08,357 INFO [daily_once] 完成并退出。
+2025-12-12 18:05:38,230 INFO [daily_once] 启动一次性每日任务...
+2025-12-12 18:05:38,241 INFO 已从交易历史恢复账户：现金72321.85，持仓标的8
+2025-12-12 18:05:38,241 INFO === 2025-12-12 18:05:38 每日任务开始 ===
+2025-12-12 18:05:38,874 WARNING 更新 159915 失败: 未获取到 159915 的ETF日线数据
+2025-12-12 18:05:39,416 WARNING 更新 159922 失败: 未获取到 159922 的ETF日线数据
+2025-12-12 18:05:39,848 WARNING 更新 510050 失败: 未获取到 510050 的ETF日线数据
+2025-12-12 18:05:40,360 WARNING 更新 510300 失败: 未获取到 510300 的ETF日线数据
+2025-12-12 18:05:40,818 WARNING 更新 512100 失败: 未获取到 512100 的ETF日线数据
+2025-12-12 18:05:41,302 WARNING 更新 512170 失败: 未获取到 512170 的ETF日线数据
+2025-12-12 18:05:41,739 WARNING 更新 512480 失败: 未获取到 512480 的ETF日线数据
+2025-12-12 18:05:42,199 WARNING 更新 512660 失败: 未获取到 512660 的ETF日线数据
+2025-12-12 18:05:42,560 WARNING 更新 512800 失败: 未获取到 512800 的ETF日线数据
+2025-12-12 18:05:43,020 WARNING 更新 513100 失败: 未获取到 513100 的ETF日线数据
+2025-12-12 18:05:43,478 WARNING 更新 513500 失败: 未获取到 513500 的ETF日线数据
+2025-12-12 18:05:43,889 WARNING 更新 515000 失败: 未获取到 515000 的ETF日线数据
+2025-12-12 18:05:44,350 WARNING 更新 515050 失败: 未获取到 515050 的ETF日线数据
+2025-12-12 18:05:44,869 WARNING 更新 515110 失败: 未获取到 515110 的ETF日线数据
+2025-12-12 18:05:45,319 WARNING 更新 516010 失败: 未获取到 516010 的ETF日线数据
+2025-12-12 18:05:45,893 WARNING 更新 516160 失败: 未获取到 516160 的ETF日线数据
+2025-12-12 18:05:46,416 WARNING 更新 588000 失败: 未获取到 588000 的ETF日线数据
+2025-12-12 18:05:46,967 WARNING 更新 588080 失败: 未获取到 588080 的ETF日线数据
+2025-12-12 18:08:15,889 INFO --- 开始处理核心池 (18个) ---
+2025-12-12 18:08:16,130 INFO --- 开始执行所有决策 ---
+2025-12-12 18:08:16,130 INFO [equity-breakdown] 510050 qty=32597.5428 px=3.1340 val=102160.70
+2025-12-12 18:08:16,130 INFO [equity-breakdown] 512800 qty=52697.4740 px=0.8130 val=42843.05
+2025-12-12 18:08:16,130 INFO [equity-breakdown] 515110 qty=25639.6596 px=1.5370 val=39408.16
+2025-12-12 18:08:16,130 INFO [equity-breakdown] 513100 qty=18810.2563 px=1.9180 val=36078.07
+2025-12-12 18:08:16,130 INFO [equity-breakdown] 513500 qty=11747.4106 px=2.4510 val=28792.90
+2025-12-12 18:08:16,130 INFO [equity-breakdown] 510300 qty=2892.9958 px=4.6940 val=13579.72
+2025-12-12 18:08:16,130 INFO [equity-breakdown] 512660 qty=17126.6163 px=1.2040 val=20620.45
+2025-12-12 18:08:16,130 INFO [equity-breakdown] 516160 qty=10624.1660 px=2.8080 val=29832.66
+2025-12-12 18:08:16,130 INFO [equity-breakdown] cash=72321.85 holdings=313315.70 missing_px=[]
+2025-12-12 18:08:16,130 INFO === 每日任务结束 ===
+
+2025-12-12 18:08:16,130 INFO [daily_once] qlib_adapter 导出原始CSV...
+2025-12-12 18:08:16,761 INFO [daily_once] qlib_run 计算因子...
+2025-12-12 18:08:16,885 INFO [daily_once] 完成并退出。
+2025-12-12 19:50:27,913 INFO [daily_once] 启动一次性每日任务...
+2025-12-12 19:50:27,930 INFO 已从交易历史恢复账户：现金72321.85，持仓标的8
+2025-12-12 19:50:27,932 INFO === 2025-12-12 19:50:27 每日任务开始 ===
+2025-12-12 19:51:58,935 INFO [daily_once] 启动一次性每日任务...
+2025-12-12 19:51:58,945 INFO 已从交易历史恢复账户：现金72321.85，持仓标的8
+2025-12-12 19:51:58,945 INFO === 2025-12-12 19:51:58 每日任务开始 ===
+2025-12-12 22:05:38,644 INFO [daily_once] 启动一次性每日任务...
+2025-12-12 22:05:38,718 INFO 已从交易历史恢复账户：现金72321.85，持仓标的8
+2025-12-12 22:05:38,718 INFO === 2025-12-12 22:05:38 每日任务开始 ===
+2025-12-12 22:05:40,784 INFO 已更新 159915 数据
+2025-12-12 22:05:42,318 INFO 已更新 159922 数据
+2025-12-12 22:05:43,997 INFO 已更新 510050 数据
+2025-12-12 22:05:45,873 INFO 已更新 510300 数据
+2025-12-12 22:05:47,635 INFO 已更新 512100 数据
+2025-12-12 22:05:49,136 INFO 已更新 512170 数据
+2025-12-12 22:05:50,795 INFO 已更新 512480 数据
+2025-12-12 22:05:53,035 INFO 已更新 512660 数据
+2025-12-12 22:05:54,935 INFO 已更新 512800 数据
+2025-12-12 22:05:56,856 INFO 已更新 513100 数据
+2025-12-12 22:05:58,387 INFO 已更新 513500 数据
+2025-12-12 22:06:01,090 INFO 已更新 515000 数据
+2025-12-12 22:06:02,555 INFO 已更新 515050 数据
+2025-12-12 22:06:04,289 INFO 已更新 515110 数据
+2025-12-12 22:06:06,639 INFO 已更新 516010 数据
+2025-12-12 22:06:09,517 INFO 已更新 516160 数据
+2025-12-12 22:06:10,964 INFO 已更新 588000 数据
+2025-12-12 22:06:12,547 INFO 已更新 588080 数据
+2025-12-12 22:06:12,959 INFO --- 开始处理核心池 (18个) ---
+2025-12-12 22:06:14,347 INFO --- 开始执行所有决策 ---
+2025-12-12 22:06:14,357 INFO [equity-breakdown] 510050 qty=32597.5428 px=3.1340 val=102160.70
+2025-12-12 22:06:14,357 INFO [equity-breakdown] 512800 qty=52697.4740 px=0.8130 val=42843.05
+2025-12-12 22:06:14,357 INFO [equity-breakdown] 515110 qty=25639.6596 px=1.5370 val=39408.16
+2025-12-12 22:06:14,357 INFO [equity-breakdown] 513100 qty=18810.2563 px=1.9210 val=36134.50
+2025-12-12 22:06:14,357 INFO [equity-breakdown] 513500 qty=11747.4106 px=2.4530 val=28816.40
+2025-12-12 22:06:14,357 INFO [equity-breakdown] 510300 qty=2892.9958 px=4.6940 val=13579.72
+2025-12-12 22:06:14,357 INFO [equity-breakdown] 512660 qty=8563.3082 px=1.2330 val=10558.56
+2025-12-12 22:06:14,357 INFO [equity-breakdown] 516160 qty=10624.1660 px=2.8150 val=29907.03
+2025-12-12 22:06:14,357 INFO [equity-breakdown] cash=82873.02 holdings=303408.11 missing_px=[]
+2025-12-12 22:06:14,365 INFO 已写入日终快照 2025-12-12: 98436.43
+2025-12-12 22:06:14,365 INFO === 每日任务结束 ===
+
+2025-12-12 22:06:14,365 INFO [daily_once] qlib_adapter 导出原始CSV...
+2025-12-12 22:06:16,122 INFO [daily_once] qlib_run 计算因子...
+2025-12-12 22:06:16,551 INFO [daily_once] 完成并退出。
+2025-12-14 22:21:53,445 INFO [daily_once] 启动一次性每日任务...
+2025-12-14 22:21:53,453 INFO 已从交易历史恢复账户：现金82873.02，持仓标的8
+2025-12-14 22:21:53,464 INFO === 2025-12-14 22:21:53 每日任务开始 ===
+2025-12-14 22:21:54,002 INFO 已更新 159915 数据
+2025-12-14 22:21:54,465 INFO 已更新 159922 数据
+2025-12-14 22:21:55,021 INFO 已更新 510050 数据
+2025-12-14 22:21:55,527 INFO 已更新 510300 数据
+2025-12-14 22:21:56,019 INFO 已更新 512100 数据
+2025-12-14 22:21:57,302 INFO 已更新 512170 数据
+2025-12-14 22:21:58,366 INFO 已更新 512480 数据
+2025-12-14 22:21:59,379 INFO 已更新 512660 数据
+2025-12-14 22:22:00,566 INFO 已更新 512800 数据
+2025-12-14 22:22:01,662 INFO 已更新 513100 数据
+2025-12-14 22:22:02,656 INFO 已更新 513500 数据
+2025-12-14 22:22:03,716 INFO 已更新 515000 数据
+2025-12-14 22:22:04,706 INFO 已更新 515050 数据
+2025-12-14 22:22:05,829 INFO 已更新 515110 数据
+2025-12-14 22:22:06,937 INFO 已更新 516010 数据
+2025-12-14 22:22:07,838 INFO 已更新 516160 数据
+2025-12-14 22:22:08,716 INFO 已更新 588000 数据
+2025-12-14 22:22:09,776 INFO 已更新 588080 数据
+2025-12-14 22:22:09,926 INFO --- 开始处理核心池 (18个) ---
+2025-12-14 22:22:19,027 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 22:22:21,516 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 22:22:24,148 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 22:22:27,515 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 22:22:30,256 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 22:22:32,756 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 22:22:35,240 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 22:22:38,585 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 22:22:41,036 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 22:22:43,826 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 22:22:47,756 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 22:22:50,588 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 22:22:52,965 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 22:22:56,505 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 22:23:01,285 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 22:23:03,916 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 22:23:07,605 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 22:23:10,545 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 22:23:10,551 INFO --- 开始执行所有决策 ---
+2025-12-14 22:23:10,556 INFO [equity-breakdown] 510050 qty=32597.5428 px=3.1340 val=102160.70
+2025-12-14 22:23:10,556 INFO [equity-breakdown] 512800 qty=52697.4740 px=0.8130 val=42843.05
+2025-12-14 22:23:10,556 INFO [equity-breakdown] 515110 qty=25639.6596 px=1.5370 val=39408.16
+2025-12-14 22:23:10,556 INFO [equity-breakdown] 513100 qty=18810.2563 px=1.9210 val=36134.50
+2025-12-14 22:23:10,560 INFO [equity-breakdown] 513500 qty=11747.4106 px=2.4530 val=28816.40
+2025-12-14 22:23:10,560 INFO [equity-breakdown] 510300 qty=2892.9958 px=4.6940 val=13579.72
+2025-12-14 22:23:10,563 INFO [equity-breakdown] 512660 qty=8563.3082 px=1.2330 val=10558.56
+2025-12-14 22:23:10,563 INFO [equity-breakdown] 516160 qty=10624.1660 px=2.8150 val=29907.03
+2025-12-14 22:23:10,564 INFO [equity-breakdown] cash=82873.02 holdings=303408.11 missing_px=[]
+2025-12-14 22:23:10,570 INFO 已写入日终快照 2025-12-14: 386281.13
+2025-12-14 22:23:10,605 INFO === 每日任务结束 ===
+
+2025-12-14 22:23:10,605 INFO [daily_once] qlib_adapter 导出原始CSV...
+2025-12-14 22:23:11,464 INFO [daily_once] qlib_run 计算因子...
+2025-12-14 22:23:11,686 INFO [daily_once] 完成并退出。
+2025-12-15 19:14:57,253 INFO [daily_once] 启动一次性每日任务...
+2025-12-15 19:14:57,271 INFO 已从交易历史恢复账户：现金82873.02，持仓标的8
+2025-12-15 19:14:57,293 INFO === 2025-12-15 19:14:57 每日任务开始 ===
+2025-12-15 19:14:58,343 INFO 已更新 159790 数据
+2025-12-15 19:14:59,264 INFO 已更新 159864 数据
+2025-12-15 19:15:00,044 INFO 已更新 159915 数据
+2025-12-15 19:15:00,873 INFO 已更新 159928 数据
+2025-12-15 19:15:01,683 INFO 已更新 510050 数据
+2025-12-15 19:15:02,453 INFO 已更新 510300 数据
+2025-12-15 19:15:03,291 INFO 已更新 510880 数据
+2025-12-15 19:15:04,313 INFO 已更新 512040 数据
+2025-12-15 19:15:05,041 INFO 已更新 512660 数据
+2025-12-15 19:15:05,913 INFO 已更新 512800 数据
+2025-12-15 19:15:06,571 INFO 已更新 513010 数据
+2025-12-15 19:15:07,793 INFO 已更新 513100 数据
+2025-12-15 19:15:08,553 INFO 已更新 513500 数据
+2025-12-15 19:15:09,481 INFO 已更新 515110 数据
+2025-12-15 19:15:10,521 INFO 已更新 515220 数据
+2025-12-15 19:15:11,281 INFO 已更新 516160 数据
+2025-12-15 19:15:11,402 INFO --- 开始处理核心池 (16个) ---
+2025-12-15 19:15:16,153 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 19:15:20,776 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 19:15:23,601 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 19:15:26,923 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 19:15:30,663 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 19:15:34,274 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 19:15:38,256 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 19:15:42,064 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 19:15:42,092 INFO 已达当日AI调用上限(8)，513500 使用默认持有策略
+2025-12-15 19:15:42,172 INFO 已达当日AI调用上限(8)，510050 使用默认持有策略
+2025-12-15 19:15:42,242 INFO 已达当日AI调用上限(8)，512800 使用默认持有策略
+2025-12-15 19:15:42,282 INFO 已达当日AI调用上限(8)，515110 使用默认持有策略
+2025-12-15 19:15:42,322 INFO 已达当日AI调用上限(8)，516160 使用默认持有策略
+2025-12-15 19:15:42,328 INFO 已达当日AI调用上限(8)，159864 使用默认持有策略
+2025-12-15 19:15:42,334 INFO 已达当日AI调用上限(8)，513010 使用默认持有策略
+2025-12-15 19:15:42,337 INFO 已达当日AI调用上限(8)，515220 使用默认持有策略
+2025-12-15 19:15:42,342 INFO --- 开始执行所有决策 ---
+2025-12-15 19:15:42,348 INFO [equity-breakdown] 510050 qty=32597.5428 px=3.1330 val=102128.10
+2025-12-15 19:15:42,348 INFO [equity-breakdown] 512800 qty=52697.4740 px=0.8150 val=42948.44
+2025-12-15 19:15:42,351 INFO [equity-breakdown] 515110 qty=25639.6596 px=1.5370 val=39408.16
+2025-12-15 19:15:42,351 INFO [equity-breakdown] 513500 qty=11747.4106 px=2.4470 val=28745.91
+2025-12-15 19:15:42,352 INFO [equity-breakdown] 510300 qty=2892.9958 px=4.6670 val=13501.61
+2025-12-15 19:15:42,372 INFO [equity-breakdown] 512660 qty=8563.3082 px=1.2450 val=10661.32
+2025-12-15 19:15:42,372 INFO [equity-breakdown] 516160 qty=10624.1660 px=2.7660 val=29386.44
+2025-12-15 19:15:42,382 INFO [equity-breakdown] cash=118625.09 holdings=266779.99 missing_px=[]
+2025-12-15 19:15:42,392 INFO === 每日任务结束 ===
+
+2025-12-15 19:15:42,392 INFO [daily_once] qlib_adapter 导出原始CSV...
+2025-12-15 19:15:43,341 INFO [daily_once] qlib_run 计算因子...
+2025-12-15 19:15:43,574 INFO [daily_once] 完成并退出。
+2025-12-15 19:16:55,050 INFO [daily_once] 启动一次性每日任务...
+2025-12-15 19:16:55,073 INFO 已从交易历史恢复账户：现金118625.09，持仓标的7
+2025-12-15 19:16:55,073 INFO === 2025-12-15 19:16:55 每日任务开始 ===
+2025-12-15 19:16:55,812 INFO 已更新 159790 数据
+2025-12-15 19:16:56,502 INFO 已更新 159864 数据
+2025-12-15 19:16:57,296 INFO 已更新 159915 数据
+2025-12-15 19:16:58,125 INFO 已更新 159928 数据
+2025-12-15 19:16:59,204 INFO 已更新 510050 数据
+2025-12-15 19:17:00,232 INFO 已更新 510300 数据
+2025-12-15 19:17:01,212 INFO 已更新 510880 数据
+2025-12-15 19:17:02,212 INFO 已更新 512040 数据
+2025-12-15 19:17:03,082 INFO 已更新 512660 数据
+2025-12-15 19:17:03,815 INFO 已更新 512800 数据
+2025-12-15 19:17:04,652 INFO 已更新 513010 数据
+2025-12-15 19:17:05,566 INFO 已更新 513100 数据
+2025-12-15 19:17:06,382 INFO 已更新 513500 数据
+2025-12-15 19:17:07,292 INFO 已更新 515110 数据
+2025-12-15 19:17:08,082 INFO 已更新 515220 数据
+2025-12-15 19:17:08,954 INFO 已更新 516160 数据
+2025-12-15 19:17:09,122 INFO --- 开始处理核心池 (16个) ---
+2025-12-15 19:17:15,196 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 19:17:18,673 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 19:17:27,404 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 19:17:31,093 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 19:17:35,152 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 19:17:37,312 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 19:17:40,107 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 19:17:43,124 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 19:17:43,154 INFO --- 开始执行所有决策 ---
+2025-12-15 19:17:43,163 INFO [equity-breakdown] 512800 qty=52697.4740 px=0.8150 val=42948.44
+2025-12-15 19:17:43,163 INFO [equity-breakdown] 515110 qty=25639.6596 px=1.5370 val=39408.16
+2025-12-15 19:17:43,171 INFO [equity-breakdown] 513500 qty=11747.4106 px=2.4470 val=28745.91
+2025-12-15 19:17:43,176 INFO [equity-breakdown] 510300 qty=2892.9958 px=4.6670 val=13501.61
+2025-12-15 19:17:43,176 INFO [equity-breakdown] 512660 qty=8563.3082 px=1.2450 val=10661.32
+2025-12-15 19:17:43,176 INFO [equity-breakdown] 516160 qty=10624.1660 px=2.7660 val=29386.44
+2025-12-15 19:17:43,176 INFO [equity-breakdown] cash=220681.71 holdings=164651.88 missing_px=[]
+2025-12-15 19:17:43,187 INFO 已写入日终快照 2025-12-15: 99777.74
+2025-12-15 19:17:43,191 INFO === 每日任务结束 ===
+
+2025-12-15 19:17:43,192 INFO [daily_once] qlib_adapter 导出原始CSV...
+2025-12-15 19:17:44,045 INFO [daily_once] qlib_run 计算因子...
+2025-12-15 19:17:44,262 INFO [daily_once] 完成并退出。
+2025-12-16 17:38:32,249 INFO [daily_once] 启动一次性每日任务...
+2025-12-16 17:38:32,273 INFO 已从交易历史恢复账户：现金220681.71，持仓标的6
+2025-12-16 17:38:32,274 INFO === 2025-12-16 17:38:32 每日任务开始 ===
+2025-12-16 17:38:32,976 INFO 已更新 159790 数据
+2025-12-16 17:38:33,543 INFO 已更新 159864 数据
+2025-12-16 17:38:34,070 INFO 已更新 159915 数据
+2025-12-16 17:38:34,565 INFO 已更新 159928 数据
+2025-12-16 17:38:35,029 INFO 已更新 510050 数据
+2025-12-16 17:38:35,570 INFO 已更新 510300 数据
+2025-12-16 17:38:36,161 INFO 已更新 510500 数据
+2025-12-16 17:38:36,670 INFO 已更新 510880 数据
+2025-12-16 17:38:37,111 INFO 已更新 512480 数据
+2025-12-16 17:38:37,532 INFO 已更新 512800 数据
+2025-12-16 17:38:37,991 INFO 已更新 513010 数据
+2025-12-16 17:38:38,592 INFO 已更新 513100 数据
+2025-12-16 17:38:39,224 INFO 已更新 513500 数据
+2025-12-16 17:38:39,682 INFO 已更新 515110 数据
+2025-12-16 17:38:40,140 INFO 已更新 515220 数据
+2025-12-16 17:38:40,617 INFO 已更新 516160 数据
+2025-12-16 17:38:41,219 INFO 已更新 516960 数据
+2025-12-16 17:38:41,404 INFO --- 开始处理核心池 (17个) ---
+2025-12-16 17:38:44,917 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-16 17:38:50,291 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-16 17:38:53,249 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-16 17:38:57,588 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-16 17:39:00,036 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-16 17:39:03,258 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-16 17:39:07,590 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-16 17:39:10,396 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-16 17:39:13,470 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-16 17:39:17,368 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-16 17:39:19,814 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-16 17:39:23,081 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-16 17:39:25,986 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-16 17:39:28,919 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-16 17:39:33,027 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-16 17:39:35,589 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-16 17:39:35,635 INFO 已达当日AI调用上限(16)，513500 使用默认持有策略
+2025-12-16 17:39:35,635 INFO --- 开始执行所有决策 ---
+2025-12-16 17:39:35,644 INFO [equity-breakdown] 512800 qty=52697.4740 px=0.8100 val=42684.95
+2025-12-16 17:39:35,644 INFO [equity-breakdown] 515110 qty=25639.6596 px=1.5150 val=38844.08
+2025-12-16 17:39:35,645 INFO [equity-breakdown] 513500 qty=11747.4106 px=2.4200 val=28428.73
+2025-12-16 17:39:35,645 INFO [equity-breakdown] 510300 qty=2892.9958 px=4.6200 val=13365.64
+2025-12-16 17:39:35,646 INFO [equity-breakdown] 512660 qty=8563.3082 px=0.0000 val=0.00
+2025-12-16 17:39:35,646 INFO [equity-breakdown] cash=249368.11 holdings=123323.41 missing_px=['512660']
+2025-12-16 17:39:35,653 INFO === 每日任务结束 ===
+
+2025-12-16 17:39:35,654 INFO [daily_once] qlib_adapter 导出原始CSV...
+2025-12-16 17:39:36,830 INFO [daily_once] qlib_run 计算因子...
+2025-12-16 17:39:37,254 INFO [daily_once] 完成并退出。
+2025-12-16 20:23:21,343 INFO [daily_once] 启动一次性每日任务...
+2025-12-16 20:23:21,356 INFO 已从交易历史恢复账户：现金249368.11，持仓标的5
+2025-12-16 20:23:21,357 INFO === 2025-12-16 20:23:21 每日任务开始 ===
+2025-12-16 20:23:22,502 INFO 已更新 159790 数据
+2025-12-16 20:23:23,207 INFO 已更新 159864 数据
+2025-12-16 20:23:23,820 INFO 已更新 159915 数据
+2025-12-16 20:23:24,359 INFO 已更新 159928 数据
+2025-12-16 20:23:25,154 INFO 已更新 510050 数据
+2025-12-16 20:23:25,758 INFO 已更新 510300 数据
+2025-12-16 20:23:27,812 INFO 已更新 510500 数据
+2025-12-16 20:23:28,455 INFO 已更新 510880 数据
+2025-12-16 20:23:29,253 INFO 已更新 512480 数据
+2025-12-16 20:23:29,875 INFO 已更新 512800 数据
+2025-12-16 20:23:31,438 INFO 已更新 513010 数据
+2025-12-16 20:23:32,012 INFO 已更新 513100 数据
+2025-12-16 20:23:32,559 INFO 已更新 513500 数据
+2025-12-16 20:23:33,122 INFO 已更新 515110 数据
+2025-12-16 20:23:33,744 INFO 已更新 515220 数据
+2025-12-16 20:23:34,340 INFO 已更新 516160 数据
+2025-12-16 20:23:34,972 INFO 已更新 516960 数据
+2025-12-16 20:23:35,079 INFO --- 开始处理核心池 (17个) ---
+2025-12-16 20:23:35,280 INFO 已达当日AI调用上限(16)，513500 使用默认持有策略
+2025-12-16 20:23:35,280 INFO --- 开始执行所有决策 ---
+2025-12-16 20:23:35,282 INFO [equity-breakdown] 512800 qty=52697.4740 px=0.8100 val=42684.95
+2025-12-16 20:23:35,283 INFO [equity-breakdown] 515110 qty=25639.6596 px=1.5150 val=38844.08
+2025-12-16 20:23:35,283 INFO [equity-breakdown] 513500 qty=11747.4106 px=2.4200 val=28428.73
+2025-12-16 20:23:35,283 INFO [equity-breakdown] 510300 qty=2892.9958 px=4.6200 val=13365.64
+2025-12-16 20:23:35,283 INFO [equity-breakdown] 512660 qty=8563.3082 px=0.0000 val=0.00
+2025-12-16 20:23:35,284 INFO [equity-breakdown] cash=249368.11 holdings=123323.41 missing_px=['512660']
+2025-12-16 20:23:35,284 INFO 已写入日终快照 2025-12-16: 99382.11
+2025-12-16 20:23:35,284 INFO === 每日任务结束 ===
+
+2025-12-16 20:23:35,285 INFO [daily_once] qlib_adapter 导出原始CSV...
+2025-12-16 20:23:36,366 INFO [daily_once] qlib_run 计算因子...
+2025-12-16 20:23:36,590 INFO [daily_once] 完成并退出。
+2025-12-17 23:14:59,574 INFO 开始过滤标的池... 最小成交额: 10000万, 最短上市: 6月
+2025-12-17 23:15:21,313 WARNING 过滤 510300 时出错: '基金代码'，默认保留。
+2025-12-17 23:15:21,313 WARNING 过滤 159928 时出错: '基金代码'，默认保留。
+2025-12-17 23:15:21,351 WARNING 过滤 510880 时出错: '基金代码'，默认保留。
+2025-12-17 23:15:21,351 WARNING 过滤 512040 时出错: '基金代码'，默认保留。
+2025-12-17 23:15:21,351 WARNING 过滤 513100 时出错: '基金代码'，默认保留。
+2025-12-17 23:15:21,351 WARNING 过滤 159915 时出错: '基金代码'，默认保留。
+2025-12-17 23:15:21,352 INFO 标的池过滤完成，剩余 6/6 个标的: 510300,159928,510880,512040,513100,159915
+2025-12-17 23:15:21,352 INFO 开始过滤标的池... 最小成交额: 10000万, 最短上市: 6月
+2025-12-17 23:15:42,726 WARNING 过滤 510500 时出错: '基金代码'，默认保留。
+2025-12-17 23:15:42,726 WARNING 过滤 513500 时出错: '基金代码'，默认保留。
+2025-12-17 23:15:42,726 WARNING 过滤 510050 时出错: '基金代码'，默认保留。
+2025-12-17 23:15:42,726 WARNING 过滤 512800 时出错: '基金代码'，默认保留。
+2025-12-17 23:15:42,726 WARNING 过滤 515110 时出错: '基金代码'，默认保留。
+2025-12-17 23:15:42,726 WARNING 过滤 516160 时出错: '基金代码'，默认保留。
+2025-12-17 23:15:42,726 WARNING 过滤 512660 时出错: '基金代码'，默认保留。
+2025-12-17 23:15:42,727 WARNING 过滤 515220 时出错: '基金代码'，默认保留。
+2025-12-17 23:15:42,727 INFO 标的池过滤完成，剩余 8/8 个标的: 510500,513500,510050,512800,515110,516160,512660,515220
+2025-12-17 23:15:42,737 INFO === 2025-12-17 23:15:42 每日任务开始 ===
+2025-12-17 23:15:43,542 INFO 已更新 159915 数据
+2025-12-17 23:15:44,116 INFO 已更新 159928 数据
+2025-12-17 23:15:44,631 INFO 已更新 510050 数据
+2025-12-17 23:15:45,117 INFO 已更新 510300 数据
+2025-12-17 23:15:45,574 INFO 已更新 510500 数据
+2025-12-17 23:15:46,092 INFO 已更新 510880 数据
+2025-12-17 23:15:46,590 INFO 已更新 512040 数据
+2025-12-17 23:15:47,094 INFO 已更新 512660 数据
+2025-12-17 23:15:47,585 INFO 已更新 512800 数据
+2025-12-17 23:15:48,058 INFO 已更新 513100 数据
+2025-12-17 23:15:48,467 INFO 已更新 513500 数据
+2025-12-17 23:15:48,956 INFO 已更新 515110 数据
+2025-12-17 23:15:49,453 INFO 已更新 515220 数据
+2025-12-17 23:15:49,881 INFO 已更新 516160 数据
+2025-12-17 23:15:49,943 INFO --- 开始处理核心池 (6个) ---
+2025-12-17 23:15:54,374 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:16:02,135 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:16:05,459 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:16:08,833 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:16:16,705 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:16:31,011 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:16:33,457 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:16:41,021 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:16:54,856 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:16:54,859 WARNING AI决策失败，510880 使用规则策略：模型调用失败（已尝试：['glm-4-air', 'glm-4-air']）：Expecting ',' delimiter: line 1 column 175 (char 174)
+2025-12-17 23:16:57,674 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:17:03,016 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:17:06,031 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:17:13,790 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:17:26,787 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:17:29,434 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:17:36,935 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:17:50,161 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:17:50,163 WARNING AI决策失败，159915 使用规则策略：模型调用失败（已尝试：['glm-4-air', 'glm-4-air']）：Expecting ',' delimiter: line 1 column 166 (char 165)
+2025-12-17 23:17:50,163 INFO --- 核心池已产生买入信号，跳过观察池。 ---
+2025-12-17 23:17:50,163 INFO --- 开始执行所有决策 ---
+2025-12-17 23:17:50,177 INFO [equity-breakdown] 159928 qty=16071.4286 px=0.8050 val=12937.50
+2025-12-17 23:17:50,177 INFO [equity-breakdown] 512040 qty=10353.1433 px=1.1350 val=11750.82
+2025-12-17 23:17:50,177 INFO [equity-breakdown] cash=75274.65 holdings=24688.32 missing_px=[]
+2025-12-17 23:17:50,201 INFO === 每日任务结束 ===
+
+2025-12-17 23:18:18,335 INFO [daily_once] 启动一次性每日任务...
+2025-12-17 23:18:18,350 INFO 已从交易历史恢复账户：现金75274.65，持仓标的7
+2025-12-17 23:18:18,351 INFO === 2025-12-17 23:18:18 每日任务开始 ===
+2025-12-17 23:18:18,938 INFO 已更新 159915 数据
+2025-12-17 23:18:19,420 INFO 已更新 159928 数据
+2025-12-17 23:18:19,920 INFO 已更新 510050 数据
+2025-12-17 23:18:20,410 INFO 已更新 510300 数据
+2025-12-17 23:18:20,893 INFO 已更新 510500 数据
+2025-12-17 23:18:21,338 INFO 已更新 510880 数据
+2025-12-17 23:18:21,792 INFO 已更新 512040 数据
+2025-12-17 23:18:22,375 INFO 已更新 512660 数据
+2025-12-17 23:18:23,076 INFO 已更新 512800 数据
+2025-12-17 23:18:23,582 INFO 已更新 513100 数据
+2025-12-17 23:18:24,230 INFO 已更新 513500 数据
+2025-12-17 23:18:24,879 INFO 已更新 515110 数据
+2025-12-17 23:18:25,538 INFO 已更新 515220 数据
+2025-12-17 23:18:26,077 INFO 已更新 516160 数据
+2025-12-17 23:18:26,132 INFO --- 开始处理核心池 (14个) ---
+2025-12-17 23:18:30,262 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:18:38,776 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:18:51,840 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:18:55,236 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:19:03,360 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:19:15,642 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:19:15,643 WARNING AI决策失败，159915 使用规则策略：模型调用失败（已尝试：['glm-4-air', 'glm-4-air']）：Expecting ',' delimiter: line 1 column 135 (char 134)
+2025-12-17 23:19:19,406 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:19:27,393 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:19:40,812 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:19:43,798 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:19:51,513 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:20:04,431 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:20:04,434 WARNING AI决策失败，510880 使用规则策略：模型调用失败（已尝试：['glm-4-air', 'glm-4-air']）：Expecting ',' delimiter: line 1 column 166 (char 165)
+2025-12-17 23:20:07,238 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:20:10,420 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:20:18,017 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:20:21,607 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:20:30,638 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:20:43,772 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:20:46,874 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:20:49,793 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:20:53,212 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:20:56,455 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:21:04,453 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:21:18,697 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:21:21,299 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-17 23:21:21,303 INFO --- 开始执行所有决策 ---
+2025-12-17 23:21:21,305 INFO [equity-breakdown] 512800 qty=3865.0357 px=0.8120 val=3138.41
+2025-12-17 23:21:21,305 INFO [equity-breakdown] 515110 qty=15383.7958 px=1.5350 val=23614.13
+2025-12-17 23:21:21,305 INFO [equity-breakdown] 513500 qty=11747.4106 px=2.4350 val=28604.94
+2025-12-17 23:21:21,305 INFO [equity-breakdown] 510300 qty=1273.0000 px=4.6990 val=5981.83
+2025-12-17 23:21:21,305 INFO [equity-breakdown] 512660 qty=8563.3082 px=1.2260 val=10498.62
+2025-12-17 23:21:21,305 INFO [equity-breakdown] 159928 qty=16071.4286 px=0.8050 val=12937.50
+2025-12-17 23:21:21,305 INFO [equity-breakdown] 512040 qty=10353.1433 px=1.1350 val=11750.82
+2025-12-17 23:21:21,306 INFO [equity-breakdown] cash=75274.65 holdings=96526.24 missing_px=[]
+2025-12-17 23:21:21,308 INFO 已写入日终快照 2025-12-17: 99646.61
+2025-12-17 23:21:21,311 INFO === 每日任务结束 ===
+
+2025-12-17 23:21:21,312 INFO [daily_once] qlib_adapter 导出原始CSV...
+2025-12-17 23:21:22,247 INFO [daily_once] qlib_run 计算因子...
+2025-12-17 23:21:22,365 INFO [daily_once] 完成并退出。
+2025-12-17 23:54:00,950 INFO [daily_once] 启动一次性每日任务...
+2025-12-17 23:54:00,951 INFO [risk] initial_capital=100000.00, max_position_pct=20.00%
+2025-12-17 23:54:00,951 INFO [risk] costs: buy_slippage=0.0010, buy_commission=0.0005, sell_slippage=0.0010, sell_commission=0.0005, sell_tax=0.0010
+2025-12-17 23:54:00,966 INFO 已从交易历史恢复账户：现金75274.65，持仓标的7
+2025-12-17 23:54:00,967 INFO === 2025-12-17 23:54:00 每日任务开始 ===
+2025-12-17 23:54:01,540 INFO 已更新 159915 数据
+2025-12-17 23:54:02,006 INFO 已更新 159928 数据
+2025-12-17 23:54:02,587 INFO 已更新 510050 数据
+2025-12-17 23:54:03,049 INFO 已更新 510300 数据
+2025-12-17 23:54:03,587 INFO 已更新 510500 数据
+2025-12-17 23:54:04,167 INFO 已更新 510880 数据
+2025-12-17 23:54:04,695 INFO 已更新 512040 数据
+2025-12-17 23:54:05,215 INFO 已更新 512660 数据
+2025-12-17 23:54:05,657 INFO 已更新 512800 数据
+2025-12-17 23:54:06,186 INFO 已更新 513100 数据
+2025-12-17 23:54:06,620 INFO 已更新 513500 数据
+2025-12-17 23:54:07,113 INFO 已更新 515110 数据
+2025-12-17 23:54:07,618 INFO 已更新 515220 数据
+2025-12-17 23:54:08,103 INFO 已更新 516160 数据
+2025-12-17 23:54:08,157 INFO --- 开始处理核心池 (14个) ---
+2025-12-17 23:54:11,449 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:49:00,425 INFO [daily_once] 启动一次性每日任务...
+2025-12-18 23:49:00,427 INFO [risk] initial_capital=100000.00, max_position_pct=20.00%
+2025-12-18 23:49:00,437 INFO [risk] costs: buy_slippage=0.0010, buy_commission=0.0005, sell_slippage=0.0010, sell_commission=0.0005, sell_tax=0.0010
+2025-12-18 23:49:00,445 INFO 已从交易历史恢复账户：现金69262.12，持仓标的4
+2025-12-18 23:49:00,446 INFO === 2025-12-18 23:49:00 每日任务开始 ===
+2025-12-18 23:49:01,091 INFO 已更新 159915 数据
+2025-12-18 23:49:01,607 INFO 已更新 159928 数据
+2025-12-18 23:49:02,104 INFO 已更新 510050 数据
+2025-12-18 23:49:02,582 INFO 已更新 510300 数据
+2025-12-18 23:49:03,020 INFO 已更新 510500 数据
+2025-12-18 23:49:03,527 INFO 已更新 510880 数据
+2025-12-18 23:49:04,018 INFO 已更新 512040 数据
+2025-12-18 23:49:04,479 INFO 已更新 512660 数据
+2025-12-18 23:49:04,925 INFO 已更新 512800 数据
+2025-12-18 23:49:05,496 INFO 已更新 513100 数据
+2025-12-18 23:49:05,986 INFO 已更新 513500 数据
+2025-12-18 23:49:06,474 INFO 已更新 515110 数据
+2025-12-18 23:49:06,952 INFO 已更新 515220 数据
+2025-12-18 23:49:07,455 INFO 已更新 516160 数据
+2025-12-18 23:49:07,514 INFO --- 开始处理核心池 (14个) ---
+2025-12-18 23:49:11,375 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:49:19,112 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:49:23,029 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:49:30,543 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:49:34,021 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:49:37,404 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:49:40,476 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:49:49,040 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:50:02,597 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:50:08,606 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:50:16,953 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:50:30,139 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:50:32,991 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:50:38,162 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:50:40,837 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:50:44,375 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:50:48,065 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:50:51,948 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:51:00,353 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:51:09,962 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:51:22,358 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:51:25,686 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:51:25,696 INFO --- 开始执行所有决策 ---
+2025-12-18 23:51:25,719 INFO [equity-breakdown] 513500 qty=1631.1965 px=2.4260 val=3957.28
+2025-12-18 23:51:25,731 INFO [equity-breakdown] 510300 qty=261.7648 px=4.6680 val=1221.92
+2025-12-18 23:51:25,732 INFO [equity-breakdown] 159928 qty=16071.4286 px=0.8010 val=12873.21
+2025-12-18 23:51:25,734 INFO [equity-breakdown] 512040 qty=10353.1433 px=1.1360 val=11761.17
+2025-12-18 23:51:25,735 INFO [equity-breakdown] 510880 qty=2822.2949 px=3.1750 val=8960.79
+2025-12-18 23:51:25,736 INFO [equity-breakdown] 512800 qty=9431.3731 px=0.8270 val=7799.75
+2025-12-18 23:51:25,737 INFO [equity-breakdown] 515220 qty=6200.1277 px=1.0950 val=6789.14
+2025-12-18 23:51:25,738 INFO [equity-breakdown] cash=45677.12 holdings=53363.26 missing_px=[]
+2025-12-18 23:51:25,752 INFO 已写入日终快照 2025-12-18: 99499.70
+2025-12-18 23:51:25,754 INFO === 每日任务结束 ===
+
+2025-12-18 23:51:25,759 WARNING [export] 合规CSV导出失败：Execution failed on sql 'SELECT id, date, etf_code, action, price, quantity, value, capital_after, reasoning FROM trades ORDER BY datetime(date)': no such column: id
+2025-12-18 23:51:25,780 INFO [daily_once] qlib_adapter 导出原始CSV...
+2025-12-18 23:51:26,647 INFO [daily_once] qlib_run 计算因子...
+2025-12-18 23:51:26,734 INFO [daily_once] 完成并退出。
+2025-12-19 22:21:44,489 INFO [daily_once] 启动一次性每日任务...
+2025-12-19 22:21:44,491 INFO [risk] initial_capital=100000.00, max_position_pct=20.00%
+2025-12-19 22:21:44,495 INFO [risk] costs: buy_slippage=0.0010, buy_commission=0.0005, sell_slippage=0.0010, sell_commission=0.0005, sell_tax=0.0010
+2025-12-19 22:21:44,525 INFO 已从交易历史恢复账户：现金45677.12，持仓标的7
+2025-12-19 22:21:44,525 INFO === 2025-12-19 22:21:44 每日任务开始 ===
+2025-12-19 22:21:45,313 INFO 已更新 159915 数据
+2025-12-19 22:21:45,945 INFO 已更新 159928 数据
+2025-12-19 22:21:46,683 INFO 已更新 510050 数据
+2025-12-19 22:21:47,503 INFO 已更新 510300 数据
+2025-12-19 22:21:48,125 INFO 已更新 510500 数据
+2025-12-19 22:21:48,774 INFO 已更新 510880 数据
+2025-12-19 22:21:49,392 INFO 已更新 512040 数据
+2025-12-19 22:21:50,025 INFO 已更新 512660 数据
+2025-12-19 22:21:50,691 INFO 已更新 512800 数据
+2025-12-19 22:21:51,369 INFO 已更新 513100 数据
+2025-12-19 22:21:52,108 INFO 已更新 513500 数据
+2025-12-19 22:21:52,803 INFO 已更新 515110 数据
+2025-12-19 22:21:53,469 INFO 已更新 515220 数据
+2025-12-19 22:21:54,029 INFO 已更新 516160 数据
+2025-12-19 22:21:54,112 INFO --- 开始处理核心池 (14个) ---
+2025-12-19 22:22:00,531 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:22:07,968 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:22:12,455 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:22:20,999 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:22:33,397 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:22:36,349 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:22:40,098 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:22:43,716 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:22:47,149 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:22:50,590 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:22:53,394 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:23:01,685 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:23:08,736 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:23:14,809 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:23:22,695 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:23:30,669 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:23:41,540 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:23:54,340 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:23:56,881 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:24:05,379 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:24:16,027 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:24:30,621 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:24:35,346 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:24:38,661 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-19 22:24:38,668 INFO --- 开始执行所有决策 ---
+2025-12-19 22:24:38,698 INFO [equity-breakdown] 513500 qty=1631.1965 px=2.4510 val=3998.06
+2025-12-19 22:24:38,699 INFO [equity-breakdown] 510300 qty=261.7648 px=4.6880 val=1227.15
+2025-12-19 22:24:38,700 INFO [equity-breakdown] 159928 qty=16071.4286 px=0.8110 val=13033.93
+2025-12-19 22:24:38,700 INFO [equity-breakdown] 512040 qty=10353.1433 px=1.1450 val=11854.35
+2025-12-19 22:24:38,701 INFO [equity-breakdown] 510880 qty=2822.2949 px=3.1740 val=8957.96
+2025-12-19 22:24:38,701 INFO [equity-breakdown] 512800 qty=9431.3731 px=0.8240 val=7771.45
+2025-12-19 22:24:38,701 INFO [equity-breakdown] 515220 qty=6200.1277 px=1.0910 val=6764.34
+2025-12-19 22:24:38,701 INFO [equity-breakdown] 512660 qty=4708.7469 px=1.2550 val=5909.48
+2025-12-19 22:24:38,701 INFO [equity-breakdown] cash=39758.78 holdings=59516.73 missing_px=[]
+2025-12-19 22:24:38,708 INFO 已写入日终快照 2025-12-19: 99844.89
+2025-12-19 22:24:38,708 INFO === 每日任务结束 ===
+
+2025-12-19 22:24:38,711 WARNING [export] 合规CSV导出失败：Execution failed on sql 'SELECT id, date, etf_code, action, price, quantity, value, capital_after, reasoning FROM trades ORDER BY datetime(date)': no such column: id
+2025-12-19 22:24:38,713 INFO [daily_once] qlib_adapter 导出原始CSV...
+2025-12-19 22:24:39,759 INFO [daily_once] qlib_run 计算因子...
+2025-12-19 22:24:39,922 INFO [daily_once] 完成并退出。
+2025-12-22 22:01:46,642 INFO [daily_once] 启动一次性每日任务...
+2025-12-22 22:01:46,644 INFO [risk] initial_capital=100000.00, max_position_pct=25.00%
+2025-12-22 22:01:46,668 INFO [risk] costs: buy_slippage=0.0010, buy_commission=0.0005, sell_slippage=0.0010, sell_commission=0.0005, sell_tax=0.0010
+2025-12-22 22:01:46,681 INFO 已从交易历史恢复账户：现金69262.12，持仓标的4
+2025-12-22 22:01:46,683 INFO === 2025-12-22 22:01:46 每日任务开始 ===
+2025-12-22 22:01:47,312 INFO 已更新 159605 数据
+2025-12-22 22:01:49,005 INFO 已更新 159915 数据
+2025-12-22 22:01:49,573 INFO 已更新 159928 数据
+2025-12-22 22:01:50,293 INFO 已更新 510050 数据
+2025-12-22 22:01:51,294 INFO 已更新 510300 数据
+2025-12-22 22:01:51,917 INFO 已更新 510500 数据
+2025-12-22 22:01:53,009 INFO 已更新 510580 数据
+2025-12-22 22:01:53,569 INFO 已更新 510880 数据
+2025-12-22 22:01:55,202 INFO 已更新 512040 数据
+2025-12-22 22:01:55,767 INFO 已更新 512170 数据
+2025-12-22 22:01:56,347 INFO 已更新 512290 数据
+2025-12-22 22:01:57,457 INFO 已更新 512660 数据
+2025-12-22 22:01:59,129 INFO 已更新 512680 数据
+2025-12-22 22:02:00,576 INFO 已更新 512800 数据
+2025-12-22 22:02:01,593 INFO 已更新 513100 数据
+2025-12-22 22:02:02,217 INFO 已更新 513500 数据
+2025-12-22 22:02:02,783 INFO 已更新 513520 数据
+2025-12-22 22:02:03,837 INFO 已更新 515030 数据
+2025-12-22 22:02:04,707 INFO 已更新 515110 数据
+2025-12-22 22:02:05,684 INFO 已更新 515220 数据
+2025-12-22 22:02:06,257 INFO 已更新 516160 数据
+2025-12-22 22:02:06,388 INFO --- 开始处理核心池 (21个) ---
+2025-12-22 22:02:11,066 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:02:15,194 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:02:19,114 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:02:22,443 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:02:26,021 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:02:29,865 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:02:32,833 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:02:36,557 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:02:36,563 INFO 已达当日AI调用上限(8)，510580 使用默认持有策略
+2025-12-22 22:02:36,570 INFO 已达当日AI调用上限(8)，510500 使用默认持有策略
+2025-12-22 22:02:36,577 INFO 已达当日AI调用上限(8)，513500 使用默认持有策略
+2025-12-22 22:02:36,583 INFO 已达当日AI调用上限(8)，510050 使用默认持有策略
+2025-12-22 22:02:36,627 INFO 已达当日AI调用上限(8)，512800 使用默认持有策略
+2025-12-22 22:02:36,633 INFO 已达当日AI调用上限(8)，515110 使用默认持有策略
+2025-12-22 22:02:36,638 INFO 已达当日AI调用上限(8)，516160 使用默认持有策略
+2025-12-22 22:02:36,642 INFO 已达当日AI调用上限(8)，512660 使用默认持有策略
+2025-12-22 22:02:36,647 INFO 已达当日AI调用上限(8)，515220 使用默认持有策略
+2025-12-22 22:02:36,651 INFO 已达当日AI调用上限(8)，512680 使用默认持有策略
+2025-12-22 22:02:36,653 INFO 已达当日AI调用上限(8)，515030 使用默认持有策略
+2025-12-22 22:02:36,662 INFO 已达当日AI调用上限(8)，512170 使用默认持有策略
+2025-12-22 22:02:36,666 INFO 已达当日AI调用上限(8)，159605 使用默认持有策略
+2025-12-22 22:02:36,666 INFO --- 开始执行所有决策 ---
+2025-12-22 22:02:36,671 INFO [equity-breakdown] 510300 qty=2525.6115 px=4.7300 val=11946.14
+2025-12-22 22:02:36,671 INFO [equity-breakdown] 513500 qty=1631.1965 px=2.4560 val=4006.22
+2025-12-22 22:02:36,671 INFO [equity-breakdown] 159928 qty=16071.4286 px=0.8090 val=13001.79
+2025-12-22 22:02:36,672 INFO [equity-breakdown] 512040 qty=10353.1433 px=1.1430 val=11833.64
+2025-12-22 22:02:36,672 INFO [equity-breakdown] cash=69262.12 holdings=40787.79 missing_px=[]
+2025-12-22 22:02:36,678 INFO === 每日任务结束 ===
+
+2025-12-22 22:02:36,690 INFO [export] 已生成合规CSV: trades/equity/performance
+2025-12-22 22:02:36,690 INFO [daily_once] qlib_adapter 导出原始CSV...
+2025-12-22 22:02:37,807 INFO [daily_once] qlib_run 计算因子...
+2025-12-22 22:02:38,019 INFO [daily_once] 完成并退出。
+2025-12-22 22:20:20,089 INFO [daily_once] 启动一次性每日任务...
+2025-12-22 22:20:20,092 INFO [risk] initial_capital=100000.00, max_position_pct=25.00%
+2025-12-22 22:20:20,094 INFO [risk] costs: buy_slippage=0.0010, buy_commission=0.0005, sell_slippage=0.0010, sell_commission=0.0005, sell_tax=0.0010
+2025-12-22 22:20:20,106 INFO 已从交易历史恢复账户：现金69262.12，持仓标的4
+2025-12-22 22:20:20,108 INFO === 2025-12-22 22:20:20 每日任务开始 ===
+2025-12-22 22:20:20,734 INFO 已更新 159605 数据
+2025-12-22 22:20:21,416 INFO 已更新 159915 数据
+2025-12-22 22:20:22,007 INFO 已更新 159928 数据
+2025-12-22 22:20:22,567 INFO 已更新 510050 数据
+2025-12-22 22:20:23,187 INFO 已更新 510300 数据
+2025-12-22 22:20:23,735 INFO 已更新 510500 数据
+2025-12-22 22:20:24,320 INFO 已更新 510580 数据
+2025-12-22 22:20:24,942 INFO 已更新 510880 数据
+2025-12-22 22:20:25,496 INFO 已更新 512040 数据
+2025-12-22 22:20:26,079 INFO 已更新 512170 数据
+2025-12-22 22:20:26,706 INFO 已更新 512290 数据
+2025-12-22 22:20:27,245 INFO 已更新 512660 数据
+2025-12-22 22:20:27,832 INFO 已更新 512680 数据
+2025-12-22 22:20:28,418 INFO 已更新 512800 数据
+2025-12-22 22:20:28,974 INFO 已更新 513100 数据
+2025-12-22 22:20:29,598 INFO 已更新 513500 数据
+2025-12-22 22:20:30,168 INFO 已更新 513520 数据
+2025-12-22 22:20:30,844 INFO 已更新 515030 数据
+2025-12-22 22:20:31,522 INFO 已更新 515110 数据
+2025-12-22 22:20:32,225 INFO 已更新 515220 数据
+2025-12-22 22:20:32,811 INFO 已更新 516160 数据
+2025-12-22 22:20:32,930 INFO --- 开始处理核心池 (21个) ---
+2025-12-22 22:20:38,495 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:20:50,601 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:21:09,173 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:21:17,717 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:23:40,927 INFO [daily_once] 启动一次性每日任务...
+2025-12-22 22:23:40,930 INFO [risk] initial_capital=100000.00, max_position_pct=25.00%
+2025-12-22 22:23:40,931 INFO [risk] costs: buy_slippage=0.0010, buy_commission=0.0005, sell_slippage=0.0010, sell_commission=0.0005, sell_tax=0.0010
+2025-12-22 22:23:40,942 INFO 已从交易历史恢复账户：现金69262.12，持仓标的4
+2025-12-22 22:23:40,944 INFO === 2025-12-22 22:23:40 每日任务开始 ===
+2025-12-22 22:23:41,687 INFO 已更新 159605 数据
+2025-12-22 22:23:42,322 INFO 已更新 159915 数据
+2025-12-22 22:23:43,050 INFO 已更新 159928 数据
+2025-12-22 22:23:43,693 INFO 已更新 510050 数据
+2025-12-22 22:23:44,395 INFO 已更新 510300 数据
+2025-12-22 22:23:45,078 INFO 已更新 510500 数据
+2025-12-22 22:23:45,721 INFO 已更新 510580 数据
+2025-12-22 22:23:46,483 INFO 已更新 510880 数据
+2025-12-22 22:23:47,193 INFO 已更新 512040 数据
+2025-12-22 22:23:47,750 INFO 已更新 512170 数据
+2025-12-22 22:23:48,644 INFO 已更新 512290 数据
+2025-12-22 22:23:49,299 INFO 已更新 512660 数据
+2025-12-22 22:23:49,979 INFO 已更新 512680 数据
+2025-12-22 22:23:50,746 INFO 已更新 512800 数据
+2025-12-22 22:23:51,592 INFO 已更新 513100 数据
+2025-12-22 22:23:52,347 INFO 已更新 513500 数据
+2025-12-22 22:23:53,338 INFO 已更新 513520 数据
+2025-12-22 22:23:54,237 INFO 已更新 515030 数据
+2025-12-22 22:23:55,080 INFO 已更新 515110 数据
+2025-12-22 22:23:55,979 INFO 已更新 515220 数据
+2025-12-22 22:23:56,706 INFO 已更新 516160 数据
+2025-12-22 22:23:57,051 INFO --- 开始处理核心池 (21个) ---
+2025-12-22 22:24:00,896 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:24:12,440 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:24:26,072 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:24:33,648 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:24:41,537 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:24:58,182 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:24:58,189 WARNING AI决策失败，510580 使用规则策略：模型调用失败（已尝试：['glm-4-air', 'glm-4-air']）：Expecting ',' delimiter: line 6 column 23 (char 138)
+2025-12-22 22:25:01,037 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:25:11,265 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:25:20,977 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:27:32,011 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:27:44,648 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:27:48,152 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:27:48,162 INFO 已达当日AI调用上限(12)，515110 使用默认持有策略
+2025-12-22 22:27:48,167 INFO 已达当日AI调用上限(12)，516160 使用默认持有策略
+2025-12-22 22:27:48,175 INFO 已达当日AI调用上限(12)，512660 使用默认持有策略
+2025-12-22 22:27:48,179 INFO 已达当日AI调用上限(12)，515220 使用默认持有策略
+2025-12-22 22:27:48,185 INFO 已达当日AI调用上限(12)，512680 使用默认持有策略
+2025-12-22 22:27:48,193 INFO 已达当日AI调用上限(12)，515030 使用默认持有策略
+2025-12-22 22:27:48,198 INFO 已达当日AI调用上限(12)，512170 使用默认持有策略
+2025-12-22 22:27:48,204 INFO 已达当日AI调用上限(12)，159605 使用默认持有策略
+2025-12-22 22:27:48,205 INFO --- 开始执行所有决策 ---
+2025-12-22 22:27:48,238 INFO [equity-breakdown] 510300 qty=2525.6115 px=4.7300 val=11946.14
+2025-12-22 22:27:48,239 INFO [equity-breakdown] 513500 qty=1631.1965 px=2.4560 val=4006.22
+2025-12-22 22:27:48,240 INFO [equity-breakdown] 159928 qty=16071.4286 px=0.8090 val=13001.79
+2025-12-22 22:27:48,241 INFO [equity-breakdown] 512040 qty=10353.1433 px=1.1430 val=11833.64
+2025-12-22 22:27:48,241 INFO [equity-breakdown] 510880 qty=2836.5895 px=3.1590 val=8960.79
+2025-12-22 22:27:48,241 INFO [equity-breakdown] cash=60287.89 holdings=49748.58 missing_px=[]
+2025-12-22 22:27:48,246 INFO === 每日任务结束 ===
+
+2025-12-22 22:27:48,259 INFO [export] 已生成合规CSV: trades/equity/performance
+2025-12-22 22:27:48,260 INFO [daily_once] qlib_adapter 导出原始CSV...
+2025-12-22 22:27:49,121 INFO [daily_once] qlib_run 计算因子...
+2025-12-22 22:27:49,308 INFO [daily_once] 完成并退出。
+2025-12-22 22:45:19,064 INFO [daily_once] 启动一次性每日任务...
+2025-12-22 22:45:19,067 INFO [risk] initial_capital=100000.00, max_position_pct=25.00%
+2025-12-22 22:45:19,067 INFO [risk] costs: buy_slippage=0.0010, buy_commission=0.0005, sell_slippage=0.0010, sell_commission=0.0005, sell_tax=0.0010
+2025-12-22 22:45:19,078 INFO 已从交易历史恢复账户：现金69262.12，持仓标的4
+2025-12-22 22:45:19,078 INFO === 2025-12-22 22:45:19 每日任务开始 ===
+2025-12-22 22:45:19,630 INFO 已更新 159605 数据
+2025-12-22 22:45:20,123 INFO 已更新 159915 数据
+2025-12-22 22:45:20,592 INFO 已更新 159928 数据
+2025-12-22 22:45:21,034 INFO 已更新 510050 数据
+2025-12-22 22:45:21,523 INFO 已更新 510300 数据
+2025-12-22 22:45:22,130 INFO 已更新 510500 数据
+2025-12-22 22:45:22,728 INFO 已更新 510580 数据
+2025-12-22 22:45:23,701 INFO 已更新 510880 数据
+2025-12-22 22:45:24,303 INFO 已更新 512040 数据
+2025-12-22 22:45:24,818 INFO 已更新 512170 数据
+2025-12-22 22:45:25,415 INFO 已更新 512290 数据
+2025-12-22 22:45:25,978 INFO 已更新 512660 数据
+2025-12-22 22:45:26,484 INFO 已更新 512680 数据
+2025-12-22 22:45:27,056 INFO 已更新 512800 数据
+2025-12-22 22:45:27,627 INFO 已更新 513100 数据
+2025-12-22 22:45:28,108 INFO 已更新 513500 数据
+2025-12-22 22:45:28,500 INFO 已更新 513520 数据
+2025-12-22 22:45:28,993 INFO 已更新 515030 数据
+2025-12-22 22:45:29,943 INFO 已更新 515110 数据
+2025-12-22 22:45:32,302 INFO 已更新 515220 数据
+2025-12-22 22:45:35,054 INFO 已更新 516160 数据
+2025-12-22 22:45:35,184 INFO --- 开始处理核心池 (21个) ---
+2025-12-22 22:45:46,283 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:45:54,603 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:46:12,854 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:46:16,269 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:46:26,890 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-22 22:46:26,929 INFO 已达当日AI调用上限(12)，512800 使用默认持有策略
+2025-12-22 22:46:26,932 INFO 已达当日AI调用上限(12)，515110 使用默认持有策略
+2025-12-22 22:46:26,935 INFO 已达当日AI调用上限(12)，516160 使用默认持有策略
+2025-12-22 22:46:26,938 INFO 已达当日AI调用上限(12)，512660 使用默认持有策略
+2025-12-22 22:46:26,942 INFO 已达当日AI调用上限(12)，515220 使用默认持有策略
+2025-12-22 22:46:26,946 INFO 已达当日AI调用上限(12)，512680 使用默认持有策略
+2025-12-22 22:46:26,949 INFO 已达当日AI调用上限(12)，515030 使用默认持有策略
+2025-12-22 22:46:26,952 INFO 已达当日AI调用上限(12)，512170 使用默认持有策略
+2025-12-22 22:46:26,955 INFO 已达当日AI调用上限(12)，159605 使用默认持有策略
+2025-12-22 22:46:26,955 INFO --- 开始执行所有决策 ---
+2025-12-22 22:46:26,962 INFO [equity-breakdown] 510300 qty=2525.6115 px=4.7300 val=11946.14
+2025-12-22 22:46:26,962 INFO [equity-breakdown] 513500 qty=1631.1965 px=2.4560 val=4006.22
+2025-12-22 22:46:26,962 INFO [equity-breakdown] 159928 qty=16071.4286 px=0.8090 val=13001.79
+2025-12-22 22:46:26,962 INFO [equity-breakdown] 512040 qty=10353.1433 px=1.1430 val=11833.64
+2025-12-22 22:46:26,963 INFO [equity-breakdown] 510880 qty=2836.5895 px=3.1590 val=8960.79
+2025-12-22 22:46:26,963 INFO [equity-breakdown] cash=60287.89 holdings=49748.58 missing_px=[]
+2025-12-22 22:46:26,964 INFO 已写入日终快照 2025-12-22: 99906.27
+2025-12-22 22:46:26,965 INFO === 每日任务结束 ===
+
+2025-12-22 22:46:26,975 INFO [export] 已生成合规CSV: trades/equity/performance
+2025-12-22 22:46:26,975 INFO [daily_once] qlib_adapter 导出原始CSV...
+2025-12-22 22:46:27,647 INFO [daily_once] qlib_run 计算因子...
+2025-12-22 22:46:27,764 INFO [daily_once] 完成并退出。
+2025-12-23 19:20:20,963 INFO [daily_once] 启动一次性每日任务...
+2025-12-23 19:20:20,966 INFO [risk] initial_capital=100000.00, max_position_pct=25.00%
+2025-12-23 19:20:20,967 INFO [risk] costs: buy_slippage=0.0010, buy_commission=0.0005, sell_slippage=0.0010, sell_commission=0.0005, sell_tax=0.0010
+2025-12-23 19:20:20,984 INFO 已从交易历史恢复账户：现金60287.89，持仓标的5
+2025-12-23 19:20:20,984 INFO === 2025-12-23 19:20:20 每日任务开始 ===
+2025-12-23 19:20:21,601 INFO 已更新 159605 数据
+2025-12-23 19:20:22,141 INFO 已更新 159915 数据
+2025-12-23 19:20:22,746 INFO 已更新 159928 数据
+2025-12-23 19:20:23,367 INFO 已更新 510050 数据
+2025-12-23 19:20:23,885 INFO 已更新 510300 数据
+2025-12-23 19:20:24,450 INFO 已更新 510500 数据
+2025-12-23 19:20:24,991 INFO 已更新 510580 数据
+2025-12-23 19:20:25,558 INFO 已更新 510880 数据
+2025-12-23 19:20:26,070 INFO 已更新 512040 数据
+2025-12-23 19:20:26,647 INFO 已更新 512170 数据
+2025-12-23 19:20:27,196 INFO 已更新 512290 数据
+2025-12-23 19:20:27,766 INFO 已更新 512660 数据
+2025-12-23 19:20:28,347 INFO 已更新 512680 数据
+2025-12-23 19:20:28,922 INFO 已更新 512800 数据
+2025-12-23 19:20:29,571 INFO 已更新 513100 数据
+2025-12-23 19:20:30,186 INFO 已更新 513500 数据
+2025-12-23 19:20:30,731 INFO 已更新 513520 数据
+2025-12-23 19:20:31,257 INFO 已更新 515030 数据
+2025-12-23 19:20:31,835 INFO 已更新 515110 数据
+2025-12-23 19:20:32,423 INFO 已更新 515220 数据
+2025-12-23 19:20:32,969 INFO 已更新 516160 数据
+2025-12-23 19:20:33,088 INFO --- 开始处理核心池 (21个) ---
+2025-12-23 19:20:36,873 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-23 19:20:39,862 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-23 19:20:44,011 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-23 19:20:47,750 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-23 19:20:51,243 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-23 19:20:54,331 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-23 19:20:57,099 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-23 19:21:02,599 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-23 19:21:09,336 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-23 19:21:13,447 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-23 19:21:16,427 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-23 19:21:21,067 INFO HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-12-23 19:21:21,081 INFO 已达当日AI调用上限(12)，512800 使用默认持有策略
+2025-12-23 19:21:21,089 INFO 已达当日AI调用上限(12)，515110 使用默认持有策略
+2025-12-23 19:21:21,098 INFO 已达当日AI调用上限(12)，516160 使用默认持有策略
+2025-12-23 19:21:21,110 INFO 已达当日AI调用上限(12)，512660 使用默认持有策略
+2025-12-23 19:21:21,120 INFO 已达当日AI调用上限(12)，515220 使用默认持有策略
+2025-12-23 19:21:21,132 INFO 已达当日AI调用上限(12)，512680 使用默认持有策略
+2025-12-23 19:21:21,141 INFO 已达当日AI调用上限(12)，515030 使用默认持有策略
+2025-12-23 19:21:21,160 INFO 已达当日AI调用上限(12)，512170 使用默认持有策略
+2025-12-23 19:21:21,176 INFO 已达当日AI调用上限(12)，159605 使用默认持有策略
+2025-12-23 19:21:21,176 INFO --- 开始执行所有决策 ---
+2025-12-23 19:21:21,188 INFO [equity-breakdown] 510300 qty=2525.6115 px=4.7400 val=11971.40
+2025-12-23 19:21:21,190 INFO [equity-breakdown] 513500 qty=1631.1965 px=2.4470 val=3991.54
+2025-12-23 19:21:21,192 INFO [equity-breakdown] 159928 qty=16071.4286 px=0.8020 val=12889.29
+2025-12-23 19:21:21,192 INFO [equity-breakdown] 512040 qty=10353.1433 px=1.1430 val=11833.64
+2025-12-23 19:21:21,192 INFO [equity-breakdown] 510880 qty=2836.5895 px=3.1600 val=8963.62
+2025-12-23 19:21:21,192 INFO [equity-breakdown] 159915 qty=2448.8997 px=3.1850 val=7799.75
+2025-12-23 19:21:21,192 INFO [equity-breakdown] cash=52476.44 holdings=57449.23 missing_px=[]
+2025-12-23 19:21:21,204 INFO 已写入日终快照 2025-12-23: 99795.48
+2025-12-23 19:21:21,205 INFO === 每日任务结束 ===
+
+2025-12-23 19:21:21,233 INFO [export] 已生成合规CSV: trades/equity/performance
+2025-12-23 19:21:21,235 INFO [daily_once] qlib_adapter 导出原始CSV...
+2025-12-23 19:21:23,031 INFO [daily_once] qlib_run 计算因子...
+2025-12-23 19:21:23,393 INFO [daily_once] 完成并退出。

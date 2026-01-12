@@ -1,0 +1,8 @@
+{
+  "decision": "buy",
+  "confidence": 0.65,
+  "reasoning": "尽管价格低于MA20，但成交量显著放大且整体趋势向上，表明有资金关注。考虑到Donchian通道的支撑位和ATR止损设置，可尝试买入。",
+  "target_price": 3.113,
+  "stop_loss": 2.703,
+  "take_profit": 2.871
+}

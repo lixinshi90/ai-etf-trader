@@ -1,0 +1,8 @@
+{
+  "decision": "sell",
+  "confidence": 0.65,
+  "reasoning": "尽管价格高于MA20，但整体趋势为下跌，且价格已触及Donchian通道上轨，存在回调风险。",
+  "target_price": 0.935,
+  "stop_loss": 0.991,
+  "take_profit": 0.9425
+}

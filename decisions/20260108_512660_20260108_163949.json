@@ -1,0 +1,8 @@
+{
+  "decision": "buy",
+  "confidence": 0.8,
+  "reasoning": "当前MA50高于MA200，显示上升趋势。ATR14较低，表明市场波动小，适合增加仓位。价格位于Donchian通道内，未触及阻力位。",
+  "target_price": null,
+  "stop_loss": null,
+  "take_profit": null
+}

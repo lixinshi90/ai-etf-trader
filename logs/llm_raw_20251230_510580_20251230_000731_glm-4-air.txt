@@ -1,0 +1,2 @@
+{"decision": "buy", "confidence": 0.8, "reasoning": "MA50>MA200，显示上升趋势，ATR较低，市场波动小，可适当增加仓位。当前价格未突破阻力位，但已站在MA20之上，建议买入。", "target_price": null, "stop_loss": 3.8330 - (3.8330 * 0.05), "take_profit": null}
+}

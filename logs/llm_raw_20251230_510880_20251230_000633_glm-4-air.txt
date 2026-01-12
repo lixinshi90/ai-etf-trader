@@ -1,0 +1,1 @@
+{"decision":"buy","confidence":0.8,"reasoning":"MA50>MA200，表明处于上升趋势。当前ATR为0.0266，波动较小，可以考虑较高仓位。价格未跌破Donchian 20日通道支撑，建议买入。","target_price":null,"stop_loss":3.1850*0.95,"take_profit":3.1850*1.12}

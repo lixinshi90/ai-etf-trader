@@ -1,0 +1,410 @@
+# AI ETF Trader - 自动化交易系统
+
+本项目是一个由 AI 驱动的 ETF 自动化交易系统，实现了从数据获取、AI 决策、交易执行到绩效评估和 Web 展示的完整闭环。
+
+## ✨ 核心特性
+
+- 混合决策引擎：结合大语言模型 (LLM)、传统技术指标（KDJ、MACD、MA Cross）与 Qlib 因子，通过可配置的合议模式 (CONSENSUS) 生成交易信号。
+- 分层标的池：支持“核心池 + 观察池”的两层结构，先处理核心池，若无买信号再处理观察池。
+- 动态仓位：可按照 AI 置信度或外部覆盖值调整仓位比例，并设置最小/最大边界。
+- 风险控制：支持强制止损、快速止盈、跟踪止损（高水位回撤）；考虑手续费与滑点。
+- Web 仪表盘：Flask + ECharts 展示账户净值、持仓、交易、AI 决策与 KPI。
+- Qlib 集成（可选）：支持因子 CSV（本地）与 TopK 选股（Provider）两种融合方式。
+- 波动率风险近似：提供 Vegas 风险敞口的近似计算（不依赖期权链与 IV）。
+
+## 🧠 交易策略总览（当前实现）
+
+系统的每日流程（收盘后）
+
+1) 拉取与落库
+- 通过 akshare 获取 ETF 日线数据（优先东方财富 fund_etf_hist_em，失败回退新浪 fund_etf_hist_sina），并写入 data/etf_data.db。
+- 实时行情用于界面刷新，优先东方财富 fund_etf_spot_em，失败回退同花顺 fund_etf_spot_ths。闭市时会自动退回历史快照（源: history）。
+
+2) 生成规则信号（rule-based）
+- STRATEGY_MODE 决定规则集：
+  - MA_CROSS：20/60 均线金叉/死叉 + 位于均线上下
+  - BREAKOUT：唐奇安通道 N 日高点突破（默认 N=20）
+  - MEAN_REVERSION：RSI(n=2) 超买/超卖（默认 low=10、high=95）
+  - KDJ_MACD：J 低位上穿阈值 + MACD 金叉
+  - AGGRESSIVE（默认）：综合上述多个规则，并可叠加“Qlib 因子”判断（见下）
+- 若开启 Qlib 因子（QLIB_FACTOR_ENABLED=true，默认 true），且 data/qlib_factors/<code>.csv 存在，读取最近一行例如 rsi_14 等因子，给出辅助买/卖提示（默认使用 RSI14 的阈值比较）。
+
+3) 可选：Qlib TopK 融合（选股层）
+- 若 QLIB_ALGO_ENABLED=true 且 Qlib Provider (QLIB_DIR) 初始化成功，则计算一段回看期（QLIB_TOPK_LOOKBACK）的收益率排序，取前 K（QLIB_TOPK_K）作为 TopK 集合：
+  - ETF 在 TopK：将规则信号提升为“买入”（并在 reasoning 中标注“Qlib TopK”）
+  - ETF 不在 TopK 且规则为 hold：给出温和的“sell”提示（“Qlib 非TopK”）
+
+4) AI 决策（限流）
+- 对单个 ETF 传入最近一段行情与关键指标，调用大模型生成结构化决策（buy/sell/hold + confidence + reasoning + 可选止损/止盈/仓位建议）。
+- 每日调用次数由 DAILY_AI_CALLS_LIMIT 控制（默认不超过标的个数）。
+
+5) 合议（CONSENSUS）
+- 仅当 AI 与 规则同向（同为 buy 或同为 sell）时才执行该方向；否则持有（hold）。
+- 合并 reasoning 与 confidence，作为最终执行依据。
+
+6) 执行与风控
+- 仓位：支持固定基础仓位 + 按置信度动态放大；也支持由决策直接覆盖 position_pct。
+- 风控：
+  - 强制止损（HARD_STOP_LOSS_PCT）：浮亏超阈值即清仓；
+  - 快速止盈（QUICK_TAKE_PROFIT_TRIGGER/SELL_RATIO）：浮盈达到触发阈值时部分卖出；
+  - 跟踪止损（ENABLE_TRAILING_STOP/TRAILING_STOP_PCT/TRAILING_STEP_PCT）：价格创新高后抬升止损线，回撤即卖出；
+  - 成本/滑点：COST_BPS、SLIPPAGE_BPS。
+- 执行完成后，写入当日 equity 快照（daily_equity 表）。
+
+7) Qlib 因子数据更新（在 daily_once 任务末尾）
+- 导出原始 CSV（qlib_adapter）与计算因子（qlib_run）。
+- 注意：因子计算在“当次决策之后”触发，因此新因子通常从“下一日”开始用于规则判断（除非你提前手工生成因子）。
+
+## ⚙️ 策略相关配置（关键环境变量）
+
+- 标的池
+  - CORE_ETF_LIST、OBSERVE_ETF_LIST、ETF_LIST
+  - FILTER_ENABLED（默认 true）、MIN_AVG_TURNOVER、MIN_LISTING_MONTHS：标的池过滤（流动性/上市时长）
+
+- 规则策略
+  - STRATEGY_MODE=AGGRESSIVE|MA_CROSS|BREAKOUT|MEAN_REVERSION|KDJ_MACD（默认 AGGRESSIVE）
+  - BREAKOUT_N=20
+  - RSI_N=2、RSI_LOW=10、RSI_HIGH=95
+  - KDJ_LOW=20
+
+- Qlib 融合
+  - QLIB_FACTOR_ENABLED=true（默认 true）：使用 data/qlib_factors/<code>.csv 的最近一行因子参与规则判断
+  - QLIB_ALGO_ENABLED=false（默认 false）：启用 TopK 选股融合（需 Qlib Provider 可用）
+  - QLIB_DIR=./data/qlib/cn_etf、QLIB_REGION=cn、QLIB_TOPK_LOOKBACK=60、QLIB_TOPK_K=2
+
+- AI 决策
+  - DAILY_AI_CALLS_LIMIT：每日最大 AI 调用次数（默认不超过标的数）
+
+- 仓位与风控
+  - ENABLE_DYNAMIC_POSITION=false、BASE_POSITION_PCT=0.2、MIN_POSITION_PCT=0.05、MAX_POSITION_PCT=0.3
+  - HARD_STOP_LOSS_PCT=0.0
+  - QUICK_TAKE_PROFIT_TRIGGER=0.0、QUICK_TAKE_PROFIT_SELL_RATIO=0.0
+  - ENABLE_TRAILING_STOP=false、TRAILING_STOP_PCT=0.05、TRAILING_STEP_PCT=0.01
+  - COST_BPS=5、SLIPPAGE_BPS=2
+
+- 实时/历史行情
+  - 闭市：/api/etf_tickers?live=1 返回 market_open=false，source=history；界面显示历史快照属正常
+
+## 🛠️ 技术栈
+
+- 包管理：uv（极速 Python 包管理器）
+- 后端：Flask、Pandas、NumPy、Akshare
+- AI：OpenAI 兼容 SDK
+- 数据库：SQLite
+- 量化：Qlib（可选）
+- 前端：ECharts、HTML/CSS/JavaScript
+
+## 🚀 快速开始
+
+1) 安装 uv（略）并克隆项目；2) uv sync 安装依赖；3) 拷贝 .env.example 为 .env 并按需修改；4) 启动 Web 或执行每日任务。
+
+- 启动 Web 仪表盘
+```bash
+uv run python -m src.web_app
+# 浏览器访问 http://127.0.0.1:5001
+```
+- 手动执行每日任务
+```bash
+uv run python -m src.daily_once
+```
+
+## 📈 Qlib 集成（可选）
+
+- 若只使用“因子 CSV 融合”，无需安装 Qlib Provider：保持 QLIB_FACTOR_ENABLED=true，同时确保 data/qlib_factors 下存在对应 CSV 即可。
+- 若要启用 TopK 选股融合（QLIB_ALGO_ENABLED=true），需准备 Qlib Provider（dump_bin 建库）并设置 QLIB_DIR、QLIB_REGION。
+
+## 📁 项目结构
+
+```
+ai-etf-trader/
+├── data/                 # 数据库、Qlib 数据等
+├── decisions/            # AI 决策 JSON
+├── deploy/               # 部署脚本
+├── logs/                 # 运行日志
+├── prompts/              # Prompt 模板与历史
+├── scripts/              # 辅助脚本（回填、审计、诊断等）
+├── src/                  # 核心代码
+│   ├── web_app.py        # Flask Web & API
+│   ├── daily_once.py     # 一次性每日任务入口
+│   ├── main.py           # 主任务调度与策略融合
+│   ├── data_fetcher.py   # 数据获取（多源 fallback）
+│   ├── ai_decision.py    # AI 决策
+│   ├── trade_executor.py # 交易执行与风控
+│   ├── qlib_adapter.py   # 导出原始 CSV
+│   └── qlib_run.py       # 计算因子（生成 data/qlib_factors）
+├── static/               # 前端静态资源
+├── templates/            # 前端模板
+└── pyproject.toml        # 依赖与元数据（uv 使用）
+```
+
+## ⚙️ API 速览（常用）
+
+- GET /api/performance：账户净值曲线
+- GET /api/portfolio：资产与持仓
+- GET /api/trades：交易记录
+- GET /api/decisions：AI 决策
+- GET /api/etf_tickers?live=1：实时/历史行情（带 source）
+- GET /api/qlib/factors：最新因子快照（每个代码 1 行）或指定 code 的最近多行
+- GET /api/vega_risk：波动率风险近似（汇总/单标的时间序列）
+- GET /api/qlib/status：Qlib Provider 状态（仅 Web 端）
+
+## ❓常见问题
+
+- 闭市为什么显示“源: history”？
+  - 这是设计逻辑：闭市时回退到数据库最新快照，仍可查看最新收盘价、涨跌等。
+- 名称为什么可能为“-”？
+  - 实时源不可用时无法动态补名；可通过环境变量 ETF_NAME_MAP 提供静态映射，或待网络恢复后自动补全。
+
+## 🤝 贡献
+
+欢迎提交 Issues 与 PR，一起完善策略与风控。
+
+---
+
+## 🌐 VPS 部署指南（建议 1 月 2 日完成，1 月 3 日撰写报告）
+
+> 目标：在 Ubuntu 20.04+ VPS 上，部署 Web 仪表盘（5001 端口）与每日收盘后自动任务；完成健康检查与日志留存，形成报告可用的运行佐证。
+
+### 1) 服务器准备
+
+- 更新系统与常用工具
+```bash
+sudo apt update && sudo apt -y upgrade
+sudo apt -y install git curl build-essential pkg-config
+```
+- 安装 uv（Python 包与虚拟环境管理）
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+# 重新登录或 source ~/.profile 使 uv 生效
+```
+- 开放端口（示例：5001）
+```bash
+sudo ufw allow 5001/tcp || true
+```
+
+### 2) 拉取代码与依赖
+```bash
+cd /opt && sudo mkdir -p ai-etf-trader && sudo chown $USER:$USER ai-etf-trader
+cd /opt/ai-etf-trader
+git clone https://github.com/your-repo/ai-etf-trader.git .
+uv sync  # 安装依赖（自动创建 .venv）
+```
+
+### 3) 配置 .env（最小可运行示例）
+在项目根目录创建 .env：
+```bash
+# 资金与标的池（示例：方案 B）
+INITIAL_CAPITAL=100000
+CORE_ETF_LIST=510300,159915,159928,513100
+OBSERVE_ETF_LIST=512040,159790,512660,513500
+ETF_LIST=510300,159915,159928,513100,512040,159790,512660,513500
+
+# 策略与合议（低回撤优先）
+STRATEGY_MODE=AGGRESSIVE
+ENSEMBLE_MODE=CONSENSUS
+BREAKOUT_N=55
+RSI_N=2
+RSI_LOW=8
+RSI_HIGH=92
+
+# 风控与仓位
+ENABLE_DYNAMIC_POSITION=true
+BASE_POSITION_PCT=0.18
+MIN_POSITION_PCT=0.05
+MAX_POSITION_PCT=0.25
+ENABLE_TRAILING_STOP=true
+TRAILING_STOP_PCT=0.05
+TRAILING_STEP_PCT=0.01
+HARD_STOP_LOSS_PCT=0.08
+QUICK_TAKE_PROFIT_TRIGGER=0.08
+QUICK_TAKE_PROFIT_SELL_RATIO=0.5
+
+# Qlib 可选（只用因子 CSV 时保持默认；启用 TopK 需自建 Provider）
+QLIB_FACTOR_ENABLED=true
+QLIB_ALGO_ENABLED=false
+QLIB_TOPK_LOOKBACK=90
+QLIB_TOPK_K=2
+
+# Web 端口
+FLASK_HOST=0.0.0.0
+FLASK_PORT=5001
+
+# AI Key（如需启用 AI 决策）
+# AI_API_KEY=sk-...
+# DAILY_AI_CALLS_LIMIT=8
+```
+
+### 4) 启动 Web 仪表盘（二选一）
+
+- 简单方式：screen 前台启动
+```bash
+screen -S ai-etf-web -dm bash -lc 'cd /opt/ai-etf-trader && uv run python -m src.web_app'
+# 查看：screen -ls / 退出：screen -r ai-etf-web
+```
+- 或使用 systemd（更稳健）
+```bash
+sudo tee /etc/systemd/system/ai-etf-web.service >/dev/null <<'UNIT'
+[Unit]
+Description=AI ETF Trader Web
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/ai-etf-trader
+Environment=FLASK_HOST=0.0.0.0
+Environment=FLASK_PORT=5001
+ExecStart=/bin/bash -lc 'uv run python -m src.web_app'
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+UNIT
+sudo systemctl daemon-reload
+sudo systemctl enable --now ai-etf-web
+```
+- 健康检查：
+```bash
+curl http://127.0.0.1:5001/health   # 返回 ok
+# 浏览器访问 http://<VPS_IP>:5001/
+```
+
+### 5) 配置每日任务（crontab）
+
+建议使用一个小脚本加载 .env 并执行业务，避免 cron 环境变量丢失：
+```bash
+sudo tee /opt/ai-etf-trader/run_daily.sh >/dev/null <<'SH'
+#!/usr/bin/env bash
+set -euo pipefail
+cd /opt/ai-etf-trader
+# 加载 .env 到环境变量
+export $(grep -v '^#' .env | xargs -d '\n' -I {} echo {})
+# 执行一次每日任务（收盘后）
+uv run python -m src.daily_once >> logs/daily_once.log 2>&1
+SH
+sudo chmod +x /opt/ai-etf-trader/run_daily.sh
+```
+- 设置定时任务（示例：工作日 17:10）：
+```bash
+crontab -l | { cat; echo '10 17 * * 1-5 /opt/ai-etf-trader/run_daily.sh'; } | crontab -
+```
+
+### 6) 可选：反向代理（Nginx）
+```bash
+sudo apt -y install nginx
+sudo tee /etc/nginx/sites-available/ai-etf-web >/dev/null <<'NG'
+server {
+  listen 80;
+  server_name _;
+  location / {
+    proxy_pass http://127.0.0.1:5001;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+}
+NG
+sudo ln -sf /etc/nginx/sites-available/ai-etf-web /etc/nginx/sites-enabled/ai-etf-web
+sudo nginx -t && sudo systemctl reload nginx
+```
+
+### 7) 验证与留痕（报告所需）
+- Web 端口可访问：`/health` 返回 ok；首页、KPI、交易、因子可见
+- 日志：`logs/daily.log`、`logs/daily_once.log`（定时任务输出）
+- 审计脚本（已内置）：
+```bash
+uv run python scripts/audit_financials.py --start 2025-12-01
+# 生成 out/daily_equity_from_*.csv、out/trades_from_*.csv、out/portfolio_snapshot.csv
+```
+
+### 8) 故障与排查
+- 实时行情“源: history”：盘中优先 Eastmoney，失败自动回退 THS；若两者均不可用，界面显示 history（数据库最新快照）
+- 代理冲突：确认未设置无效的 HTTP(S)_PROXY；或在 web_app 中改为直连（当前已做重试与列名修复）
+- akshare 报连接/证书错误：`uv add -U requests urllib3 certifi akshare` 后重试
+- 时区：报告期建议统一为 Asia/Shanghai（`sudo timedatectl set-timezone Asia/Shanghai`）
+
+> 时间安排建议：1 月 2 日完成部署与一次烟测（含 `/health` 截图、`/api/etf_tickers?live=1` 截图、`logs/daily_once.log` 片段）；1 月 3 日据此撰写部署与运行附录即可。
+
+---
+
+## 📜 策略与 AI 决策：系统指令与样例
+
+### System Prompt（片段，可直接用于系统提示词）
+你是一个严谨的量化投研助理，基于给定的ETF历史日线与指标，输出结构化交易决策。必须遵循：
+- 风险硬约束（优先级最高）：
+  - 单笔买入资金占用 ≤ 20%
+  - 单标浮亏 ≥ 5% 立即卖出（强制止损）
+  - 浮盈 8%–15% 区间择优止盈；默认浮盈 ≥10% 部分止盈 50%
+  - 持仓上限 20 个交易日；到期必须给出卖出建议（如趋势极强可给一次性续持，但需给充分理由）
+- 信号与稳健性：
+  - 趋势类信号优先（20/60 均线 + Donchian 突破）；RSI(6) 仅作极端判断，不单独触发反转
+  - 避免同簇（芯片/光伏/军工/创业板）在同一天多只“买入”建议
+- 产出格式：必须返回 JSON，字段完整，不可缺省
+  - decision: buy/sell/hold
+  - confidence: [0,1]
+  - reasoning: 中文50–100字
+  - stop_loss / take_profit: 数值（若无填 null）
+  - position_pct: 建议仓位（0~0.20），如卖出给出 sell_ratio（0~1）
+  - horizon_days: 建议持有期（天，≤20）
+- 只基于传入数据给出判断，不杜撰外部事实；若信号冲突，给出“hold”并说明原因
+
+### 决策 JSON 样例
+```json
+{
+  "decision": "sell",
+  "confidence": 0.70,
+  "reasoning": "价格在突破回落后跌破MA20，短期动能转弱；当前持有已满20日，且浮盈接近10%阈值，优先兑现收益并规避回撤风险。",
+  "stop_loss": 4.55,
+  "take_profit": 4.95,
+  "position_pct": 0.00,
+  "sell_ratio": 1.0,
+  "horizon_days": 0
+}
+```
+
+### 合议逻辑（CONSENSUS）
+- 系统对“AI决策（上面JSON）”与“规则信号（MA/Breakout/RSI/KDJ-MACD）”做 CONSENSUS：
+  - 若 AI 与 规则同向且为 buy/sell，则执行该方向；confidence 取二者均值并合并 reasoning
+  - 若不一致，则 hold（不交易）
+- 该机制可显著降低噪音信号、提升胜率与稳健性；结合止损/止盈/冷静期，配合 TopK_K=2 控制交易频率在 50–100/年
+
+---
+
+## 📚 参考资料（近10年公开文献/资源）
+
+- BloombergGPT: A Large Language Model for Finance (2023)  
+  https://arxiv.org/abs/2303.17564
+- FinGPT: Open-Source Financial Large Language Models (2023/2024)  
+  https://arxiv.org/abs/2306.06031
+- FinBERT: Financial Sentiment Analysis with Pre-trained Language Models (2019)  
+  https://arxiv.org/abs/1908.10063
+- Large Language Models in Finance: A Survey (2023/2024)  
+  https://arxiv.org/abs/2311.10771
+- FinRL-Meta: Market Environments and Benchmarks for Data-Driven DRL in Finance (2022)  
+  https://arxiv.org/abs/2206.03004
+- Qlib: An AI-oriented Quantitative Investment Platform (Microsoft, 2020)  
+  https://arxiv.org/abs/2009.11189
+- Time Series Momentum: A Practitioner’s Guide (AQR, 2019)  
+  https://www.aqr.com/Insights/White-Papers/Time-Series-Momentum-A-Practitioners-Guide
+- Trend Following: Equity and Bond Markets（AQR 系列，2019–2020）  
+  https://www.aqr.com/Insights/Research
+- Backtest Overfitting and the Deflated Sharpe Ratio（López de Prado, 2018–2019 扩展）  
+  https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2462421
+- Akshare 官方文档  
+  https://akshare.akfamily.xyz/
+
+---
+
+## 📄 绩效摘要页（报告附录生成）
+
+已内置脚本：`scripts/generate_perf_summary.py`，基于 out/*.csv 生成摘要页与收益曲线：
+
+1) 先导出审计期数据：
+```bash
+uv run python scripts/audit_financials.py --start 2025-12-01
+```
+2) 生成摘要页（HTML + PNG）：
+```bash
+uv run python scripts/generate_perf_summary.py
+# 输出：out/REPORT_PERF_SUMMARY.html 与 out/equity_curve.png
+```
+附录建议包含：KPI表（总交易、买入/卖出、胜率、总收益、年化、MDD）、收益曲线、每日交易分布、当前持仓表。

@@ -1,0 +1,8 @@
+{
+  "decision": "buy",
+  "confidence": 0.85,
+  "reasoning": "MA50>MA200，显示上升趋势，ATR为0.0265，波动较小，建议仓位不超过20%。当前价格未突破阻力位1.9720，但已突破MA20，可考虑买入。",
+  "target_price": null,
+  "stop_loss": 1.851,
+  "take_profit": null
+}

@@ -1,0 +1,1 @@
+{"decision":"buy","confidence":0.85,"reasoning":"MA50>MA200，表明处于上升趋势。当前价格接近Donchian通道上轨，且ATR相对较低，建议买入。","target_price":null,"stop_loss":2.3171,"take_profit":2.6778}

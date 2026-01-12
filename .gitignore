@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+
+# Virtual Environments
+.venv/
+venv/
+env/
+qlib-venv/
+qlib-main/
+
+# Cache, logs, and output artifacts
+.cache/
+out/
+logs/*.log
+*.bak
+*.backup
+
+# IDE / Editor specific
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store
+Thumbs.db

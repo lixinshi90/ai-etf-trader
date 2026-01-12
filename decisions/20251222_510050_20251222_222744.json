@@ -1,0 +1,8 @@
+{
+  "decision": "buy",
+  "confidence": 0.85,
+  "reasoning": "MA50>MA200，显示上升趋势，ATR为0.0336，波动较低，建议仓位不超过20%。",
+  "target_price": null,
+  "stop_loss": 3.002,
+  "take_profit": 3.4408
+}
