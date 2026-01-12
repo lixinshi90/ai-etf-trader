@@ -4,6 +4,7 @@ __pycache__/
 *.pyo
 *.pyd
 .env
+*.env
 
 # Virtual Environments
 .venv/
@@ -15,9 +16,11 @@ qlib-main/
 # Cache, logs, and output artifacts
 .cache/
 out/
-logs/*.log
+logs/
+*.log
 *.bak
 *.backup
+*.db
 
 # IDE / Editor specific
 .vscode/
@@ -26,3 +29,8 @@ logs/*.log
 # OS specific
 .DS_Store
 Thumbs.db
+
+# Ignore temporary scripts in the root directory
+/*.py
+/*.txt
+/*.md
