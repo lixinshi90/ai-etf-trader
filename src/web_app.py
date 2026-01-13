@@ -1178,7 +1178,7 @@ def api_audit_summary():
 
 if __name__ == "__main__":
     server_config = config.get('flask', {})
-    host = os.getenv('FLASK_HOST', server_config.get('host', '0.0.0.0'))  # Hardcode to 0.0.0.0 for deployment
+    host = '0.0.0.0'  # Force listen on all interfaces for deployment
     port = int(os.getenv('FLASK_PORT', str(server_config.get('port', 5001))))
     debug_env = os.getenv('FLASK_DEBUG', '')
     debug = (debug_env.lower() == 'true') if debug_env else bool(server_config.get('debug', False))
