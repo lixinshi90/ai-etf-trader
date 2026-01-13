@@ -97,7 +97,7 @@
     <div class="header"><h1>📊 AI ETF Trader 仪表盘</h1><div class="header-right"><span id="liveSourceBadge" class="mode-badge" style="margin-right:10px;">源: --</span><div class="last-update"><span>最后更新</span><span class="time" id="lastUpdate">--:--:--</span></div><button class="btn-refresh" onclick="loadAll()">🔄 刷新</button><button class="btn-refresh" id="btnPull" onclick="refreshPrices()">📥 拉取最新行情</button><div class="auto-refresh">自动刷新: 10秒</div></div></div>
     <div id="globalError" class="error-banner"></div>
     <div class="content">
-    <div id="sec-performance" class="card"><div class="card-header"><span class="icon">📈</span><h2>账户总资产曲线</h2><div style="margin-left:auto; display:flex; align-items:center; gap:8px;"><span id="modeLabel" class="mode-badge">交易日</span><span class="muted">显示</span><select id="tradingModeSelect" class="btn"><option value="1">交易日</option><option value="0">自然日</option></select></div></div><div class="card-body"><div id="performanceChart" class="chart-container"><div class="chart-placeholder">📭 暂无数据</div></div></div></div>
+    <div id="sec-performance" class="card"><div class="card-header"><span class="icon">📈</span><h2>账户总资产曲线</h2></div><div class="card-body"><div id="performanceChart" class="chart-container"><div class="chart-placeholder">📭 暂无数据</div></div></div></div>
     <div id="sec-portfolio" class="card"><div class="card-header"><span class="icon">💹</span><h2>实时资产概览</h2></div><div class="card-body"><div class="metrics-grid"><div class="metric-card"><div class="metric-label">总资产(估值)</div><div class="metric-value" id="p-total">0.00</div></div><div class="metric-card"><div class="metric-label">现金</div><div class="metric-value" id="p-cash">0.00</div></div><div class="metric-card"><div class="metric-label">持仓市值</div><div class="metric-value" id="p-hold">0.00</div></div></div></div></div>
     
     <div id="sec-kpi" class="card"><div class="card-header"><span class="icon">🎯</span><h2>关键绩效指标</h2></div><div class="card-body"><div class="metrics-grid"><div class="metric-card"><div class="metric-label"><span class="tooltip-wrapper">总交易次数<span class="tooltip-text">统计周期内买入+卖出次数；下方显示买/卖明细</span></span></div><div class="metric-value" id="m-total">--</div><div class="metric-unit" id="m-total-detail">买 0 / 卖 0</div></div><div class="metric-card"><div class="metric-label"><span class="tooltip-wrapper">胜率<span class="tooltip-text">盈利的卖出交易次数 / 总卖出交易次数</span></span></div><div class="metric-value" id="m-win">--</div></div><div class="metric-card"><div class="metric-label"><span class="tooltip-wrapper">总收益率<span class="tooltip-text">公式: (期末总资产 - 期初总资产) / 期初总资产 × 100%</span></span></div><div class="metric-value" id="m-totalret">--</div></div><div class="metric-card"><div class="metric-label"><span class="tooltip-wrapper">年化收益率<span class="tooltip-text">公式: 总收益率 × (365 / 统计天数)</span></span></div><div class="metric-value" id="m-annual">--</div></div><div class="metric-card"><div class="metric-label"><span class="tooltip-wrapper">最大回撤<span class="tooltip-text">统计周期内，账户净值从任意历史高点回落的最大百分比</span></span></div><div class="metric-value" id="m-mdd">--</div></div></div></div></div>
@@ -200,8 +200,7 @@
     const getName = (code) => { const n = codeNameMap[String(code)] || ''; return n && n !== '-' ? n : null; };
     const codeWithName = (code) => { const n = getName(code); return n ? `${code} (${n})` : `${code}`; };
 
-    const getTradingMode = () => document.getElementById('tradingModeSelect')?.value || '1';
-    const updateModeLabel = () => { const el = document.getElementById('modeLabel'); if(el) el.textContent = getTradingMode() === '0' ? '自然日' : '交易日'; };
+        const getTradingMode = () => '1'; // Always use trading day mode
     const setLastUpdate = () => { const d = new Date(); document.getElementById('lastUpdate').textContent = d.toTimeString().split(' ')[0]; };
     const showError = (msg) => { const el = document.getElementById('globalError'); el.textContent = '⚠️ ' + msg; el.classList.add('show'); setTimeout(() => el.classList.remove('show'), 5000); };
     const fetchJSON = async (url) => { const res = await fetch(url, { cache: 'no-store' }); if (!res.ok) throw new Error(url + ' -> HTTP ' + res.status); return await res.json(); };
@@ -701,10 +700,7 @@
 
     // --- Initialization ---
     document.addEventListener('DOMContentLoaded', () => {
-      const sel = document.getElementById('tradingModeSelect');
-      try { const saved = localStorage.getItem('tradingMode'); if (sel && saved) sel.value = saved; } catch(e) {}
-      updateModeLabel();
-      if (sel) sel.addEventListener('change', () => { try { localStorage.setItem('tradingMode', sel.value); } catch(e) {} updateModeLabel(); loadPerformance(); });
+
       // back-to-top toggle
       const btt = document.getElementById('backToTop');
       window.addEventListener('scroll', () => {
