@@ -202,7 +202,20 @@
 
         const getTradingMode = () => '1'; // Always use trading day mode
     const setLastUpdate = () => { const d = new Date(); document.getElementById('lastUpdate').textContent = d.toTimeString().split(' ')[0]; };
-    const showError = (msg) => { const el = document.getElementById('globalError'); el.textContent = '⚠️ ' + msg; el.classList.add('show'); setTimeout(() => el.classList.remove('show'), 5000); };
+    const showError = (msg) => {
+      const el = document.getElementById('globalError');
+      let text = msg;
+      try {
+        if (typeof msg === 'object' && msg !== null) {
+          text = (msg.message || msg.msg || JSON.stringify(msg));
+        }
+      } catch (e) {
+        text = String(msg);
+      }
+      el.textContent = '⚠️ ' + String(text);
+      el.classList.add('show');
+      setTimeout(() => el.classList.remove('show'), 5000);
+    };
     const fetchJSON = async (url) => { const res = await fetch(url, { cache: 'no-store' }); if (!res.ok) throw new Error(url + ' -> HTTP ' + res.status); return await res.json(); };
     const formatPercent = (v) => (typeof v === 'number' && isFinite(v) ? v.toFixed(2) : '--') + (typeof v === 'number' && isFinite(v) ? '%' : '');
     const safeNum = (v) => (typeof v === 'number' && isFinite(v) ? v : null);

@@ -75,6 +75,9 @@ def calculate_performance_from_data(trades_df: pd.DataFrame | None, daily_perf_d
 
     win_rate = (win_sell / total_sell) if total_sell else 0.0
 
+    # Align win-rate definition with report: treat break-even sells as wins (profit >= 0)
+    # Note: this is applied by counting wins above; keep denominator as total_sell.
+
     # --- Equity-based metrics ---
     if daily_perf_df is None or daily_perf_df.empty:
         out = dict(base_empty)

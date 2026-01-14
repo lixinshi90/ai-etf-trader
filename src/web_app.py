@@ -251,7 +251,8 @@ def get_trades():
                     'constraint_triggered': 0,
                     'trade_cost': 0,
                 })
-                # Step 4: Convert any remaining NaN to None
+                # Step 4: Ensure no NaN/inf reaches JSON (browser JSON.parse will fail on NaN)
+                df = df.replace([np.nan, np.inf, -np.inf], None)
                 df = df.where(pd.notna(df), None)
                 # Step 5: Convert to records and validate each trade
                 recs = df.to_dict("records")
@@ -523,63 +524,103 @@ def get_performance():
 @app.route("/api/metrics")
 @cache.cached(timeout=60)
 def get_metrics():
-    """Calculate KPIs from the authoritative DB source (trade_history.db)."""
+    """Calculate KPIs aligned with out/REPORT_PERF_SUMMARY.html.
+
+    Data source priority:
+    1) trade_history.db (trades + daily_equity)
+    2) out/resimulated_trades_fully_compliant.csv + out/resimulated_daily_equity.csv
+    """
     trades_df = pd.DataFrame()
     daily_perf_df = pd.DataFrame()
 
+    # 1) Prefer DB (most deployments have this; also matches dashboard /api/trades)
     try:
         db_path = os.path.join(_project_root(), "data", "trade_history.db")
-        if not os.path.exists(db_path):
-            raise FileNotFoundError("trade_history.db not found")
-
-        import sqlite3 as _sql
-        conn = _sql.connect(db_path)
-        try:
-            trades_df = pd.read_sql_query("SELECT date, etf_code, action, price, quantity, value, capital_after, reasoning FROM trades ORDER BY datetime(date)", conn)
-            daily_perf_df = pd.read_sql_query("SELECT date, equity FROM daily_equity ORDER BY date", conn)
-            if not daily_perf_df.empty:
-                daily_perf_df = daily_perf_df.rename(columns={"equity":"total_assets"})
-        finally:
-            conn.close()
-
+        if os.path.exists(db_path):
+            import sqlite3 as _sql
+            conn = _sql.connect(db_path)
+            try:
+                trades_df = pd.read_sql_query(
+                    "SELECT date, etf_code, action, price, quantity, value, capital_after, reasoning FROM trades ORDER BY datetime(date)",
+                    conn,
+                )
+                daily_perf_df = pd.read_sql_query("SELECT date, equity FROM daily_equity ORDER BY date", conn)
+                if daily_perf_df is not None and not daily_perf_df.empty:
+                    daily_perf_df = daily_perf_df.rename(columns={"equity": "total_assets"})
+            finally:
+                conn.close()
     except Exception as e:
         app.logger.error(f"Failed to load metrics from DB: {e}")
-        # On failure, return empty metrics but log the error to make it visible
-        metrics = calculate_performance_from_data(pd.DataFrame(), pd.DataFrame())
-        return jsonify(sanitize_api_response(metrics))
+        trades_df = pd.DataFrame()
+        daily_perf_df = pd.DataFrame()
+
+    # 2) Fallback to resimulated CSV
+    if trades_df.empty or daily_perf_df.empty:
+        try:
+            if trades_df.empty and os.path.exists(COMPLIANT_TRADES_CSV):
+                trades_df = pd.read_csv(
+                    COMPLIANT_TRADES_CSV,
+                    na_values=["NaN", "nan", "None", "null", "NaT", ""],
+                    keep_default_na=True,
+                )
+            if daily_perf_df.empty and os.path.exists(COMPLIANT_EQUITY_CSV):
+                daily_perf_df = pd.read_csv(COMPLIANT_EQUITY_CSV)
+                if not daily_perf_df.empty:
+                    daily_perf_df.columns = [str(c).lstrip("\ufeff").strip() for c in daily_perf_df.columns]
+                    if 'date' not in daily_perf_df.columns and len(daily_perf_df.columns) >= 1:
+                        daily_perf_df = daily_perf_df.rename(columns={daily_perf_df.columns[0]: 'date'})
+
+                    if 'equity' in daily_perf_df.columns and 'total_assets' not in daily_perf_df.columns:
+                        daily_perf_df['total_assets'] = pd.to_numeric(daily_perf_df['equity'], errors='coerce')
+                    elif 'total_assets' in daily_perf_df.columns:
+                        daily_perf_df['total_assets'] = pd.to_numeric(daily_perf_df['total_assets'], errors='coerce')
+
+                    if 'date' in daily_perf_df.columns:
+                        daily_perf_df['date'] = pd.to_datetime(daily_perf_df['date'], errors='coerce')
+        except Exception as e:
+            app.logger.error(f"Failed to load metrics from compliant CSV: {e}")
+            trades_df = pd.DataFrame()
+            daily_perf_df = pd.DataFrame()
+
+    # Ensure equity series is sorted ascending by date before performance calc
+    try:
+        if daily_perf_df is not None and (not daily_perf_df.empty) and 'date' in daily_perf_df.columns:
+            daily_perf_df = daily_perf_df.copy()
+            daily_perf_df['date'] = pd.to_datetime(daily_perf_df['date'], errors='coerce')
+            daily_perf_df = daily_perf_df.dropna(subset=['date'])
+            daily_perf_df = daily_perf_df.sort_values('date')
+    except Exception:
+        pass
 
     metrics = calculate_performance_from_data(trades_df, daily_perf_df)
-    
+
     # Validate metrics to prevent inflated values
     validated_metrics = {}
-    
-    for key, value in metrics.items():
+
+    for key, value in (metrics or {}).items():
         if value is None:
             validated_metrics[key] = None
             continue
-            
-        # Apply appropriate validation based on metric type
+
         if key in ['total_return', 'annualized_return', 'max_drawdown', 'sharpe_ratio', 'sortino_ratio']:
-            # Financial ratios and percentages
             if isinstance(value, (int, float)):
                 if pd.isna(value) or np.isinf(value):
                     validated_metrics[key] = None
                 else:
-                    # Apply reasonable bounds
                     if key == 'total_return' or key == 'annualized_return':
-                        if -100 <= value <= 1000:  # Allow up to 1000% returns
+                        if -100 <= value <= 1000:
                             validated_metrics[key] = value
                         else:
                             print(f"Warning: {key} value {value} is outside expected range")
                             validated_metrics[key] = None
                     elif key == 'max_drawdown':
-                        if -100 <= value <= 0:  # Drawdown should be negative or zero
+                        if -100 <= value <= 0:
                             validated_metrics[key] = value
                         else:
                             print(f"Warning: {key} value {value} is outside expected range")
                             validated_metrics[key] = None
                     elif key in ['sharpe_ratio', 'sortino_ratio']:
-                        if -10 <= value <= 10:  # Reasonable range for risk metrics
+                        if -10 <= value <= 10:
                             validated_metrics[key] = value
                         else:
                             print(f"Warning: {key} value {value} is outside expected range")
@@ -589,7 +630,6 @@ def get_metrics():
             else:
                 validated_metrics[key] = None
         elif key == 'win_rate':
-            # win_rate in calculate_performance_from_data is already in percentage [0,100]
             if isinstance(value, (int, float)):
                 if pd.isna(value) or np.isinf(value):
                     validated_metrics[key] = None
@@ -601,7 +641,6 @@ def get_metrics():
             else:
                 validated_metrics[key] = None
         elif key == 'profit_factor':
-            # profit_factor is typically >=0 and often in [0, +inf), cap it for display sanity
             if isinstance(value, (int, float)):
                 if pd.isna(value) or np.isinf(value):
                     validated_metrics[key] = None
@@ -612,19 +651,16 @@ def get_metrics():
                     validated_metrics[key] = None
             else:
                 validated_metrics[key] = None
-        elif key in ['num_trades', 'num_winning_trades', 'num_losing_trades']:
-            # Count metrics
+        elif key in ['total_trades', 'buy_count', 'sell_count', 'num_trades', 'num_winning_trades', 'num_losing_trades']:
             if isinstance(value, (int, float)) and value >= 0 and value < 10000:
                 validated_metrics[key] = int(value)
             else:
                 print(f"Warning: {key} value {value} is outside expected range")
                 validated_metrics[key] = 0
         elif key in ['avg_win', 'avg_loss', 'largest_win', 'largest_loss']:
-            # Monetary values
             validated_value = validate_financial_value(value, 'price', key)
             validated_metrics[key] = validated_value
         else:
-            # For any other metrics, sanitize and validate as a number
             if isinstance(value, (int, float)):
                 if pd.isna(value) or np.isinf(value):
                     validated_metrics[key] = None
@@ -632,8 +668,7 @@ def get_metrics():
                     validated_metrics[key] = value
             else:
                 validated_metrics[key] = None
-    
-    # Sanitize the response before returning
+
     sanitized_metrics = sanitize_api_response(validated_metrics)
     return jsonify(sanitized_metrics)
 
