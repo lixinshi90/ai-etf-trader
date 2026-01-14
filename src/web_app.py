@@ -523,35 +523,30 @@ def get_performance():
 @app.route("/api/metrics")
 @cache.cached(timeout=60)
 def get_metrics():
-    """Prefer DB trades + daily_equity to compute KPIs; fallback to CSVs."""
+    """Calculate KPIs from the authoritative DB source (trade_history.db)."""
     trades_df = pd.DataFrame()
     daily_perf_df = pd.DataFrame()
 
-    # 1) Prefer DB
     try:
         db_path = os.path.join(_project_root(), "data", "trade_history.db")
-        if os.path.exists(db_path):
-            import sqlite3 as _sql
-            conn = _sql.connect(db_path)
-            try:
-                tdf = pd.read_sql_query("SELECT date, etf_code, action, price, quantity, value, capital_after, reasoning FROM trades ORDER BY datetime(date)", conn)
-                edf = pd.read_sql_query("SELECT date, equity FROM daily_equity ORDER BY date", conn)
-            finally:
-                conn.close()
-            if tdf is not None and not tdf.empty:
-                trades_df = tdf
-            if edf is not None and not edf.empty:
-                daily_perf_df = edf.rename(columns={"equity":"total_assets"})
-    except Exception:
-        pass
+        if not os.path.exists(db_path):
+            raise FileNotFoundError("trade_history.db not found")
 
-    # 2) Fallback to CSVs
-    if trades_df.empty and os.path.exists(COMPLIANT_TRADES_CSV):
-        trades_df = pd.read_csv(COMPLIANT_TRADES_CSV)
-    if daily_perf_df.empty and os.path.exists(COMPLIANT_PERF_CSV):
-        daily_perf_df = pd.read_csv(COMPLIANT_PERF_CSV)
-        if not daily_perf_df.empty and 'total_assets' not in daily_perf_df.columns and 'equity' in daily_perf_df.columns:
-            daily_perf_df = daily_perf_df.rename(columns={'equity': 'total_assets'})
+        import sqlite3 as _sql
+        conn = _sql.connect(db_path)
+        try:
+            trades_df = pd.read_sql_query("SELECT date, etf_code, action, price, quantity, value, capital_after, reasoning FROM trades ORDER BY datetime(date)", conn)
+            daily_perf_df = pd.read_sql_query("SELECT date, equity FROM daily_equity ORDER BY date", conn)
+            if not daily_perf_df.empty:
+                daily_perf_df = daily_perf_df.rename(columns={"equity":"total_assets"})
+        finally:
+            conn.close()
+
+    except Exception as e:
+        app.logger.error(f"Failed to load metrics from DB: {e}")
+        # On failure, return empty metrics but log the error to make it visible
+        metrics = calculate_performance_from_data(pd.DataFrame(), pd.DataFrame())
+        return jsonify(sanitize_api_response(metrics))
 
     metrics = calculate_performance_from_data(trades_df, daily_perf_df)
     
