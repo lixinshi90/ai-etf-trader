@@ -1,0 +1,8 @@
+{
+  "decision": "sell",
+  "confidence": 0.65,
+  "reasoning": "价格低于MA20且处于下跌趋势中，未见明显反转信号，量能正常但未现突破。",
+  "target_price": 0.746,
+  "stop_loss": 0.763,
+  "take_profit": 0.73
+}

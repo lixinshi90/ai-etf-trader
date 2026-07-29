@@ -1,0 +1,8 @@
+{
+  "decision": "sell",
+  "confidence": 0.8,
+  "reasoning": "ETF处于下跌趋势，当前价格低于20日均线，显示近期弱势。结合最近5日涨跌幅为负，表明短期内有进一步下跌的风险。",
+  "target_price": 0.33,
+  "stop_loss": 0.35,
+  "take_profit": 0.32
+}

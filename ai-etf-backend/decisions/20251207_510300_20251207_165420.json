@@ -1,0 +1,8 @@
+{
+  "decision": "sell",
+  "confidence": 0.8,
+  "reasoning": "尽管成交量放大，但价格仍处于下跌趋势中，且当前价格高于20日均线，存在回调风险。根据趋势为王原则，应选择卖出。",
+  "target_price": 4.68,
+  "stop_loss": 4.72,
+  "take_profit": 4.65
+}

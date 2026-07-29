@@ -1,0 +1,8 @@
+{
+  "decision": "hold",
+  "confidence": 0.65,
+  "reasoning": "尽管价格高于MA20，但成交量显著萎缩且趋势向下，表明市场动能不足，暂不宜买入。同时，未见明显卖出信号，因此选择持有。",
+  "target_price": null,
+  "stop_loss": null,
+  "take_profit": null
+}

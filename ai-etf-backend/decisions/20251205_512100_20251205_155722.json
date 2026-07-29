@@ -1,0 +1,8 @@
+{
+  "decision": "sell",
+  "confidence": 0.75,
+  "reasoning": "价格处于下跌趋势，且低于20日均线，显示近期弱势。成交量放大但价格未突破，表明卖压较重。根据趋势跟踪和量价分析原则，应考虑卖出。",
+  "target_price": 2.95,
+  "stop_loss": 2.99,
+  "take_profit": 2.96
+}

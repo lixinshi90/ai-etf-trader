@@ -1,0 +1,8 @@
+{
+  "decision": "sell",
+  "confidence": 0.75,
+  "reasoning": "ETF处于下跌趋势，价格低于20日均线，显示近期弱势。成交量显著萎缩，表明市场参与度低，上涨动力不足。根据趋势跟踪和量价分析原则，应考虑卖出。",
+  "target_price": 2.8,
+  "stop_loss": 2.85,
+  "take_profit": 2.78
+}

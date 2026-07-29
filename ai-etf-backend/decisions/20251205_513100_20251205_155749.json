@@ -1,0 +1,8 @@
+{
+  "decision": "buy",
+  "confidence": 0.8,
+  "reasoning": "当前ETF处于上涨趋势，价格高于20日均线，显示偏强，且成交量正常。根据趋势跟踪策略，应寻找买入机会。",
+  "target_price": 2.05,
+  "stop_loss": 1.92,
+  "take_profit": 2.1
+}

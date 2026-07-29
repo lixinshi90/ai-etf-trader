@@ -1,0 +1,8 @@
+{
+  "decision": "buy",
+  "confidence": 0.8,
+  "reasoning": "价格上涨趋势明显，成交量显著放大，显示市场活跃度提高，价格位于20日均线之上，表明短期强势。结合最近5日的小幅回调，可能是较好的买入机会。",
+  "target_price": 2.55,
+  "stop_loss": 2.4,
+  "take_profit": 2.6
+}

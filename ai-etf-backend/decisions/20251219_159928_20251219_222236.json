@@ -1,0 +1,8 @@
+{
+  "decision": "hold",
+  "confidence": 0.7,
+  "reasoning": "当前处于下降趋势，MA50小于MA200，不符合买入条件。ATR较低，但未出现技术性买点，不建议买入。同时，未达到卖出止损条件，因此建议持有。",
+  "target_price": null,
+  "stop_loss": null,
+  "take_profit": null
+}

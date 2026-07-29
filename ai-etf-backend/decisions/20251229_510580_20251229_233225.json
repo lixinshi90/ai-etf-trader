@@ -1,0 +1,8 @@
+{
+  "decision": "buy",
+  "confidence": 0.8,
+  "reasoning": "MA50>MA200且ATR较低，建议买入。",
+  "target_price": null,
+  "stop_loss": 3.6299,
+  "take_profit": null
+}

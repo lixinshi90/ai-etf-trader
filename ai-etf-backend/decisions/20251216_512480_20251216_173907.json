@@ -1,0 +1,8 @@
+{
+  "decision": "sell",
+  "confidence": 0.65,
+  "reasoning": "价格低于MA20且处于下跌趋势中，短期内未见止跌迹象，量能正常但未现突破信号，宜逢高减仓。",
+  "target_price": 1.371,
+  "stop_loss": 1.385,
+  "take_profit": 1.306
+}

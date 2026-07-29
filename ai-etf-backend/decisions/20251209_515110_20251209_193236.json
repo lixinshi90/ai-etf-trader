@@ -1,0 +1,8 @@
+{
+  "decision": "hold",
+  "confidence": 0.65,
+  "reasoning": "尽管ETF处于上涨趋势，但最新价格低于MA20且处于偏弱位置，同时未见明显突破阻力位或支撑位，量能放大但价格未创新高，缺乏明确买入或卖出信号。",
+  "target_price": null,
+  "stop_loss": null,
+  "take_profit": null
+}

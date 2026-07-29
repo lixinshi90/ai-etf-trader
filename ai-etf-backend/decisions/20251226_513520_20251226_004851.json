@@ -1,0 +1,8 @@
+{
+  "decision": "buy",
+  "confidence": 0.85,
+  "reasoning": "MA50>MA200，表明上升趋势，当前价格未触发止损或止盈条件，ATR较低，建议适量买入。",
+  "target_price": null,
+  "stop_loss": 1.7755,
+  "take_profit": 2.0132
+}

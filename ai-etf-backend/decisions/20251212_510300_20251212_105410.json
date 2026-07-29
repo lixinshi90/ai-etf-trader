@@ -1,0 +1,8 @@
+{
+  "decision": "hold",
+  "confidence": 0.55,
+  "reasoning": "价格低于MA20且成交量萎缩，显示市场偏弱，当前未见明显趋势转折信号，保持观望。",
+  "target_price": null,
+  "stop_loss": null,
+  "take_profit": null
+}

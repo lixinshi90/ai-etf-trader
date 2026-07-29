@@ -1,0 +1,8 @@
+{
+  "decision": "sell",
+  "confidence": 0.65,
+  "reasoning": "尽管总体趋势向上，但最新价格低于MA20且处于20日低点附近，表明短期内有回调需求。量能正常但未见明显放大，缺乏上涨动力。",
+  "target_price": 2.758,
+  "stop_loss": 2.766,
+  "take_profit": 2.703
+}

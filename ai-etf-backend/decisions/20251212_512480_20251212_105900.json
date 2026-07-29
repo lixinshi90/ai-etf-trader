@@ -1,0 +1,8 @@
+{
+  "decision": "hold",
+  "confidence": 0.65,
+  "reasoning": "尽管价格高于MA20显示偏强，但成交量显著萎缩且趋势为下跌趋势，表明上涨动力不足。同时，未见到价格突破关键阻力位，因此保持持有状态。",
+  "target_price": null,
+  "stop_loss": null,
+  "take_profit": null
+}

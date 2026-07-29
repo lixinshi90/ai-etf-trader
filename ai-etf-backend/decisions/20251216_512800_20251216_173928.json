@@ -1,0 +1,8 @@
+{
+  "decision": "hold",
+  "confidence": 0.65,
+  "reasoning": "价格低于MA20且成交量萎缩，显示市场犹豫，尽管长期趋势向上，但短期内缺乏明确买入信号。",
+  "target_price": null,
+  "stop_loss": null,
+  "take_profit": null
+}

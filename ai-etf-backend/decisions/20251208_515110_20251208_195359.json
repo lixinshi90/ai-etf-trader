@@ -1,0 +1,8 @@
+{
+  "decision": "buy",
+  "confidence": 0.85,
+  "reasoning": "价格高于MA20且处于上涨趋势，短期内未见明显回调迹象，量能稳定。根据Donchian通道，价格有上涨空间。",
+  "target_price": 1.598,
+  "stop_loss": 1.511,
+  "take_profit": 1.6
+}

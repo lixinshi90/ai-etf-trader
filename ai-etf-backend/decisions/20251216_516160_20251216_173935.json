@@ -1,0 +1,8 @@
+{
+  "decision": "sell",
+  "confidence": 0.65,
+  "reasoning": "价格低于MA20且处于下跌趋势中，未见止跌迹象，短期内风险较高",
+  "target_price": 2.675,
+  "stop_loss": 2.702,
+  "take_profit": 2.65
+}

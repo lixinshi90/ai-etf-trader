@@ -1,0 +1,8 @@
+{
+  "decision": "buy",
+  "confidence": 0.8,
+  "reasoning": "MA50>MA200处于上升趋势，当前价格4.3240接近Donchian阻力位4.2880，ATR较低可考虑建仓。",
+  "target_price": null,
+  "stop_loss": 4.1088,
+  "take_profit": 4.8429
+}

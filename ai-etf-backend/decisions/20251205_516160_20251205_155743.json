@@ -1,0 +1,8 @@
+{
+  "decision": "buy",
+  "confidence": 0.6,
+  "reasoning": "尽管价格低于20日均线，但整体仍处于上涨趋势中。考虑到短期内的回调可能已经结束，且成交量正常，有理由相信价格将回归上升趋势。",
+  "target_price": 2.9,
+  "stop_loss": 2.75,
+  "take_profit": 2.85
+}

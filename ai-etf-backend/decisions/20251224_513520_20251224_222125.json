@@ -1,0 +1,8 @@
+{
+  "decision": "buy",
+  "confidence": 0.85,
+  "reasoning": "MA50>MA200，表明上升趋势，当前价格1.8230高于Donchian通道支撑1.7730，ATR为0.0283，波动较小，建议动态仓位买入。",
+  "target_price": null,
+  "stop_loss": 1.7435,
+  "take_profit": 2.0274
+}
